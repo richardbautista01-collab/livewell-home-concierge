@@ -8,7 +8,7 @@
 
 <title>Contact | LiveWell Home Concierge</title>
 
-<meta name="description" content="Schedule a home assessment with LiveWell Home Concierge and learn how we can help care for your home.">
+<meta name="description" content="Request a home assessment with LiveWell Home Concierge.">
 
 
 <style>
@@ -22,15 +22,19 @@ font-family:Arial, Helvetica, sans-serif;
 
 
 body{
-color:#1f2937;
+
+color:#1F2937;
 line-height:1.6;
+
 }
 
 
+/* NAV */
+
 nav{
 
-background:#12395a;
-padding:25px 10%;
+background:#2F6B4F;
+padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -39,10 +43,10 @@ color:white;
 }
 
 
-.logo{
+.logo img{
 
-font-size:24px;
-font-weight:bold;
+height:60px;
+width:auto;
 
 }
 
@@ -52,15 +56,18 @@ nav a{
 color:white;
 text-decoration:none;
 margin-left:25px;
+font-weight:bold;
 
 }
 
 
 
+/* HERO */
+
 .hero{
 
-background:#f8f5f0;
-padding:80px 10%;
+background:#F8F5F0;
+padding:90px 10%;
 text-align:center;
 
 }
@@ -69,7 +76,7 @@ text-align:center;
 .hero h1{
 
 font-size:48px;
-color:#12395a;
+color:#2F6B4F;
 margin-bottom:20px;
 
 }
@@ -78,16 +85,20 @@ margin-bottom:20px;
 .hero p{
 
 font-size:20px;
+max-width:750px;
+margin:auto;
 
 }
 
 
 
+/* CONTACT */
+
 .container{
 
 padding:80px 10%;
 display:flex;
-gap:50px;
+gap:60px;
 justify-content:center;
 flex-wrap:wrap;
 
@@ -103,10 +114,10 @@ width:100%;
 }
 
 
-
 .form-box h2{
 
-color:#12395a;
+color:#2F6B4F;
+margin-bottom:20px;
 
 }
 
@@ -119,16 +130,15 @@ width:100%;
 padding:15px;
 margin-bottom:20px;
 border:1px solid #ccc;
-border-radius:8px;
+border-radius:10px;
 font-size:16px;
 
 }
 
 
-
 textarea{
 
-height:150px;
+height:160px;
 
 }
 
@@ -136,9 +146,9 @@ height:150px;
 
 .button{
 
-background:#2f6e9b;
+background:#2F6B4F;
 color:white;
-padding:15px 35px;
+padding:16px 35px;
 border:none;
 border-radius:30px;
 font-weight:bold;
@@ -149,6 +159,8 @@ font-size:16px;
 
 
 
+/* INFO */
+
 .info{
 
 max-width:400px;
@@ -156,14 +168,12 @@ max-width:400px;
 }
 
 
-
 .info h2{
 
-color:#12395a;
+color:#2F6B4F;
 margin-bottom:20px;
 
 }
-
 
 
 .info p{
@@ -175,15 +185,16 @@ margin-bottom:15px;
 
 
 
+/* BOTTOM */
+
 .assessment{
 
-background:#12395a;
+background:#1E4534;
 color:white;
-padding:70px 10%;
+padding:80px 10%;
 text-align:center;
 
 }
-
 
 
 .assessment h2{
@@ -195,9 +206,11 @@ margin-bottom:20px;
 
 
 
+/* FOOTER */
+
 footer{
 
-background:#0d273d;
+background:#1E4534;
 color:white;
 padding:30px;
 text-align:center;
@@ -206,21 +219,33 @@ text-align:center;
 
 
 
+
 @media(max-width:768px){
 
 nav div:last-child{
+
 display:none;
+
 }
 
+
 .hero h1{
+
 font-size:36px;
+
+}
+
+
+.logo img{
+
+height:45px;
+
 }
 
 }
 
 
 </style>
-
 
 </head>
 
@@ -234,8 +259,11 @@ font-size:36px;
 
 
 <div class="logo">
-LiveWell Home Concierge
+
+<img src="logo.png" alt="LiveWell Home Concierge Logo">
+
 </div>
+
 
 
 <div>
@@ -258,13 +286,13 @@ LiveWell Home Concierge
 
 
 <h1>
-Let's Talk About Your Home.
+Let's Care For Your Home.
 </h1>
 
 
 <p>
 
-Schedule a complimentary home assessment and discover how LiveWell can help simplify home ownership.
+Schedule a complimentary home assessment and discover how LiveWell can simplify home ownership and provide peace of mind.
 
 </p>
 
@@ -287,10 +315,11 @@ Request Your Home Assessment
 </h2>
 
 
-<br>
-
 
 <form action="https://formspree.io/f/xkodajgr" method="POST" enctype="application/x-www-form-urlencoded">
+
+
+<input type="hidden" name="_subject" value="New LiveWell Home Assessment Request">
 
 
 <input type="text" name="name" placeholder="Your Name" required>
@@ -305,8 +334,11 @@ Request Your Home Assessment
 <textarea name="message" placeholder="Tell us about your home and how we can help" required></textarea>
 
 
+
 <button type="submit" class="button">
+
 Request My Home Assessment
+
 </button>
 
 
@@ -328,22 +360,22 @@ Why Contact LiveWell?
 
 
 <p>
-✓ Reduce the stress of home maintenance
+✓ One trusted contact for your home
 </p>
 
 
 <p>
-✓ Have one trusted person coordinating services
+✓ Less stress managing repairs and maintenance
 </p>
 
 
 <p>
-✓ Help your family feel confident about your home
+✓ Reliable professional coordination
 </p>
 
 
 <p>
-✓ Protect your home's value through preventative care
+✓ Peace of mind for homeowners and families
 </p>
 
 
@@ -368,12 +400,13 @@ Your Home Deserves A Trusted Partner.
 
 <p>
 
-LiveWell Home Concierge provides ongoing support so you can spend less time managing problems and more time enjoying your home.
+LiveWell Home Concierge helps protect your home, your comfort, and your peace of mind.
 
 </p>
 
 
 </section>
+
 
 
 
