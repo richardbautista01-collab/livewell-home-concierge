@@ -8,7 +8,7 @@
 
 <title>Services | LiveWell Home Concierge</title>
 
-<meta name="description" content="LiveWell Home Concierge provides ongoing home maintenance coordination, trusted contractor management, and aging-in-place support.">
+<meta name="description" content="LiveWell Home Concierge provides preventative home care, maintenance coordination, repairs, and aging-in-place support.">
 
 
 <style>
@@ -23,16 +23,19 @@ font-family:Arial, Helvetica, sans-serif;
 
 body{
 
-color:#1f2937;
+color:#1F2937;
 line-height:1.6;
 
 }
 
 
+
+/* NAV */
+
 nav{
 
-background:#12395a;
-padding:25px 10%;
+background:#2F6B4F;
+padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -41,10 +44,10 @@ color:white;
 }
 
 
-.logo{
+.logo img{
 
-font-size:24px;
-font-weight:bold;
+height:60px;
+width:auto;
 
 }
 
@@ -54,38 +57,46 @@ nav a{
 color:white;
 text-decoration:none;
 margin-left:25px;
+font-weight:bold;
 
 }
 
 
 
+/* HERO */
+
 .hero{
 
-padding:80px 10%;
-background:#f8f5f0;
+background:#F8F5F0;
+padding:90px 10%;
 text-align:center;
 
 }
 
 
+
 .hero h1{
 
 font-size:48px;
-color:#12395a;
+color:#2F6B4F;
 margin-bottom:20px;
 
 }
 
 
+
 .hero p{
 
 font-size:20px;
-max-width:750px;
+max-width:800px;
 margin:auto;
 
 }
 
 
+
+
+/* SERVICES */
 
 .section{
 
@@ -95,11 +106,12 @@ text-align:center;
 }
 
 
+
 .section h2{
 
-font-size:38px;
-color:#12395a;
-margin-bottom:30px;
+font-size:40px;
+color:#2F6B4F;
+margin-bottom:25px;
 
 }
 
@@ -108,9 +120,9 @@ margin-bottom:30px;
 .cards{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
 gap:30px;
-margin-top:40px;
+margin-top:50px;
 
 }
 
@@ -118,10 +130,9 @@ margin-top:40px;
 
 .card{
 
+background:#F8F5F0;
 padding:35px;
-background:white;
 border-radius:18px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
 
 }
 
@@ -129,18 +140,19 @@ box-shadow:0 5px 20px rgba(0,0,0,.08);
 
 .card h3{
 
-color:#12395a;
-font-size:24px;
+font-size:23px;
+color:#2F6B4F;
 margin-bottom:15px;
 
 }
 
 
 
+/* MEMBERSHIP */
 
 .membership{
 
-background:#12395a;
+background:#1E4534;
 color:white;
 padding:80px 10%;
 text-align:center;
@@ -157,6 +169,7 @@ margin-bottom:20px;
 }
 
 
+
 .price{
 
 font-size:42px;
@@ -170,10 +183,10 @@ margin:25px;
 .button{
 
 display:inline-block;
-background:#2f6e9b;
-padding:15px 35px;
-border-radius:30px;
+background:#2F6B4F;
 color:white;
+padding:16px 35px;
+border-radius:30px;
 text-decoration:none;
 font-weight:bold;
 
@@ -181,9 +194,11 @@ font-weight:bold;
 
 
 
+/* FOOTER */
+
 footer{
 
-background:#0d273d;
+background:#1E4534;
 color:white;
 padding:30px;
 text-align:center;
@@ -191,14 +206,28 @@ text-align:center;
 }
 
 
+
+
 @media(max-width:768px){
 
 nav div:last-child{
+
 display:none;
+
 }
 
+
 .hero h1{
+
 font-size:36px;
+
+}
+
+
+.logo img{
+
+height:45px;
+
 }
 
 }
@@ -209,8 +238,8 @@ font-size:36px;
 </head>
 
 
-
 <body>
+
 
 
 
@@ -218,15 +247,18 @@ font-size:36px;
 
 
 <div class="logo">
-LiveWell Home Concierge
+
+<img src="logo.png" alt="LiveWell Home Concierge Logo">
+
 </div>
+
 
 
 <div>
 
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
-<a href="#">About</a>
+<a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 
 </div>
@@ -236,17 +268,24 @@ LiveWell Home Concierge
 
 
 
+
+
+
+
 <section class="hero">
 
 
 <h1>
-Your Home. Professionally Managed.
+
+Your Home, Professionally Cared For.
+
 </h1>
+
 
 
 <p>
 
-LiveWell provides ongoing support to help homeowners maintain their property, coordinate trusted professionals, and enjoy a safer, more comfortable home.
+LiveWell Home Concierge provides ongoing home support by coordinating maintenance, repairs, and trusted professionals — giving homeowners and families peace of mind.
 
 </p>
 
@@ -256,11 +295,16 @@ LiveWell provides ongoing support to help homeowners maintain their property, co
 
 
 
+
+
+
 <section class="section">
 
 
 <h2>
+
 Our Concierge Services
+
 </h2>
 
 
@@ -268,15 +312,16 @@ Our Concierge Services
 <div class="cards">
 
 
+
 <div class="card">
 
 <h3>
-Preventative Maintenance
+Preventative Home Maintenance
 </h3>
 
 <p>
 
-Seasonal checklists, filter reminders, home inspections, maintenance planning, and helping prevent costly surprises.
+Seasonal inspections, reminders, maintenance planning, and helping identify issues before they become costly problems.
 
 </p>
 
@@ -284,15 +329,16 @@ Seasonal checklists, filter reminders, home inspections, maintenance planning, a
 
 
 
+
 <div class="card">
 
 <h3>
-Trusted Contractor Management
+Trusted Contractor Coordination
 </h3>
 
 <p>
 
-We find, coordinate, and communicate with trusted professionals so homeowners do not have to manage multiple contractors.
+We find, coordinate, and communicate with reliable professionals so you don't have to manage multiple service providers.
 
 </p>
 
@@ -300,19 +346,21 @@ We find, coordinate, and communicate with trusted professionals so homeowners do
 
 
 
+
 <div class="card">
 
 <h3>
-Home Project Coordination
+Home Repairs & Projects
 </h3>
 
 <p>
 
-From repairs and upgrades to improvements, LiveWell manages the details and keeps projects moving.
+From small repairs to larger improvements, LiveWell helps organize the work and keeps projects moving.
 
 </p>
 
 </div>
+
 
 
 
@@ -324,11 +372,12 @@ Aging-In-Place Support
 
 <p>
 
-Helping older adults remain comfortable and independent while giving their families confidence.
+Helping older adults remain comfortable, safe, and independent in the homes they love.
 
 </p>
 
 </div>
+
 
 
 
@@ -348,6 +397,7 @@ Preparing your home for winter, spring maintenance, and important yearly tasks.
 
 
 
+
 <div class="card">
 
 <h3>
@@ -356,7 +406,7 @@ Family Peace Of Mind
 
 <p>
 
-A trusted local contact who helps ensure your loved one's home is cared for.
+A trusted local contact helping families stay informed and confident about their loved one's home.
 
 </p>
 
@@ -372,19 +422,26 @@ A trusted local contact who helps ensure your loved one's home is cared for.
 
 
 
+
+
+
 <section class="membership">
 
 
 <h2>
+
 LiveWell Membership
+
 </h2>
+
 
 
 <p>
 
-Ongoing home support without the hassle of managing everything yourself.
+A simple monthly relationship for homeowners who want their home cared for year-round.
 
 </p>
+
 
 
 
@@ -396,22 +453,30 @@ Starting at $249/month
 
 
 
+
 <p>
 
-Includes routine coordination, maintenance reminders, priority scheduling, and a dedicated home concierge relationship.
+Includes maintenance reminders, service coordination, priority support, and a dedicated home concierge relationship.
 
 </p>
+
 
 
 <br>
 
 
 <a href="contact.html" class="button">
-Book Your Home Assessment
+
+Request Your Home Assessment
+
 </a>
 
 
+
 </section>
+
+
+
 
 
 
