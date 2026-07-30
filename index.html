@@ -242,13 +242,6 @@ margin-bottom:15px;
 }
 
 
-.membership .button{
-
-margin-top:20px;
-
-}
-
-
 
 /* TRUST */
 
@@ -286,11 +279,49 @@ text-align:center;
 
 
 
+/* MOBILE */
+
 @media(max-width:768px){
+
+
+nav{
+
+flex-direction:column;
+gap:20px;
+text-align:center;
+
+}
+
 
 nav div:last-child{
 
-display:none;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+
+}
+
+
+nav a{
+
+margin-left:0;
+font-size:14px;
+
+}
+
+
+.logo img{
+
+height:45px;
+
+}
+
+
+.hero{
+
+padding:60px 8%;
+min-height:80vh;
 
 }
 
@@ -302,13 +333,36 @@ font-size:40px;
 }
 
 
-.logo img{
+.hero p{
 
-height:45px;
+font-size:18px;
+
+}
+
+
+.section h2{
+
+font-size:32px;
 
 }
 
+
+.membership h2{
+
+font-size:32px;
+
 }
+
+
+.price{
+
+font-size:36px;
+
+}
+
+
+}
+
 
 
 </style>
@@ -317,7 +371,6 @@ height:45px;
 
 
 <body>
-
 
 
 
@@ -444,7 +497,6 @@ We help organize the details of your home, coordinate services, and make managin
 
 
 
-
 <div class="card">
 
 <h3>
@@ -462,7 +514,6 @@ We coordinate reliable professionals and help manage the process from start to f
 
 
 
-
 <div class="card">
 
 <h3>
@@ -471,12 +522,11 @@ Home Support & Improvements
 
 <p>
 
-From projects to improvements, we help keep your home comfortable and cared for.
+We help manage projects and improvements so your home remains comfortable.
 
 </p>
 
 </div>
-
 
 
 
@@ -489,7 +539,7 @@ Aging-In-Place & Family Support
 
 <p>
 
-Helping older adults remain comfortable and independent while giving families confidence and peace of mind.
+Helping older adults remain comfortable and independent while giving families peace of mind.
 
 </p>
 
