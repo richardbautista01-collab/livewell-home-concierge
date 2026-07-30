@@ -1,192 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LiveWell Home Concierge | One Call. Everything Your Home Needs.</title>
-    <meta name="description" content="LiveWell Home Concierge helps older adults live safely and independently at home by coordinating trusted home maintenance, repairs, and services.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<title>LiveWell Home Concierge | Peace of Mind for Your Home</title>
 
-        body {
-            color: #1f2937;
-            line-height: 1.6;
-        }
+<meta name="description" content="LiveWell Home Concierge helps older adults maintain safe, comfortable homes through trusted maintenance coordination, repairs, and personalized home support.">
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 60px 10%;
-            background: linear-gradient(
-                rgba(0,0,0,0.45),
-                rgba(0,0,0,0.45)
-            ),
-            url("https://images.unsplash.com/photo-1554995207-c18c203602cb") center/cover;
-            color: white;
-        }
+<style>
 
-        .hero-content {
-            max-width: 700px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
 
-        h1 {
-            font-size: 58px;
-            line-height: 1.1;
-            margin-bottom: 25px;
-        }
+body{
+color:#1f2937;
+line-height:1.6;
+}
 
-        .tagline {
-            font-size: 26px;
-            margin-bottom: 20px;
-        }
 
-        p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
+/* NAV */
 
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #2f6e9b;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-        }
+nav{
+position:absolute;
+top:0;
+width:100%;
+padding:25px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+z-index:10;
+}
 
-        .section {
-            padding: 80px 10%;
-            text-align: center;
-        }
+.logo{
+font-size:24px;
+font-weight:bold;
+}
 
-        .section h2 {
-            font-size: 38px;
-            margin-bottom: 25px;
-            color: #12395a;
-        }
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+}
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
 
-        .card {
-            padding: 30px;
-            border-radius: 15px;
-            background: #f8f5f0;
-        }
+/* HERO */
 
-        .card h3 {
-            margin-bottom: 15px;
-            color: #12395a;
-        }
+.hero{
 
-        footer {
-            background: #12395a;
-            color:white;
-            padding:30px;
-            text-align:center;
-        }
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:80px 10%;
 
-        @media(max-width:768px){
-            h1{
-                font-size:40px;
-            }
+background:
+linear-gradient(
+rgba(0,0,0,.5),
+rgba(0,0,0,.5)
+),
+url("https://images.unsplash.com/photo-1554995207-c18c203602cb")
+center/cover;
 
-            .tagline{
-                font-size:22px;
-            }
-        }
+color:white;
 
-    </style>
+}
+
+
+.hero-content{
+max-width:750px;
+}
+
+
+.tagline{
+font-size:24px;
+margin-bottom:15px;
+}
+
+
+h1{
+font-size:60px;
+line-height:1.1;
+margin-bottom:25px;
+}
+
+
+.hero p{
+
+font-size:20px;
+margin-bottom:35px;
+
+}
+
+
+.button{
+
+display:inline-block;
+padding:16px 35px;
+background:#2f6e9b;
+color:white;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+/* SECTION */
+
+
+.section{
+
+padding:90px 10%;
+text-align:center;
+
+}
+
+
+.section h2{
+
+font-size:40px;
+color:#12395a;
+margin-bottom:25px;
+
+}
+
+
+.services{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:45px;
+
+}
+
+
+.card{
+
+background:#f8f5f0;
+padding:35px;
+border-radius:18px;
+
+}
+
+
+.card h3{
+
+color:#12395a;
+font-size:22px;
+margin-bottom:15px;
+
+}
+
+
+/* TRUST */
+
+.trust{
+
+background:#12395a;
+color:white;
+padding:80px 10%;
+text-align:center;
+
+}
+
+.trust h2{
+
+font-size:38px;
+margin-bottom:20px;
+
+}
+
+
+/* FOOTER */
+
+
+footer{
+
+background:#0d273d;
+color:white;
+padding:30px;
+text-align:center;
+
+}
+
+
+
+@media(max-width:768px){
+
+h1{
+font-size:40px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
 
 </head>
 
+
 <body>
+
+
+<nav>
+
+<div class="logo">
+LiveWell Home Concierge
+</div>
+
+<div>
+
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+
+</div>
+
+</nav>
+
+
 
 <section class="hero">
 
+
 <div class="hero-content">
 
+
 <div class="tagline">
+
 Because Home Is More Than a Place.
+
 </div>
 
+
 <h1>
-It's a Lifetime of Memories.
+
+Helping You Stay In The Home You Love.
+
 </h1>
 
+
 <p>
-LiveWell Home Concierge helps older adults stay safely, comfortably, and independently in the homes they love.
+
+LiveWell Home Concierge provides personalized home support for older adults and their families — coordinating maintenance, repairs, and trusted professionals so every detail is handled.
+
 </p>
 
+
 <a href="#" class="button">
-Book a Free Consultation
+
+Schedule Your Home Assessment
+
 </a>
+
 
 </div>
 
 </section>
+
+
 
 
 <section class="section">
 
+
 <h2>
-One Call. Everything Your Home Needs.
+
+One Trusted Partner For Your Home.
+
 </h2>
 
+
 <p>
-From maintenance and repairs to trusted contractor coordination, we take care of the details so homeowners and their families can enjoy peace of mind.
+
+Your home requires attention throughout the year. We help manage the small details before they become big problems, giving homeowners and their families confidence and peace of mind.
+
 </p>
+
 
 
 <div class="services">
 
+
 <div class="card">
-<h3>Home Maintenance</h3>
+
+<h3>
+Preventative Home Care
+</h3>
+
 <p>
-Seasonal upkeep, reminders, and preventative care.
+Seasonal maintenance, reminders, inspections, and ongoing home care planning.
 </p>
+
 </div>
 
 
+
 <div class="card">
-<h3>Trusted Contractors</h3>
+
+<h3>
+Trusted Service Coordination
+</h3>
+
 <p>
-We coordinate reliable professionals you can trust.
+We connect you with reliable professionals and manage the process from start to finish.
 </p>
+
 </div>
 
 
+
 <div class="card">
-<h3>Home Repairs</h3>
+
+<h3>
+Home Repairs & Projects
+</h3>
+
 <p>
-We manage repairs from start to finish.
+From small repairs to larger improvements, we make sure nothing is overlooked.
 </p>
+
 </div>
 
 
+
 <div class="card">
-<h3>Aging in Place</h3>
+
+<h3>
+Aging In Place Support
+</h3>
+
 <p>
-Helping homes remain safe and comfortable.
+Helping older adults remain independent while giving families peace of mind.
 </p>
+
 </div>
 
 
 </div>
 
 </section>
+
+
+
+
+<section class="trust">
+
+<h2>
+Peace Of Mind For Homeowners And Their Families.
+</h2>
+
+<p>
+
+One call. One trusted relationship. A home that is cared for year-round.
+
+</p>
+
+</section>
+
+
 
 
 <footer>
@@ -199,4 +381,5 @@ Helping homes remain safe and comfortable.
 
 
 </body>
+
 </html>
