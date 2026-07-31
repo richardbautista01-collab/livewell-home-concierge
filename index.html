@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LiveWell Home Concierge | Helping You Stay In The Home You Love</title>
+<title>LiveWell Home Concierge | Peace of Mind for Families</title>
 
-<meta name="description" content="LiveWell Home Concierge provides trusted home support, coordination, and peace of mind for homeowners and families.">
+<meta name="description" content="LiveWell Home Concierge provides trusted home support, maintenance coordination, and peace of mind for families across the GTA and York Region.">
 
 
 <style>
@@ -20,15 +20,13 @@ box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
 
-
 body{
 color:#1F2937;
 line-height:1.6;
 }
 
 
-
-/* NAV */
+/* NAVIGATION */
 
 nav{
 
@@ -38,13 +36,14 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 color:white;
+position:relative;
 
 }
 
 
 .logo img{
 
-height:60px;
+height:75px;
 width:auto;
 
 }
@@ -79,7 +78,6 @@ cursor:pointer;
 }
 
 
-
 /* HERO */
 
 .hero{
@@ -101,31 +99,28 @@ color:white;
 }
 
 
-
 .hero-content{
 
-max-width:750px;
+max-width:800px;
 
 }
 
 
 .tagline{
 
-font-size:24px;
-margin-bottom:15px;
+font-size:22px;
+margin-bottom:20px;
 
 }
-
 
 
 .hero h1{
 
-font-size:60px;
+font-size:58px;
 line-height:1.1;
 margin-bottom:25px;
 
 }
-
 
 
 .hero p{
@@ -134,7 +129,6 @@ font-size:20px;
 margin-bottom:35px;
 
 }
-
 
 
 .button{
@@ -150,8 +144,8 @@ font-weight:bold;
 }
 
 
+/* SECTIONS */
 
-/* SERVICES */
 
 .section{
 
@@ -161,15 +155,13 @@ text-align:center;
 }
 
 
-
 .section h2{
 
 font-size:40px;
 color:#2F6B4F;
-margin-bottom:25px;
+margin-bottom:20px;
 
 }
-
 
 
 .services{
@@ -182,7 +174,6 @@ margin-top:50px;
 }
 
 
-
 .card{
 
 background:#F8F5F0;
@@ -190,7 +181,6 @@ padding:35px;
 border-radius:18px;
 
 }
-
 
 
 .card h3{
@@ -202,8 +192,47 @@ margin-bottom:15px;
 }
 
 
+/* HOW IT WORKS */
+
+
+.steps{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+
+}
+
+
+.step{
+
+padding:35px;
+background:white;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+
+.step span{
+
+font-size:40px;
+font-weight:bold;
+color:#2F6B4F;
+
+}
+
+
+.step h3{
+
+margin:15px 0;
+
+}
+
 
 /* MEMBERSHIP */
+
 
 .membership{
 
@@ -218,7 +247,6 @@ text-align:center;
 
 font-size:40px;
 color:#2F6B4F;
-margin-bottom:20px;
 
 }
 
@@ -227,7 +255,7 @@ margin-bottom:20px;
 
 font-size:20px;
 max-width:750px;
-margin:0 auto 30px;
+margin:20px auto;
 
 }
 
@@ -237,7 +265,7 @@ margin:0 auto 30px;
 font-size:44px;
 font-weight:bold;
 color:#1E4534;
-margin:30px 0;
+margin:30px;
 
 }
 
@@ -245,9 +273,6 @@ margin:30px 0;
 .membership ul{
 
 list-style:none;
-width:fit-content;
-margin:40px auto;
-text-align:left;
 
 }
 
@@ -255,10 +280,9 @@ text-align:left;
 .membership li{
 
 font-size:18px;
-margin-bottom:18px;
+margin:15px;
 
 }
-
 
 
 .membership .button{
@@ -268,21 +292,20 @@ background:#1E4534;
 }
 
 
+/* SERVICE AREA */
 
-/* TRUST */
 
-.trust{
+.area{
 
+padding:70px 10%;
+text-align:center;
 background:#1E4534;
 color:white;
-padding:80px 10%;
-text-align:center;
 
 }
 
 
-
-.trust h2{
+.area h2{
 
 font-size:38px;
 margin-bottom:20px;
@@ -290,20 +313,17 @@ margin-bottom:20px;
 }
 
 
-
 /* FOOTER */
+
 
 footer{
 
-background:#1E4534;
+background:#153526;
 color:white;
 padding:30px;
 text-align:center;
 
 }
-
-
-
 
 
 /* MOBILE */
@@ -318,13 +338,11 @@ padding:15px 6%;
 }
 
 
-
 .logo img{
 
-height:45px;
+height:55px;
 
 }
-
 
 
 .menu-toggle{
@@ -334,12 +352,11 @@ display:block;
 }
 
 
-
 .nav-links{
 
 display:none;
 position:absolute;
-top:75px;
+top:80px;
 left:0;
 width:100%;
 background:#2F6B4F;
@@ -350,13 +367,11 @@ padding:20px 0;
 }
 
 
-
 .nav-links a{
 
 margin:12px 0;
 
 }
-
 
 
 .nav-links.active{
@@ -366,22 +381,18 @@ display:flex;
 }
 
 
-
 .hero{
 
 padding:60px 8%;
-min-height:80vh;
 
 }
-
 
 
 .hero h1{
 
-font-size:40px;
+font-size:38px;
 
 }
-
 
 
 .hero p{
@@ -391,336 +402,15 @@ font-size:18px;
 }
 
 
-
-.section h2{
-
-font-size:32px;
-
-}
-
-
-
+.section h2,
 .membership h2{
 
 font-size:32px;
 
 }
 
-
-
-.price{
-
-font-size:36px;
-
 }
-
-
-}
-
 
 </style>
 
 </head>
-
-
-<body>
-
-
-
-<nav>
-
-
-<div class="logo">
-
-<img src="logo.png" alt="LiveWell Home Concierge Logo">
-
-</div>
-
-
-
-<button class="menu-toggle" id="menu-toggle">
-☰
-</button>
-
-
-
-<div class="nav-links" id="nav-links">
-
-
-<a href="./index.html">Home</a>
-
-<a href="./services.html">Services</a>
-
-<a href="./families.html">For Families</a>
-
-<a href="./about.html">About</a>
-
-<a href="./contact.html">Contact</a>
-
-</div>
-
-
-</nav>
-
-
-
-
-
-
-<section class="hero">
-
-
-<div class="hero-content">
-
-
-<div class="tagline">
-
-Because Home Is More Than A Place.
-
-</div>
-
-
-
-<h1>
-
-Helping You Stay In The Home You Love.
-
-</h1>
-
-
-
-<p>
-
-LiveWell Home Concierge helps homeowners enjoy the homes they love by providing trusted support, coordinating services, and giving families peace of mind.
-
-</p>
-
-
-
-<a href="./contact.html" class="button">
-
-Connect With LiveWell Home Concierge
-
-</a>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section class="section">
-
-
-<h2>
-
-One Trusted Partner For Your Home.
-
-</h2>
-
-
-
-<p>
-
-Your home deserves care, attention, and a trusted partner who understands your needs.
-
-</p>
-
-
-
-
-
-<div class="services">
-
-
-
-<div class="card">
-
-<h3>
-Home Care Coordination
-</h3>
-
-<p>
-We help organize the details of your home, coordinate services, and make managing your household easier.
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Trusted Home Partners
-</h3>
-
-<p>
-We coordinate reliable professionals and help manage the process from start to finish.
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Home Support & Improvements
-</h3>
-
-<p>
-We help manage projects and improvements so your home remains comfortable.
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Aging-In-Place & Family Support
-</h3>
-
-<p>
-Helping older adults remain comfortable and independent while giving families peace of mind.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="membership">
-
-
-<h2>
-LiveWell Concierge Membership
-</h2>
-
-
-
-<p>
-
-A trusted relationship for homeowners who want confidence, comfort, and peace of mind in the home they love.
-
-</p>
-
-
-
-<div class="price">
-
-Starting at $249/month
-
-</div>
-
-
-
-<ul>
-
-<li>✓ Personalized home support plan</li>
-
-<li>✓ Seasonal home check-ins and planning</li>
-
-<li>✓ Coordination with trusted home professionals</li>
-
-<li>✓ Help managing projects and household needs</li>
-
-<li>✓ Priority support when your home needs attention</li>
-
-<li>✓ Peace of mind for you and your family</li>
-
-</ul>
-
-
-
-<a href="./contact.html" class="button">
-
-Speak With Your Home Concierge
-
-</a>
-
-
-</section>
-
-
-
-
-
-
-<section class="trust">
-
-
-<h2>
-
-Peace Of Mind For You And Your Family.
-
-</h2>
-
-
-<p>
-
-One call. One trusted relationship. A home cared for year-round.
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-<footer>
-
-<p>
-© 2026 LiveWell Home Concierge. All Rights Reserved.
-</p>
-
-</footer>
-
-
-
-
-
-<script>
-
-const menuButton = document.getElementById("menu-toggle");
-
-const navLinks = document.getElementById("nav-links");
-
-
-menuButton.addEventListener("click", function(){
-
-navLinks.classList.toggle("active");
-
-});
-
-
-</script>
-
-
-
-</body>
-
-</html>
