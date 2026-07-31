@@ -21,64 +21,50 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 
-html{
-scroll-behavior:smooth;
-}
-
-
 body{
-
 color:#1F2937;
 line-height:1.6;
-
 }
 
 
 
-/* HEADER */
+/* NAV */
 
-
-header{
+nav{
 
 background:#2F6B4F;
-padding:15px 10%;
+padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
+color:white;
 
 }
-
 
 
 .logo img{
 
 height:60px;
+width:auto;
 
 }
 
 
-
-nav{
+.nav-links{
 
 display:flex;
-gap:30px;
-align-items:center;
 
 }
-
 
 
 nav a{
 
 color:white;
 text-decoration:none;
+margin-left:25px;
 font-weight:bold;
 
 }
-
 
 
 .menu-toggle{
@@ -87,17 +73,13 @@ display:none;
 background:none;
 border:none;
 color:white;
-font-size:35px;
+font-size:32px;
 cursor:pointer;
 
 }
 
 
-
-
-
 /* HERO */
-
 
 .hero{
 
@@ -108,7 +90,6 @@ text-align:center;
 }
 
 
-
 .hero h1{
 
 font-size:48px;
@@ -116,7 +97,6 @@ color:#2F6B4F;
 margin-bottom:20px;
 
 }
-
 
 
 .hero p{
@@ -129,10 +109,7 @@ margin:auto;
 
 
 
-
-
 /* CONTACT */
-
 
 .container{
 
@@ -145,14 +122,12 @@ flex-wrap:wrap;
 }
 
 
-
 .form-box{
 
 max-width:500px;
 width:100%;
 
 }
-
 
 
 .form-box h2{
@@ -167,7 +142,6 @@ margin-bottom:20px;
 .form-box input,
 .form-box textarea{
 
-
 width:100%;
 padding:15px;
 margin-bottom:20px;
@@ -176,7 +150,6 @@ border-radius:10px;
 font-size:16px;
 
 }
-
 
 
 textarea{
@@ -202,10 +175,7 @@ font-size:16px;
 
 
 
-
-
 /* INFO */
-
 
 .info{
 
@@ -214,14 +184,12 @@ max-width:400px;
 }
 
 
-
 .info h2{
 
 color:#2F6B4F;
 margin-bottom:20px;
 
 }
-
 
 
 .info p{
@@ -233,10 +201,7 @@ margin-bottom:15px;
 
 
 
-
-
 /* CTA */
-
 
 .assessment{
 
@@ -248,7 +213,6 @@ text-align:center;
 }
 
 
-
 .assessment h2{
 
 font-size:38px;
@@ -258,10 +222,7 @@ margin-bottom:20px;
 
 
 
-
-
 /* FOOTER */
-
 
 footer{
 
@@ -275,15 +236,12 @@ text-align:center;
 
 
 
-
-
 /* MOBILE */
-
 
 @media(max-width:768px){
 
 
-header{
+nav{
 
 padding:15px 6%;
 
@@ -297,7 +255,6 @@ height:45px;
 }
 
 
-
 .menu-toggle{
 
 display:block;
@@ -306,7 +263,7 @@ display:block;
 
 
 
-nav{
+.nav-links{
 
 display:none;
 position:absolute;
@@ -315,24 +272,24 @@ left:0;
 width:100%;
 background:#2F6B4F;
 flex-direction:column;
-padding:25px 0;
-gap:20px;
+text-align:center;
+padding:20px 0;
 
 }
 
 
 
-nav.active{
+.nav-links a{
+
+margin:12px 0;
+
+}
+
+
+
+.nav-links.active{
 
 display:flex;
-
-}
-
-
-
-.hero{
-
-padding:70px 8%;
 
 }
 
@@ -345,36 +302,9 @@ font-size:36px;
 }
 
 
-
-.hero p{
-
-font-size:18px;
-
-}
-
-
-
-.container{
-
-padding:60px 8%;
-gap:40px;
-
-}
-
-
-
-.assessment h2{
-
-font-size:30px;
-
-}
-
-
-
 }
 
 </style>
-
 
 </head>
 
@@ -383,8 +313,7 @@ font-size:30px;
 
 
 
-
-<header>
+<nav>
 
 
 <div class="logo">
@@ -395,30 +324,31 @@ font-size:30px;
 
 
 
-
 <button class="menu-toggle" id="menu-toggle">
+
 ☰
+
 </button>
 
 
 
+<div class="nav-links" id="nav-links">
 
-<nav id="mobile-menu">
 
-<a href="index.html">Home</a>
+<a href="./index.html">Home</a>
 
-<a href="services.html">Services</a>
+<a href="./services.html">Services</a>
 
-<a href="families.html">For Families</a>
+<a href="./about.html">About</a>
 
-<a href="about.html">About</a>
+<a href="./contact.html">Contact</a>
 
-<a href="contact.html">Contact</a>
+
+</div>
+
 
 </nav>
 
-
-</header>
 
 
 
@@ -453,9 +383,6 @@ Schedule a complimentary home assessment and discover how LiveWell can simplify 
 <section class="container">
 
 
-
-
-
 <div class="form-box">
 
 
@@ -464,8 +391,7 @@ Connect With Your Home Concierge
 </h2>
 
 
-
-<form action="https://formspree.io/f/xkodajgr" method="POST">
+<form action="https://formspree.io/f/xkodajgr" method="POST" enctype="application/x-www-form-urlencoded">
 
 
 <input type="hidden" name="_subject" value="New LiveWell Home Assessment Request">
@@ -481,7 +407,6 @@ Connect With Your Home Concierge
 
 
 <textarea name="message" placeholder="Tell us about your home and how we can help" required></textarea>
-
 
 
 <button type="submit" class="button">
@@ -500,16 +425,12 @@ Request My Home Consultation
 
 
 
-
-
-
 <div class="info">
 
 
 <h2>
 Why Contact LiveWell?
 </h2>
-
 
 
 <p>
@@ -535,8 +456,8 @@ Why Contact LiveWell?
 </div>
 
 
-
 </section>
+
 
 
 
@@ -567,6 +488,7 @@ LiveWell Home Concierge helps protect your home, your comfort, and your peace of
 
 
 
+
 <footer>
 
 <p>
@@ -580,18 +502,16 @@ LiveWell Home Concierge helps protect your home, your comfort, and your peace of
 
 
 
-
 <script>
-
 
 const menuButton = document.getElementById("menu-toggle");
 
-const menu = document.getElementById("mobile-menu");
+const navLinks = document.getElementById("nav-links");
 
 
 menuButton.addEventListener("click", function(){
 
-menu.classList.toggle("active");
+navLinks.classList.toggle("active");
 
 });
 
