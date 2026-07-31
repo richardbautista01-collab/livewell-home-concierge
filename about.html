@@ -20,10 +20,6 @@ box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 
 body{
 color:#1F2937;
@@ -31,44 +27,34 @@ line-height:1.6;
 }
 
 
-/* HEADER */
+/* NAVIGATION */
 
-header{
-
+nav{
 background:#2F6B4F;
-padding:15px 10%;
+padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-
+color:white;
 }
 
 
 .logo img{
-
 height:60px;
-
+width:auto;
 }
 
 
-nav{
-
+.nav-links{
 display:flex;
-gap:30px;
-align-items:center;
-
 }
 
 
 nav a{
-
 color:white;
 text-decoration:none;
+margin-left:25px;
 font-weight:bold;
-
 }
 
 
@@ -78,7 +64,7 @@ display:none;
 background:none;
 border:none;
 color:white;
-font-size:35px;
+font-size:30px;
 cursor:pointer;
 
 }
@@ -86,7 +72,6 @@ cursor:pointer;
 
 
 /* HERO */
-
 
 .hero{
 
@@ -116,8 +101,7 @@ margin:auto;
 
 
 
-/* MAIN */
-
+/* MAIN SECTION */
 
 .section{
 
@@ -136,7 +120,6 @@ margin-bottom:25px;
 }
 
 
-
 .content{
 
 max-width:900px;
@@ -147,9 +130,7 @@ font-size:19px;
 
 
 
-
 /* VALUES */
-
 
 .values{
 
@@ -161,7 +142,6 @@ margin-top:60px;
 }
 
 
-
 .card{
 
 background:#F8F5F0;
@@ -169,7 +149,6 @@ padding:35px;
 border-radius:18px;
 
 }
-
 
 
 .card h3{
@@ -181,10 +160,7 @@ margin-bottom:15px;
 }
 
 
-
-
-/* TRUST */
-
+/* TRUST SECTION */
 
 .trust{
 
@@ -196,14 +172,12 @@ text-align:center;
 }
 
 
-
 .trust h2{
 
 font-size:38px;
 margin-bottom:20px;
 
 }
-
 
 
 .trust p{
@@ -216,9 +190,7 @@ margin:auto;
 
 
 
-
 /* FOOTER */
-
 
 footer{
 
@@ -235,11 +207,10 @@ text-align:center;
 
 /* MOBILE */
 
-
 @media(max-width:768px){
 
 
-header{
+nav{
 
 padding:15px 6%;
 
@@ -260,7 +231,7 @@ display:block;
 }
 
 
-nav{
+.nav-links{
 
 display:none;
 position:absolute;
@@ -269,22 +240,22 @@ left:0;
 width:100%;
 background:#2F6B4F;
 flex-direction:column;
-padding:25px 0;
-gap:20px;
+text-align:center;
+padding:20px 0;
 
 }
 
 
-nav.active{
+.nav-links a{
+
+margin:10px 0;
+
+}
+
+
+.nav-links.active{
 
 display:flex;
-
-}
-
-
-.hero{
-
-padding:70px 8%;
 
 }
 
@@ -296,34 +267,11 @@ font-size:36px;
 }
 
 
-.hero p{
-
-font-size:18px;
-
 }
-
-
-.section{
-
-padding:60px 8%;
-
-}
-
-
-.section h2{
-
-font-size:32px;
-
-}
-
-
-}
-
 
 
 
 </style>
-
 
 </head>
 
@@ -331,8 +279,7 @@ font-size:32px;
 <body>
 
 
-
-<header>
+<nav>
 
 
 <div class="logo">
@@ -344,27 +291,28 @@ font-size:32px;
 
 
 <button class="menu-toggle" id="menu-toggle">
+
 ☰
+
 </button>
 
 
 
-<nav id="mobile-menu">
+<div class="nav-links" id="nav-links">
+
 
 <a href="index.html">Home</a>
-
 <a href="services.html">Services</a>
-
 <a href="families.html">For Families</a>
-
 <a href="about.html">About</a>
-
 <a href="contact.html">Contact</a>
+
+
+</div>
+
 
 </nav>
 
-
-</header>
 
 
 
@@ -394,13 +342,13 @@ LiveWell Home Concierge helps homeowners and families enjoy greater peace of min
 
 
 
+
 <section class="section">
 
 
 <h2>
 Why LiveWell?
 </h2>
-
 
 
 <div class="content">
@@ -461,7 +409,6 @@ We coordinate reliable professionals and services with clear communication and a
 
 
 
-
 <div class="card">
 
 <h3>
@@ -496,11 +443,12 @@ We help homeowners remain comfortable, safe, and independent in the home they kn
 
 
 
+
 </div>
 
 
-
 </section>
+
 
 
 
@@ -512,9 +460,7 @@ We help homeowners remain comfortable, safe, and independent in the home they kn
 
 
 <h2>
-
 More Than A Service. A Trusted Relationship.
-
 </h2>
 
 
@@ -545,23 +491,21 @@ One dedicated partner to coordinate the people, services, and details that help 
 
 
 
-
 <script>
 
 const menuButton = document.getElementById("menu-toggle");
 
-const menu = document.getElementById("mobile-menu");
+const navLinks = document.getElementById("nav-links");
 
 
 menuButton.addEventListener("click", function(){
 
-menu.classList.toggle("active");
+navLinks.classList.toggle("active");
 
 });
 
 
 </script>
-
 
 
 
