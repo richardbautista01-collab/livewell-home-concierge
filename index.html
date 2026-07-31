@@ -20,6 +20,9 @@ box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
 
 body{
 color:#1F2937;
@@ -27,17 +30,18 @@ line-height:1.6;
 }
 
 
+/* HEADER */
 
-/* NAV */
-
-nav{
+header{
 
 background:#2F6B4F;
-padding:20px 10%;
+padding:15px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-color:white;
+position:sticky;
+top:0;
+z-index:1000;
 
 }
 
@@ -45,7 +49,15 @@ color:white;
 .logo img{
 
 height:60px;
-width:auto;
+
+}
+
+
+nav{
+
+display:flex;
+gap:30px;
+align-items:center;
 
 }
 
@@ -54,14 +66,26 @@ nav a{
 
 color:white;
 text-decoration:none;
-margin-left:25px;
 font-weight:bold;
+
+}
+
+
+.menu-toggle{
+
+display:none;
+background:none;
+border:none;
+font-size:35px;
+color:white;
+cursor:pointer;
 
 }
 
 
 
 /* HERO */
+
 
 .hero{
 
@@ -98,7 +122,6 @@ margin-bottom:15px;
 }
 
 
-
 .hero h1{
 
 font-size:60px;
@@ -106,7 +129,6 @@ line-height:1.1;
 margin-bottom:25px;
 
 }
-
 
 
 .hero p{
@@ -134,13 +156,13 @@ font-weight:bold;
 
 /* SERVICES */
 
+
 .section{
 
 padding:90px 10%;
 text-align:center;
 
 }
-
 
 
 .section h2{
@@ -163,7 +185,6 @@ margin-top:50px;
 }
 
 
-
 .card{
 
 background:#F8F5F0;
@@ -171,7 +192,6 @@ padding:35px;
 border-radius:18px;
 
 }
-
 
 
 .card h3{
@@ -186,6 +206,7 @@ margin-bottom:15px;
 
 /* MEMBERSHIP */
 
+
 .membership{
 
 background:#F8F5F0;
@@ -199,7 +220,6 @@ text-align:center;
 
 font-size:40px;
 color:#2F6B4F;
-margin-bottom:20px;
 
 }
 
@@ -208,7 +228,7 @@ margin-bottom:20px;
 
 font-size:20px;
 max-width:750px;
-margin:0 auto 30px;
+margin:20px auto;
 
 }
 
@@ -218,8 +238,7 @@ margin:0 auto 30px;
 font-size:44px;
 font-weight:bold;
 color:#1E4534;
-text-align:center;
-margin:30px 0;
+margin:30px;
 
 }
 
@@ -227,7 +246,7 @@ margin:30px 0;
 .membership ul{
 
 list-style:none;
-width:fit-content;
+max-width:500px;
 margin:40px auto;
 text-align:left;
 
@@ -238,29 +257,20 @@ text-align:left;
 
 font-size:18px;
 margin-bottom:18px;
-padding-left:10px;
-
-}
-
-
-.membership li::first-letter{
-
-color:#2F6B4F;
 
 }
 
 
 .membership .button{
 
-margin-top:20px;
 background:#1E4534;
-padding:16px 45px;
-border-radius:8px;
 
 }
 
 
+
 /* TRUST */
+
 
 .trust{
 
@@ -283,6 +293,7 @@ margin-bottom:20px;
 
 /* FOOTER */
 
+
 footer{
 
 background:#1E4534;
@@ -294,36 +305,15 @@ text-align:center;
 
 
 
-
-
 /* MOBILE */
+
 
 @media(max-width:768px){
 
 
-nav{
+header{
 
-flex-direction:column;
-gap:20px;
-text-align:center;
-
-}
-
-
-nav div:last-child{
-
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-
-}
-
-
-nav a{
-
-margin-left:0;
-font-size:14px;
+padding:15px 6%;
 
 }
 
@@ -335,10 +325,39 @@ height:45px;
 }
 
 
+.menu-toggle{
+
+display:block;
+
+}
+
+
+nav{
+
+display:none;
+position:absolute;
+top:75px;
+left:0;
+width:100%;
+background:#2F6B4F;
+flex-direction:column;
+padding:25px 0;
+gap:20px;
+
+}
+
+
+nav.active{
+
+display:flex;
+
+}
+
+
+
 .hero{
 
 padding:60px 8%;
-min-height:80vh;
 
 }
 
@@ -357,13 +376,21 @@ font-size:18px;
 }
 
 
-.section h2{
+.tagline{
 
-font-size:32px;
+font-size:20px;
 
 }
 
 
+.section{
+
+padding:60px 8%;
+
+}
+
+
+.section h2,
 .membership h2{
 
 font-size:32px;
@@ -384,14 +411,16 @@ font-size:36px;
 
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
-
 <header>
+
 
 <div class="logo">
 
@@ -400,20 +429,27 @@ font-size:36px;
 </div>
 
 
-  <button class="menu-toggle" id="menu-toggle">
-    ☰
-  </button>
 
-  <nav id="mobile-menu">
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<button class="menu-toggle" id="menu-toggle">
+☰
+</button>
+
+
+
+<nav id="mobile-menu">
+
+<a href="#services">Services</a>
+
+<a href="#pricing">Pricing</a>
+
+<a href="#about">About</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+
 </header>
-
-
-
 
 
 
@@ -431,13 +467,11 @@ Because Home Is More Than A Place.
 </div>
 
 
-
 <h1>
 
 Helping You Stay In The Home You Love.
 
 </h1>
-
 
 
 <p>
@@ -447,13 +481,11 @@ LiveWell Home Concierge helps homeowners enjoy the homes they love by providing 
 </p>
 
 
-
 <a href="./contact.html" class="button">
 
 Connect With LiveWell Home Concierge
 
 </a>
-
 
 
 </div>
@@ -464,10 +496,7 @@ Connect With LiveWell Home Concierge
 
 
 
-
-
-
-<section class="section">
+<section class="section" id="services">
 
 
 <h2>
@@ -475,7 +504,6 @@ Connect With LiveWell Home Concierge
 One Trusted Partner For Your Home.
 
 </h2>
-
 
 
 <p>
@@ -486,81 +514,57 @@ Your home deserves care, attention, and a trusted partner who understands your n
 
 
 
-
-
 <div class="services">
 
 
-
 <div class="card">
 
-<h3>
-Home Care Coordination
-</h3>
+<h3>Home Care Coordination</h3>
 
 <p>
-
 We help organize the details of your home, coordinate services, and make managing your household easier.
-
 </p>
 
 </div>
 
 
 
-
 <div class="card">
 
-<h3>
-Trusted Home Partners
-</h3>
+<h3>Trusted Home Partners</h3>
 
 <p>
-
 We coordinate reliable professionals and help manage the process from start to finish.
-
 </p>
 
 </div>
 
 
 
-
 <div class="card">
 
-<h3>
-Home Support & Improvements
-</h3>
+<h3>Home Support & Improvements</h3>
 
 <p>
-
 We help manage projects and improvements so your home remains comfortable.
-
 </p>
 
 </div>
-
 
 
 
 <div class="card">
 
-<h3>
-Aging-In-Place & Family Support
-</h3>
+<h3>Aging-In-Place & Family Support</h3>
 
 <p>
-
 Helping older adults remain comfortable and independent while giving families peace of mind.
-
 </p>
 
 </div>
 
 
-
 </div>
-
 
 </section>
 
@@ -568,17 +572,12 @@ Helping older adults remain comfortable and independent while giving families pe
 
 
 
-
-
-<section class="membership">
+<section class="membership" id="pricing">
 
 
 <h2>
-
 LiveWell Concierge Membership
-
 </h2>
-
 
 
 <p>
@@ -588,13 +587,11 @@ A trusted relationship for homeowners who want confidence, comfort, and peace of
 </p>
 
 
-
 <div class="price">
 
 Starting at $249/month
 
 </div>
-
 
 
 <ul>
@@ -614,7 +611,6 @@ Starting at $249/month
 </ul>
 
 
-
 <a href="./contact.html" class="button">
 
 Speak With Your Home Concierge
@@ -628,9 +624,7 @@ Speak With Your Home Concierge
 
 
 
-
-
-<section class="trust">
+<section class="trust" id="about">
 
 
 <h2>
@@ -653,15 +647,34 @@ One call. One trusted relationship. A home cared for year-round.
 
 
 
-
-
-<footer>
+<footer id="contact">
 
 <p>
 © 2026 LiveWell Home Concierge. All Rights Reserved.
 </p>
 
 </footer>
+
+
+
+
+
+<script>
+
+
+const menuButton = document.getElementById("menu-toggle");
+
+const menu = document.getElementById("mobile-menu");
+
+
+menuButton.addEventListener("click", function(){
+
+menu.classList.toggle("active");
+
+});
+
+
+</script>
 
 
 
