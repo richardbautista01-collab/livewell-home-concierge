@@ -8,7 +8,7 @@
 
 <title>About | LiveWell Home Concierge</title>
 
-<meta name="description" content="LiveWell Home Concierge provides trusted home support, personal support coordination, and lifestyle services that help homeowners live comfortably, safely, and independently.">
+<meta name="description" content="Learn about LiveWell Home Concierge, founded by professionals with experience in finance, nursing, and senior support.">
 
 
 <style>
@@ -20,258 +20,162 @@ box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
 
-
 body{
-color:#1F2937;
+background:#f8f7f2;
+color:#333;
 line-height:1.6;
 }
 
 
-/* NAVIGATION */
-
-nav{
-background:#2F6B4F;
-padding:20px 10%;
+header{
+background:white;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-color:white;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
 
-.logo img{
-height:60px;
-width:auto;
-}
-
-
-.nav-links{
-display:flex;
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#2f6f62;
 }
 
 
 nav a{
-color:white;
+margin-left:20px;
 text-decoration:none;
-margin-left:25px;
-font-weight:bold;
+color:#333;
+font-size:15px;
 }
 
 
-.menu-toggle{
-
-display:none;
-background:none;
-border:none;
-color:white;
-font-size:30px;
-cursor:pointer;
-
+nav a:hover{
+color:#2f6f62;
 }
 
 
-
-/* HERO */
 
 .hero{
-
-background:#F8F5F0;
-padding:100px 10%;
+background:#e8f1ed;
+padding:70px 8%;
 text-align:center;
-
 }
 
 
 .hero h1{
-
-font-size:48px;
-color:#2F6B4F;
+font-size:42px;
+color:#24584d;
 margin-bottom:20px;
-
 }
 
 
 .hero p{
-
-font-size:21px;
-max-width:850px;
+max-width:750px;
 margin:auto;
-
+font-size:18px;
 }
 
 
 
-/* MAIN SECTION */
-
-.section{
-
-padding:80px 10%;
-text-align:center;
-
-}
-
-
-.section h2{
-
-font-size:38px;
-color:#2F6B4F;
-margin-bottom:25px;
-
-}
-
-
-.content{
-
-max-width:900px;
-margin:auto;
-font-size:19px;
-
-}
-
-
-
-/* VALUES */
-
-.values{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:60px;
-
+.container{
+width:84%;
+max-width:1100px;
+margin:50px auto;
 }
 
 
 .card{
-
-background:#F8F5F0;
+background:white;
 padding:35px;
-border-radius:18px;
-
+margin-bottom:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 
-.card h3{
-
-color:#2F6B4F;
-font-size:24px;
+.card h2{
+color:#2f6f62;
+font-size:28px;
 margin-bottom:15px;
-
 }
 
 
-/* TRUST SECTION */
+.card p{
+margin-bottom:15px;
+}
 
-.trust{
 
-background:#1E4534;
+.card ul{
+margin-left:20px;
+}
+
+
+.card li{
+margin-bottom:10px;
+}
+
+
+
+.cta{
+background:#2f6f62;
 color:white;
-padding:90px 10%;
+padding:45px 20px;
 text-align:center;
-
+border-radius:15px;
 }
 
 
-.trust h2{
-
-font-size:38px;
-margin-bottom:20px;
-
+.cta h2{
+font-size:30px;
+margin-bottom:15px;
 }
 
 
-.trust p{
-
-font-size:20px;
-max-width:800px;
-margin:auto;
-
+.button{
+display:inline-block;
+margin-top:20px;
+background:white;
+color:#2f6f62;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
 }
 
 
-
-/* FOOTER */
 
 footer{
-
-background:#163426;
+background:#222;
 color:white;
-padding:30px;
 text-align:center;
-
+padding:30px;
+margin-top:50px;
 }
 
 
 
+@media(max-width:900px){
 
-
-/* MOBILE */
-
-@media(max-width:768px){
-
+header{
+flex-direction:column;
+}
 
 nav{
-
-padding:15px 6%;
-
+margin-top:15px;
 }
-
-
-.logo img{
-
-height:45px;
-
-}
-
-
-.menu-toggle{
-
-display:block;
-
-}
-
-
-.nav-links{
-
-display:none;
-position:absolute;
-top:75px;
-left:0;
-width:100%;
-background:#2F6B4F;
-flex-direction:column;
-text-align:center;
-padding:20px 0;
-
-}
-
-
-.nav-links a{
-
-margin:10px 0;
-
-}
-
-
-.nav-links.active{
-
-display:flex;
-
-}
-
 
 .hero h1{
-
-font-size:36px;
-
+font-size:32px;
 }
 
-
 }
-
 
 
 </style>
+
 
 </head>
 
@@ -279,137 +183,59 @@ font-size:36px;
 <body>
 
 
-<nav>
-
+<header>
 
 <div class="logo">
-
-<img src="logo.png" alt="LiveWell Home Concierge Logo">
-
+LiveWell Home Concierge
 </div>
 
 
-
-<button class="menu-toggle" id="menu-toggle">
-
-☰
-
-</button>
-
-
-
-<div class="nav-links" id="nav-links">
-
+<nav>
 
 <a href="./index.html">Home</a>
-
 <a href="./services.html">Services</a>
-
 <a href="./families.html">For Families</a>
-
 <a href="./memberships.html">Memberships</a>
-
 <a href="./resources.html">Resources</a>
-
 <a href="./about.html">About</a>
-
 <a href="./contact.html">Contact</a>
-
-
-</div>
-
 
 </nav>
 
 
-
-
+</header>
 
 
 
 <section class="hero">
 
-
-<h1>
-Helping Homes Stay Homes.
-</h1>
-
+<h1>About LiveWell Home Concierge</h1>
 
 <p>
-
-LiveWell Home Concierge helps homeowners and families enjoy greater peace of mind by coordinating trusted support, personal care services, and everyday home needs — allowing people to live comfortably and independently in the place they love.
-
+Supporting seniors, connecting families, and helping homes remain safe, comfortable, and well managed.
 </p>
-
 
 </section>
 
 
 
-
-
-
-
-
-<section class="section">
-
-
-<h2>
-Why LiveWell?
-</h2>
-
-
-<div class="content">
-
-
-<p>
-
-A home is more than a property. It is where life happens, memories are created, and independence is valued.
-
-</p>
-
-
-<br>
-
-
-<p>
-
-As homeowners age or life becomes busier, managing the many details of everyday living can become challenging. LiveWell provides a trusted point of contact to coordinate services, connect families with reliable professionals, and ensure the right support is available when it is needed.
-
-</p>
-
-
-<br>
-
-
-<p>
-
-From personal support worker coordination to household service management, we help simplify home life so families can focus on what matters most.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="values">
-
+<div class="container">
 
 
 <div class="card">
 
-<h3>
-Trusted Support
-</h3>
+<h2>Our Story</h2>
 
 <p>
+LiveWell Home Concierge was founded with one mission: to help seniors remain comfortable, confident, and independent in the homes they love while providing families with peace of mind.
+</p>
 
-We coordinate reliable professionals and services with clear communication and a focus on quality and trust.
+<p>
+We understand that managing a home can become more challenging over time. Everyday responsibilities, home maintenance, organization, and coordinating support can create stress for seniors and their families.
+</p>
 
+<p>
+LiveWell provides trusted home concierge services designed to simplify these challenges and help families stay connected.
 </p>
 
 </div>
@@ -419,14 +245,22 @@ We coordinate reliable professionals and services with clear communication and a
 
 <div class="card">
 
-<h3>
-Family Peace Of Mind
-</h3>
+<h2>Our Founding Team</h2>
 
 <p>
+LiveWell was founded by professionals with complementary backgrounds in finance, business, nursing, and senior support.
+</p>
 
-Families have confidence knowing there is a dedicated partner helping manage the details and support their loved ones.
+<p>
+Our Founder brings experience in corporate finance, business advisory, and strategic planning, helping individuals and organizations navigate complex decisions and long-term planning.
+</p>
 
+<p>
+Our founding team also includes Registered Nurses (RNs), Registered Practical Nurses (RPNs), and Personal Support Workers (PSWs) with years of experience working with seniors and within retirement home environments.
+</p>
+
+<p>
+While LiveWell does not provide medical care or healthcare services, our team's experience provides valuable insight into the challenges seniors and families face when planning for safe and comfortable aging at home.
 </p>
 
 </div>
@@ -437,14 +271,40 @@ Families have confidence knowing there is a dedicated partner helping manage the
 
 <div class="card">
 
-<h3>
-Independent Living
-</h3>
+<h2>What We Do</h2>
+
+<ul>
+
+<li>Home check-ins and wellness visits</li>
+
+<li>Household organization and support</li>
+
+<li>Maintenance coordination</li>
+
+<li>Contractor coordination</li>
+
+<li>Seasonal home preparation</li>
+
+<li>Family communication and updates</li>
+
+</ul>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>Our Commitment</h2>
 
 <p>
+We believe seniors should have the opportunity to remain in the homes they love while having the right support around them.
+</p>
 
-We help homeowners remain comfortable, safe, and independent in the home they know and love.
-
+<p>
+Our role is to provide a reliable presence, help families stay proactive, and make managing a home easier.
 </p>
 
 </div>
@@ -452,38 +312,26 @@ We help homeowners remain comfortable, safe, and independent in the home they kn
 
 
 
-</div>
 
+<div class="cta">
 
-</section>
-
-
-
-
-
-
-
-
-<section class="trust">
-
-
-<h2>
-More Than A Service. A Trusted Relationship.
-</h2>
-
+<h2>Ready To Learn More?</h2>
 
 <p>
-
-One dedicated partner to coordinate the people, services, and details that help make home life easier.
-
+Discover how LiveWell can help your family create a safer and more comfortable aging-at-home plan.
 </p>
 
 
-</section>
+<a href="./contact.html" class="button">
+Book A Home Assessment
+</a>
+
+
+</div>
 
 
 
-
+</div>
 
 
 
@@ -494,26 +342,6 @@ One dedicated partner to coordinate the people, services, and details that help 
 </p>
 
 </footer>
-
-
-
-
-
-<script>
-
-const menuButton = document.getElementById("menu-toggle");
-
-const navLinks = document.getElementById("nav-links");
-
-
-menuButton.addEventListener("click", function(){
-
-navLinks.classList.toggle("active");
-
-});
-
-
-</script>
 
 
 
