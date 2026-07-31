@@ -21,36 +21,25 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 
-html{
-scroll-behavior:smooth;
-}
-
-
 body{
-
 color:#1F2937;
 line-height:1.6;
-
 }
 
 
 
-/* HEADER */
+/* NAV */
 
-
-header{
+nav{
 
 background:#2F6B4F;
-padding:15px 10%;
+padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
+color:white;
 
 }
-
 
 
 .logo img{
@@ -60,25 +49,21 @@ height:60px;
 }
 
 
-
-nav{
+.nav-links{
 
 display:flex;
-gap:30px;
-align-items:center;
 
 }
-
 
 
 nav a{
 
 color:white;
 text-decoration:none;
+margin-left:25px;
 font-weight:bold;
 
 }
-
 
 
 .menu-toggle{
@@ -87,18 +72,14 @@ display:none;
 background:none;
 border:none;
 color:white;
-font-size:35px;
+font-size:32px;
 cursor:pointer;
 
 }
 
 
 
-
-
-
 /* HERO */
-
 
 .hero{
 
@@ -109,7 +90,6 @@ text-align:center;
 }
 
 
-
 .hero h1{
 
 font-size:48px;
@@ -117,7 +97,6 @@ color:#2F6B4F;
 margin-bottom:20px;
 
 }
-
 
 
 .hero p{
@@ -130,12 +109,7 @@ margin:auto;
 
 
 
-
-
-
-
 /* SERVICES */
-
 
 .section{
 
@@ -145,7 +119,6 @@ text-align:center;
 }
 
 
-
 .section h2{
 
 font-size:40px;
@@ -153,7 +126,6 @@ color:#2F6B4F;
 margin-bottom:30px;
 
 }
-
 
 
 .cards{
@@ -166,7 +138,6 @@ margin-top:50px;
 }
 
 
-
 .card{
 
 background:#F8F5F0;
@@ -174,7 +145,6 @@ padding:35px;
 border-radius:18px;
 
 }
-
 
 
 .card h3{
@@ -187,12 +157,7 @@ margin-bottom:15px;
 
 
 
-
-
-
-
 /* FAMILY */
-
 
 .family{
 
@@ -204,7 +169,6 @@ text-align:center;
 }
 
 
-
 .family h2{
 
 font-size:38px;
@@ -214,12 +178,7 @@ margin-bottom:20px;
 
 
 
-
-
-
-
 /* CTA */
-
 
 .cta{
 
@@ -229,7 +188,6 @@ text-align:center;
 }
 
 
-
 .cta h2{
 
 color:#2F6B4F;
@@ -237,7 +195,6 @@ font-size:36px;
 margin-bottom:20px;
 
 }
-
 
 
 .button{
@@ -254,11 +211,7 @@ font-weight:bold;
 
 
 
-
-
-
 /* FOOTER */
-
 
 footer{
 
@@ -273,20 +226,16 @@ text-align:center;
 
 
 
-
-
 /* MOBILE */
-
 
 @media(max-width:768px){
 
 
-header{
+nav{
 
 padding:15px 6%;
 
 }
-
 
 
 .logo img{
@@ -294,7 +243,6 @@ padding:15px 6%;
 height:45px;
 
 }
-
 
 
 .menu-toggle{
@@ -305,7 +253,7 @@ display:block;
 
 
 
-nav{
+.nav-links{
 
 display:none;
 position:absolute;
@@ -314,24 +262,23 @@ left:0;
 width:100%;
 background:#2F6B4F;
 flex-direction:column;
-padding:25px 0;
-gap:20px;
+text-align:center;
+padding:20px 0;
+
+}
+
+
+.nav-links a{
+
+margin:12px 0;
 
 }
 
 
 
-nav.active{
+.nav-links.active{
 
 display:flex;
-
-}
-
-
-
-.hero{
-
-padding:70px 8%;
 
 }
 
@@ -344,49 +291,7 @@ font-size:36px;
 }
 
 
-
-.hero p{
-
-font-size:18px;
-
 }
-
-
-
-.section{
-
-padding:60px 8%;
-
-}
-
-
-
-.section h2{
-
-font-size:32px;
-
-}
-
-
-
-.family h2{
-
-font-size:30px;
-
-}
-
-
-
-.cta h2{
-
-font-size:30px;
-
-}
-
-
-}
-
-
 
 </style>
 
@@ -397,9 +302,7 @@ font-size:30px;
 
 
 
-
-
-<header>
+<nav>
 
 
 <div class="logo">
@@ -407,7 +310,6 @@ font-size:30px;
 <img src="logo.png" alt="LiveWell Home Concierge Logo">
 
 </div>
-
 
 
 
@@ -420,26 +322,22 @@ font-size:30px;
 
 
 
+<div class="nav-links" id="nav-links">
 
-<nav id="mobile-menu">
+
+<a href="./index.html">Home</a>
+
+<a href="./services.html">Services</a>
+
+<a href="./about.html">About</a>
+
+<a href="./contact.html">Contact</a>
 
 
-<a href="index.html">Home</a>
-
-<a href="services.html">Services</a>
-
-<a href="families.html">For Families</a>
-
-<a href="about.html">About</a>
-
-<a href="contact.html">Contact</a>
+</div>
 
 
 </nav>
-
-
-</header>
-
 
 
 
@@ -458,13 +356,11 @@ More Than Home Support. A Trusted Partner For Your Family.
 </h1>
 
 
-
 <p>
 
 LiveWell helps homeowners and families manage the details of everyday living by coordinating trusted services, home support, and resources that help older adults remain comfortable and independent.
 
 </p>
-
 
 
 </section>
@@ -489,10 +385,7 @@ Our Concierge Services
 
 
 
-
 <div class="cards">
-
-
 
 
 
@@ -503,14 +396,10 @@ Home Care Coordination
 </h3>
 
 <p>
-
 We help organize the details of your home, coordinate services, and make managing your household easier.
-
 </p>
 
 </div>
-
-
 
 
 
@@ -522,14 +411,10 @@ Trusted Home Professionals
 </h3>
 
 <p>
-
 We connect families with reliable professionals and help coordinate the process from start to finish.
-
 </p>
 
 </div>
-
-
 
 
 
@@ -541,14 +426,10 @@ Home Projects & Improvements
 </h3>
 
 <p>
-
 From updates to larger projects, LiveWell helps manage the details so your home continues to work for you.
-
 </p>
 
 </div>
-
-
 
 
 
@@ -560,14 +441,10 @@ Aging-In-Place Support
 </h3>
 
 <p>
-
 Helping older adults remain comfortable, safe, and independent in the home they love.
-
 </p>
 
 </div>
-
-
 
 
 
@@ -579,14 +456,10 @@ Personal Support Coordination
 </h3>
 
 <p>
-
 When additional help is needed, LiveWell can help coordinate trusted personal support resources and connect families with appropriate care providers.
-
 </p>
 
 </div>
-
-
 
 
 
@@ -598,14 +471,10 @@ Family Peace Of Mind
 </h3>
 
 <p>
-
 Helping families stay informed and confident that their loved one's needs are being supported.
-
 </p>
 
 </div>
-
-
 
 
 
@@ -613,7 +482,6 @@ Helping families stay informed and confident that their loved one's needs are be
 
 
 </section>
-
 
 
 
@@ -632,7 +500,6 @@ Supporting Families Through Every Stage Of Home Life.
 </h2>
 
 
-
 <p>
 
 Whether you live nearby or across the country, LiveWell provides a trusted connection to the home and people you care about.
@@ -640,9 +507,7 @@ Whether you live nearby or across the country, LiveWell provides a trusted conne
 </p>
 
 
-
 </section>
-
 
 
 
@@ -661,13 +526,11 @@ Ready To Experience LiveWell?
 </h2>
 
 
-
 <a href="./contact.html" class="button">
 
 Talk With A Home Concierge
 
 </a>
-
 
 
 </section>
@@ -679,16 +542,11 @@ Talk With A Home Concierge
 
 
 
-
 <footer>
 
-
 <p>
-
 © 2026 LiveWell Home Concierge. All Rights Reserved.
-
 </p>
-
 
 </footer>
 
@@ -696,26 +554,21 @@ Talk With A Home Concierge
 
 
 
-
-
 <script>
-
 
 const menuButton = document.getElementById("menu-toggle");
 
-const menu = document.getElementById("mobile-menu");
+const navLinks = document.getElementById("nav-links");
 
 
 menuButton.addEventListener("click", function(){
 
-menu.classList.toggle("active");
+navLinks.classList.toggle("active");
 
 });
 
 
 </script>
-
-
 
 
 
