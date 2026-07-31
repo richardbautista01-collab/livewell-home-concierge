@@ -21,36 +21,24 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 
-html{
-scroll-behavior:smooth;
-}
-
-
 body{
-
 color:#1F2937;
 line-height:1.6;
-
 }
 
 
+/* NAV */
 
-/* HEADER */
-
-
-header{
+nav{
 
 background:#2F6B4F;
-padding:15px 10%;
+padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
+color:white;
 
 }
-
 
 
 .logo img{
@@ -60,25 +48,21 @@ height:60px;
 }
 
 
-
-nav{
+.nav-links{
 
 display:flex;
-gap:30px;
-align-items:center;
 
 }
-
 
 
 nav a{
 
 color:white;
 text-decoration:none;
+margin-left:25px;
 font-weight:bold;
 
 }
-
 
 
 .menu-toggle{
@@ -87,17 +71,14 @@ display:none;
 background:none;
 border:none;
 color:white;
-font-size:35px;
+font-size:32px;
 cursor:pointer;
 
 }
 
 
 
-
-
 /* HERO */
-
 
 .hero{
 
@@ -108,7 +89,6 @@ text-align:center;
 }
 
 
-
 .hero h1{
 
 font-size:48px;
@@ -116,7 +96,6 @@ color:#2F6B4F;
 margin-bottom:20px;
 
 }
-
 
 
 .hero p{
@@ -129,10 +108,7 @@ margin:auto;
 
 
 
-
-
 /* SECTIONS */
-
 
 .section{
 
@@ -142,7 +118,6 @@ text-align:center;
 }
 
 
-
 .section h2{
 
 font-size:38px;
@@ -150,7 +125,6 @@ color:#2F6B4F;
 margin-bottom:25px;
 
 }
-
 
 
 .content{
@@ -163,10 +137,7 @@ font-size:19px;
 
 
 
-
-
 /* CARDS */
-
 
 .cards{
 
@@ -178,7 +149,6 @@ margin-top:50px;
 }
 
 
-
 .card{
 
 background:#F8F5F0;
@@ -186,7 +156,6 @@ padding:35px;
 border-radius:18px;
 
 }
-
 
 
 .card h3{
@@ -198,10 +167,7 @@ margin-bottom:15px;
 
 
 
-
-
 /* CTA */
-
 
 .cta{
 
@@ -213,14 +179,12 @@ text-align:center;
 }
 
 
-
 .cta h2{
 
 font-size:38px;
 margin-bottom:20px;
 
 }
-
 
 
 .button{
@@ -238,10 +202,7 @@ text-decoration:none;
 
 
 
-
-
 /* FOOTER */
-
 
 footer{
 
@@ -258,16 +219,14 @@ text-align:center;
 
 /* MOBILE */
 
-
 @media(max-width:768px){
 
 
-header{
+nav{
 
 padding:15px 6%;
 
 }
-
 
 
 .logo img{
@@ -275,7 +234,6 @@ padding:15px 6%;
 height:45px;
 
 }
-
 
 
 .menu-toggle{
@@ -286,7 +244,7 @@ display:block;
 
 
 
-nav{
+.nav-links{
 
 display:none;
 position:absolute;
@@ -295,24 +253,24 @@ left:0;
 width:100%;
 background:#2F6B4F;
 flex-direction:column;
-padding:25px 0;
-gap:20px;
+text-align:center;
+padding:20px 0;
 
 }
 
 
 
-nav.active{
+.nav-links a{
+
+margin:12px 0;
+
+}
+
+
+
+.nav-links.active{
 
 display:flex;
-
-}
-
-
-
-.hero{
-
-padding:70px 8%;
 
 }
 
@@ -325,43 +283,9 @@ font-size:36px;
 }
 
 
-
-.hero p{
-
-font-size:18px;
-
 }
-
-
-
-.section{
-
-padding:60px 8%;
-
-}
-
-
-
-.section h2{
-
-font-size:32px;
-
-}
-
-
-
-.cta h2{
-
-font-size:30px;
-
-}
-
-
-}
-
 
 </style>
-
 
 </head>
 
@@ -369,9 +293,7 @@ font-size:30px;
 <body>
 
 
-
-
-<header>
+<nav>
 
 
 <div class="logo">
@@ -379,7 +301,6 @@ font-size:30px;
 <img src="logo.png" alt="LiveWell Home Concierge">
 
 </div>
-
 
 
 <button class="menu-toggle" id="menu-toggle">
@@ -390,26 +311,20 @@ font-size:30px;
 
 
 
-
-<nav id="mobile-menu">
+<div class="nav-links" id="nav-links">
 
 
 <a href="index.html">Home</a>
-
 <a href="services.html">Services</a>
-
 <a href="families.html">For Families</a>
-
 <a href="about.html">About</a>
-
 <a href="contact.html">Contact</a>
 
 
+</div>
+
+
 </nav>
-
-
-</header>
-
 
 
 
@@ -422,11 +337,8 @@ font-size:30px;
 
 
 <h1>
-
 Peace Of Mind For Your Parents. Confidence For You.
-
 </h1>
-
 
 
 <p>
@@ -434,7 +346,6 @@ Peace Of Mind For Your Parents. Confidence For You.
 LiveWell Home Concierge helps families support their aging loved ones by coordinating trusted services, personal support, and everyday home needs — helping seniors remain comfortable and independent at home.
 
 </p>
-
 
 
 </section>
@@ -451,11 +362,8 @@ LiveWell Home Concierge helps families support their aging loved ones by coordin
 
 
 <h2>
-
 When Your Parents Need More Support
-
 </h2>
-
 
 
 <div class="content">
@@ -484,21 +392,14 @@ LiveWell becomes your trusted local partner — helping coordinate the right sup
 
 
 
-
-
-
 <div class="cards">
-
 
 
 <div class="card">
 
 <h3>
-
 Personal Support Coordination
-
 </h3>
-
 
 <p>
 
@@ -506,9 +407,7 @@ We help coordinate personal support services so your loved one receives the help
 
 </p>
 
-
 </div>
-
 
 
 
@@ -517,11 +416,8 @@ We help coordinate personal support services so your loved one receives the help
 <div class="card">
 
 <h3>
-
 Home Service Management
-
 </h3>
-
 
 <p>
 
@@ -529,9 +425,7 @@ From arranging trusted professionals to managing household needs, we simplify th
 
 </p>
 
-
 </div>
-
 
 
 
@@ -540,11 +434,8 @@ From arranging trusted professionals to managing household needs, we simplify th
 <div class="card">
 
 <h3>
-
 Family Updates
-
 </h3>
-
 
 <p>
 
@@ -552,18 +443,13 @@ Stay informed knowing there is someone local helping monitor needs and coordinat
 
 </p>
 
-
 </div>
 
 
-
 </div>
-
-
 
 
 </section>
-
 
 
 
@@ -576,11 +462,8 @@ Stay informed knowing there is someone local helping monitor needs and coordinat
 
 
 <h2>
-
 Your Family Shouldn't Have To Manage Everything Alone.
-
 </h2>
-
 
 
 <p>
@@ -590,13 +473,9 @@ Let LiveWell become the trusted connection between your family, your home, and t
 </p>
 
 
-
 <a class="button" href="contact.html">
-
 Schedule A Conversation
-
 </a>
-
 
 
 </section>
@@ -607,17 +486,11 @@ Schedule A Conversation
 
 
 
-
-
 <footer>
 
-
 <p>
-
 © 2026 LiveWell Home Concierge. All Rights Reserved.
-
 </p>
-
 
 </footer>
 
@@ -625,28 +498,21 @@ Schedule A Conversation
 
 
 
-
-
-
 <script>
-
 
 const menuButton = document.getElementById("menu-toggle");
 
-const menu = document.getElementById("mobile-menu");
+const navLinks = document.getElementById("nav-links");
 
 
 menuButton.addEventListener("click", function(){
 
-menu.classList.toggle("active");
+navLinks.classList.toggle("active");
 
 });
 
 
 </script>
-
-
-
 
 
 
