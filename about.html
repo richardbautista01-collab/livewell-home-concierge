@@ -20,6 +20,10 @@ box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 
 body{
 color:#1F2937;
@@ -27,34 +31,62 @@ line-height:1.6;
 }
 
 
-/* NAVIGATION */
+/* HEADER */
 
-nav{
+header{
+
 background:#2F6B4F;
-padding:20px 10%;
+padding:15px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-color:white;
+position:sticky;
+top:0;
+z-index:1000;
+
 }
 
 
 .logo img{
+
 height:60px;
-width:auto;
+
+}
+
+
+nav{
+
+display:flex;
+gap:30px;
+align-items:center;
+
 }
 
 
 nav a{
+
 color:white;
 text-decoration:none;
-margin-left:25px;
 font-weight:bold;
+
+}
+
+
+.menu-toggle{
+
+display:none;
+background:none;
+border:none;
+color:white;
+font-size:35px;
+cursor:pointer;
+
 }
 
 
 
 /* HERO */
+
 
 .hero{
 
@@ -84,7 +116,8 @@ margin:auto;
 
 
 
-/* MAIN SECTION */
+/* MAIN */
+
 
 .section{
 
@@ -103,6 +136,7 @@ margin-bottom:25px;
 }
 
 
+
 .content{
 
 max-width:900px;
@@ -113,7 +147,9 @@ font-size:19px;
 
 
 
+
 /* VALUES */
+
 
 .values{
 
@@ -125,6 +161,7 @@ margin-top:60px;
 }
 
 
+
 .card{
 
 background:#F8F5F0;
@@ -132,6 +169,7 @@ padding:35px;
 border-radius:18px;
 
 }
+
 
 
 .card h3{
@@ -143,7 +181,10 @@ margin-bottom:15px;
 }
 
 
-/* TRUST SECTION */
+
+
+/* TRUST */
+
 
 .trust{
 
@@ -155,12 +196,14 @@ text-align:center;
 }
 
 
+
 .trust h2{
 
 font-size:38px;
 margin-bottom:20px;
 
 }
+
 
 
 .trust p{
@@ -173,7 +216,9 @@ margin:auto;
 
 
 
+
 /* FOOTER */
+
 
 footer{
 
@@ -186,16 +231,17 @@ text-align:center;
 
 
 
+
+
+/* MOBILE */
+
+
 @media(max-width:768px){
 
-nav div:last-child{
-display:none;
-}
 
+header{
 
-.hero h1{
-
-font-size:36px;
+padding:15px 6%;
 
 }
 
@@ -206,10 +252,78 @@ height:45px;
 
 }
 
+
+.menu-toggle{
+
+display:block;
+
 }
 
 
+nav{
+
+display:none;
+position:absolute;
+top:75px;
+left:0;
+width:100%;
+background:#2F6B4F;
+flex-direction:column;
+padding:25px 0;
+gap:20px;
+
+}
+
+
+nav.active{
+
+display:flex;
+
+}
+
+
+.hero{
+
+padding:70px 8%;
+
+}
+
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+
+.hero p{
+
+font-size:18px;
+
+}
+
+
+.section{
+
+padding:60px 8%;
+
+}
+
+
+.section h2{
+
+font-size:32px;
+
+}
+
+
+}
+
+
+
+
 </style>
+
 
 </head>
 
@@ -217,7 +331,8 @@ height:45px;
 <body>
 
 
-<nav>
+
+<header>
 
 
 <div class="logo">
@@ -227,18 +342,30 @@ height:45px;
 </div>
 
 
-<div>
+
+<button class="menu-toggle" id="menu-toggle">
+☰
+</button>
+
+
+
+<nav id="mobile-menu">
 
 <a href="index.html">Home</a>
+
 <a href="services.html">Services</a>
+
 <a href="families.html">For Families</a>
+
 <a href="about.html">About</a>
+
 <a href="contact.html">Contact</a>
 
-</div>
-
-
 </nav>
+
+
+</header>
+
 
 
 
@@ -273,6 +400,7 @@ LiveWell Home Concierge helps homeowners and families enjoy greater peace of min
 <h2>
 Why LiveWell?
 </h2>
+
 
 
 <div class="content">
@@ -333,6 +461,7 @@ We coordinate reliable professionals and services with clear communication and a
 
 
 
+
 <div class="card">
 
 <h3>
@@ -367,8 +496,8 @@ We help homeowners remain comfortable, safe, and independent in the home they kn
 
 
 
-
 </div>
+
 
 
 </section>
@@ -383,7 +512,9 @@ We help homeowners remain comfortable, safe, and independent in the home they kn
 
 
 <h2>
+
 More Than A Service. A Trusted Relationship.
+
 </h2>
 
 
@@ -409,6 +540,28 @@ One dedicated partner to coordinate the people, services, and details that help 
 </p>
 
 </footer>
+
+
+
+
+
+
+<script>
+
+const menuButton = document.getElementById("menu-toggle");
+
+const menu = document.getElementById("mobile-menu");
+
+
+menuButton.addEventListener("click", function(){
+
+menu.classList.toggle("active");
+
+});
+
+
+</script>
+
 
 
 
