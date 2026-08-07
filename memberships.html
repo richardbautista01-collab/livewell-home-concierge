@@ -1,133 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Memberships | LiveWell Home Concierge</title>
+
+<meta name="description" content="LiveWell Home Concierge membership plans provide home support, maintenance coordination, and peace of mind for families.">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f8f7f2;
+color:#333;
+line-height:1.6;
+}
+
+
+/* HEADER */
+
+header{
+background:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#2f6f62;
+}
+
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-size:15px;
+}
+
+
+nav a:hover{
+color:#2f6f62;
+}
+
+
+/* HERO */
+
+.hero{
+background:#e8f1ed;
+padding:70px 8%;
+text-align:center;
+}
+
+
+.hero h1{
+font-size:42px;
+color:#24584d;
+margin-bottom:20px;
+}
+
+
+.hero p{
+max-width:750px;
+margin:auto;
+font-size:18px;
+}
+
+
+/* CONTAINER */
+
+.container{
+width:84%;
+max-width:1100px;
+margin:50px auto;
+}
+
+
+/* INTRO */
+
+.intro{
+text-align:center;
+margin-bottom:40px;
+}
+
+
+.intro h2{
+color:#2f6f62;
+font-size:30px;
+margin-bottom:15px;
+}
+
+
+/* PLANS */
+
+.plans{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+
+}
+
+
+.plan{
+
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+
+.plan h2{
+
+color:#2f6f62;
+font-size:26px;
+margin-bottom:10px;
+
+}
+
+
+.price{
+
+font-size:32px;
+font-weight:bold;
+color:#24584d;
+margin:15px 0;
+
+}
+
+
+.plan p{
+
+margin-bottom:20px;
+
+}
+
+
+
+/* CHECK LIST */
+
+
+.features{
+
+list-style:none;
+padding:0;
+margin-top:20px;
+
+}
+
+
+.features li{
+
+padding:10px 0;
+border-bottom:1px solid #eeeeee;
+font-size:15px;
+
+}
+
+
+.features li::before{
+
+content:"✓";
+color:#2f6f62;
+font-weight:bold;
+margin-right:10px;
+
+}
+
+
+.not-included::before{
+
+content:"—" !important;
+color:#999 !important;
+
+}
+
+
+/* POPULAR */
+
+.popular{
+
+border:3px solid #2f6f62;
+transform:translateY(-8px);
+
+}
+
+
+.badge{
+
+background:#2f6f62;
+color:white;
+padding:6px 15px;
+border-radius:20px;
+display:inline-block;
+font-size:13px;
+font-weight:bold;
+margin-bottom:15px;
+
+}
+
+
+/* BUTTON */
+
+.plan-button{
+
+display:block;
+text-align:center;
+margin-top:25px;
+background:#2f6f62;
+color:white;
+padding:12px 20px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+.plan-button:hover{
+
+background:#24584d;
+
+}
+
+
+
+/* ADDONS */
+
+.addons{
+
+background:white;
+padding:35px;
+border-radius:15px;
+margin-top:40px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+
+.addons h2{
+
+color:#2f6f62;
+margin-bottom:15px;
+
+}
+
+
+.addons li{
+
+margin-left:20px;
+margin-bottom:10px;
+
+}
+
+
+
+/* CTA */
+
+.cta{
+
+background:#2f6f62;
+color:white;
+padding:45px 20px;
+text-align:center;
+border-radius:15px;
+margin-top:40px;
+
+}
+
+
+.cta h2{
+
+font-size:30px;
+margin-bottom:15px;
+
+}
+
+
+.button{
+
+display:inline-block;
+margin-top:20px;
+background:white;
+color:#2f6f62;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+
+/* FOOTER */
+
+footer{
+
+background:#222;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.plans{
+
+grid-template-columns:1fr;
+
+}
+
+
+.popular{
+
+transform:none;
+
+}
+
+
+header{
+
+flex-direction:column;
+
+}
+
+
+nav{
+
+margin-top:15px;
+
+}
+
+
+nav a{
+
+display:inline-block;
+margin:5px;
+
+}
+
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+<div class="logo">
+LiveWell Home Concierge
+</div>
+
+
+<nav>
+
+<a href="./index.html">Home</a>
+<a href="./services.html">Services</a>
+<a href="./families.html">For Families</a>
+<a href="./memberships.html">Memberships</a>
+<a href="./resources.html">Resources</a>
+<a href="./about.html">About</a>
+<a href="./partners.html">Partners</a>
+<a href="./contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="hero">
+
+<h1>Membership Plans</h1>
+
+<p>
+Flexible home concierge plans designed to help older homeowners stay comfortable and give families peace of mind.
+</p>
+
+</section>
+
+
+
+
+<div class="container">
+
+
+<div class="intro">
+
+<h2>Choose The Level Of Support That Fits Your Family</h2>
+
+<p>
+LiveWell provides trusted coordination, oversight, and support so families don't have to manage everything alone.
+</p>
+
+</div>
+
+
+
+
 <div class="plans">
+
 
 
 <div class="plan">
 
-<h2>Essential</h2>
+<h2>LiveWell Essential</h2>
 
 <div class="price">
 $99/month
 </div>
 
+
 <p>
-A simple way to have someone keeping an eye on your home and helping coordinate everyday needs.
+A simple way to have someone keeping an eye on the home and helping coordinate everyday needs.
 </p>
 
-<table class="features">
 
-<tr>
-<td>Home needs coordination</td>
-<td>✓</td>
-</tr>
+<ul class="features">
 
-<tr>
-<td>Trusted vendor coordination</td>
-<td>✓</td>
-</tr>
+<li>Home needs coordination</li>
 
-<tr>
-<td>Maintenance reminders</td>
-<td>✓</td>
-</tr>
+<li>Trusted vendor coordination</li>
 
-<tr>
-<td>Seasonal planning</td>
-<td>✓</td>
-</tr>
+<li>Maintenance reminders</li>
 
-<tr>
-<td>Family updates</td>
-<td>✓</td>
-</tr>
+<li>Seasonal planning</li>
 
-<tr>
-<td>Project management</td>
-<td>—</td>
-</tr>
+<li>Basic family updates</li>
 
-<tr>
-<td>Priority support</td>
-<td>—</td>
-</tr>
+<li class="not-included">Priority support</li>
 
-</table>
+<li class="not-included">Full project coordination</li>
+
+</ul>
 
 
 <a href="./contact.html" class="plan-button">
 Get Started
 </a>
 
+
 </div>
+
 
 
 
 
 <div class="plan popular">
 
+
 <div class="badge">
 MOST POPULAR
 </div>
 
 
-<h2>LiveWell</h2>
+<h2>LiveWell Concierge</h2>
+
 
 <div class="price">
 $199/month
 </div>
 
+
 <p>
-Our complete home concierge membership designed for ongoing support and peace of mind.
+Our complete concierge membership for families who want ongoing support and coordination.
 </p>
 
 
-<table class="features">
+<ul class="features">
 
-<tr>
-<td>Home needs coordination</td>
-<td>✓</td>
-</tr>
+<li>Everything in Essential</li>
 
-<tr>
-<td>Trusted vendor coordination</td>
-<td>✓</td>
-</tr>
+<li>Appointment scheduling</li>
 
-<tr>
-<td>Maintenance reminders</td>
-<td>✓</td>
-</tr>
+<li>Maintenance coordination</li>
 
-<tr>
-<td>Seasonal planning</td>
-<td>✓</td>
-</tr>
+<li>Contractor follow-up</li>
 
-<tr>
-<td>Family updates</td>
-<td>✓</td>
-</tr>
+<li>Family communication updates</li>
 
-<tr>
-<td>Appointment scheduling</td>
-<td>✓</td>
-</tr>
+<li>Technology assistance</li>
 
-<tr>
-<td>Contractor follow-up</td>
-<td>✓</td>
-</tr>
+<li>Mail and package coordination</li>
 
-<tr>
-<td>Technology assistance</td>
-<td>✓</td>
-</tr>
+<li>Household oversight</li>
 
-<tr>
-<td>Priority support</td>
-<td>—</td>
-</tr>
-
-</table>
+</ul>
 
 
 <a href="./contact.html" class="plan-button">
@@ -141,9 +536,12 @@ Speak With Your Concierge
 
 
 
+
 <div class="plan">
 
-<h2>Family Concierge</h2>
+
+<h2>LiveWell Family</h2>
+
 
 <div class="price">
 $349/month
@@ -151,48 +549,27 @@ $349/month
 
 
 <p>
-For families who want a higher level of involvement and someone they can rely on.
+For families who want a higher level of involvement and additional peace of mind.
 </p>
 
 
-<table class="features">
+<ul class="features">
 
-<tr>
-<td>Everything in LiveWell</td>
-<td>✓</td>
-</tr>
+<li>Everything in Concierge</li>
 
-<tr>
-<td>Priority response</td>
-<td>✓</td>
-</tr>
+<li>Priority response support</li>
 
-<tr>
-<td>Enhanced home oversight</td>
-<td>✓</td>
-</tr>
+<li>Enhanced home oversight</li>
 
-<tr>
-<td>Vendor management</td>
-<td>✓</td>
-</tr>
+<li>Vendor management</li>
 
-<tr>
-<td>Full project coordination</td>
-<td>✓</td>
-</tr>
+<li>Full project coordination</li>
 
-<tr>
-<td>Seasonal preparation</td>
-<td>✓</td>
-</tr>
+<li>Seasonal home preparation</li>
 
-<tr>
-<td>Customized reporting</td>
-<td>✓</td>
-</tr>
+<li>Customized family reporting</li>
 
-</table>
+</ul>
 
 
 <a href="./contact.html" class="plan-button">
@@ -203,4 +580,81 @@ Speak With Your Concierge
 </div>
 
 
+
 </div>
+
+
+
+
+
+
+<div class="addons">
+
+<h2>Additional Services</h2>
+
+<p>
+Some services can be arranged separately depending on your home's needs.
+</p>
+
+
+<ul>
+
+<li>Home safety assessments</li>
+
+<li>Seasonal home preparation</li>
+
+<li>Contractor coordination</li>
+
+<li>Technology setup</li>
+
+<li>Home organization and downsizing assistance</li>
+
+<li>Special project coordination</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div class="cta">
+
+<h2>Not Sure Which Plan Is Right?</h2>
+
+<p>
+Let's discuss your family's needs and create the right level of LiveWell support.
+</p>
+
+
+<a href="./contact.html" class="button">
+Speak With Your Concierge
+</a>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+<footer>
+
+<p>
+© 2026 LiveWell Home Concierge. All Rights Reserved.
+</p>
+
+</footer>
+
+
+
+</body>
+
+</html>
