@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,12 +52,17 @@ margin-left:25px;
 font-weight:bold;
 }
 
+nav a:hover{
+opacity:.85;
+}
+
 .menu-toggle{
 display:none;
 background:none;
 border:none;
 color:white;
 font-size:32px;
+cursor:pointer;
 }
 
 
@@ -101,6 +107,11 @@ padding:16px 35px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
+transition:.2s;
+}
+
+.button:hover{
+background:#1E4534;
 }
 
 
@@ -150,19 +161,79 @@ text-align:center;
 .membership h2{
 font-size:40px;
 color:#2F6B4F;
+margin-bottom:20px;
 }
 
-.price{
-font-size:42px;
+.membership-intro{
+font-size:20px;
+max-width:750px;
+margin:0 auto 40px;
+}
+
+.membership-plans{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:1100px;
+margin:0 auto 40px;
+}
+
+.membership-card{
+background:white;
+padding:35px 25px;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+text-align:left;
+}
+
+.membership-card h3{
+font-size:25px;
+color:#2F6B4F;
+margin-bottom:10px;
+}
+
+.membership-price{
+font-size:32px;
 font-weight:bold;
 color:#1E4534;
-margin:25px;
+margin:15px 0 20px;
 }
 
-.membership li{
+.membership-card p{
+margin-bottom:20px;
+}
+
+.membership-card ul{
 list-style:none;
-margin:12px;
-font-size:18px;
+padding:0;
+}
+
+.membership-card li{
+margin:10px 0;
+font-size:15px;
+}
+
+.membership-card li::before{
+content:"✓";
+color:#2F6B4F;
+font-weight:bold;
+margin-right:8px;
+}
+
+.membership-card.popular{
+border:3px solid #2F6B4F;
+transform:translateY(-8px);
+}
+
+.popular-badge{
+display:inline-block;
+background:#2F6B4F;
+color:white;
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+margin-bottom:15px;
 }
 
 
@@ -177,6 +248,7 @@ text-align:center;
 
 .area h2{
 font-size:38px;
+margin-bottom:15px;
 }
 
 
@@ -191,6 +263,20 @@ text-align:center;
 
 
 /* MOBILE */
+
+@media(max-width:900px){
+
+.membership-plans{
+grid-template-columns:1fr;
+max-width:600px;
+}
+
+.membership-card.popular{
+transform:none;
+}
+
+}
+
 
 @media(max-width:768px){
 
@@ -216,6 +302,7 @@ background:#2F6B4F;
 flex-direction:column;
 text-align:center;
 padding:20px;
+z-index:100;
 }
 
 .nav-links a{
@@ -228,6 +315,7 @@ display:flex;
 
 .hero{
 padding:60px 8%;
+min-height:80vh;
 }
 
 .hero h1{
@@ -236,6 +324,38 @@ font-size:38px;
 
 .hero p{
 font-size:18px;
+}
+
+.tagline{
+font-size:18px;
+}
+
+.section{
+padding:60px 8%;
+}
+
+.section h2{
+font-size:32px;
+}
+
+.membership{
+padding:60px 8%;
+}
+
+.membership h2{
+font-size:32px;
+}
+
+.membership-intro{
+font-size:18px;
+}
+
+.area{
+padding:55px 8%;
+}
+
+.area h2{
+font-size:32px;
 }
 
 }
@@ -248,6 +368,8 @@ font-size:18px;
 <body>
 
 
+<!-- NAVIGATION -->
+
 <nav>
 
 <div class="logo">
@@ -255,7 +377,7 @@ font-size:18px;
 </div>
 
 
-<button class="menu-toggle" id="menu-toggle">
+<button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">
 ☰
 </button>
 
@@ -277,6 +399,8 @@ font-size:18px;
 
 
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="hero-content">
@@ -290,7 +414,7 @@ Peace Of Mind For Families. A Trusted Partner For Aging At Home.
 </h1>
 
 <p>
-LiveWell Home Concierge helps families maintain safe, comfortable homes through trusted support, maintenance coordination, and personalized home care solutions.
+LiveWell Home Concierge helps families maintain safe, comfortable homes through trusted support, maintenance coordination, and personalized household solutions.
 </p>
 
 <a href="./contact.html" class="button">
@@ -303,6 +427,8 @@ Request A Home Assessment
 
 
 
+<!-- SERVICES -->
+
 <section class="section">
 
 <h2>
@@ -310,7 +436,7 @@ Your Home. Your Family. Our Commitment.
 </h2>
 
 <p>
-When families cannot always be there, LiveWell provides reliable support to help keep homes safe and well cared for.
+When families cannot always be there, LiveWell provides reliable support to help keep homes safe, comfortable, and well cared for.
 </p>
 
 
@@ -318,26 +444,46 @@ When families cannot always be there, LiveWell provides reliable support to help
 
 
 <div class="card">
+
 <h3>🏡 Home Check-In Visits</h3>
-<p>Regular visits to identify issues early and provide peace of mind.</p>
+
+<p>
+Regular visits to identify issues early and provide peace of mind.
+</p>
+
 </div>
 
 
 <div class="card">
+
 <h3>🔧 Maintenance Coordination</h3>
-<p>We coordinate trusted professionals and manage household needs.</p>
+
+<p>
+We coordinate trusted professionals and manage household needs.
+</p>
+
 </div>
 
 
 <div class="card">
+
 <h3>❄️ Seasonal Home Care</h3>
-<p>Support with inspections, preparation, and preventative maintenance.</p>
+
+<p>
+Support with inspections, preparation, and preventative maintenance.
+</p>
+
 </div>
 
 
 <div class="card">
+
 <h3>❤️ Family Updates</h3>
-<p>Stay informed knowing someone trusted is looking after the home.</p>
+
+<p>
+Stay informed knowing someone trusted is looking after the home.
+</p>
+
 </div>
 
 
@@ -346,6 +492,8 @@ When families cannot always be there, LiveWell provides reliable support to help
 </section>
 
 
+
+<!-- HOW IT WORKS -->
 
 <section class="section">
 
@@ -356,22 +504,45 @@ How It Works
 
 <div class="steps">
 
+
 <div class="step">
-<h3>01 - Home Assessment</h3>
-<p>We understand your home and your family's needs.</p>
+
+<h3>
+01 - Home Assessment
+</h3>
+
+<p>
+We understand your home and your family's needs.
+</p>
+
 </div>
 
 
 <div class="step">
-<h3>02 - Personal Plan</h3>
-<p>We create a simple support plan based on your priorities.</p>
+
+<h3>
+02 - Personal Plan
+</h3>
+
+<p>
+We create a simple support plan based on your priorities.
+</p>
+
 </div>
 
 
 <div class="step">
-<h3>03 - Ongoing Support</h3>
-<p>We provide continued coordination and communication.</p>
+
+<h3>
+03 - Ongoing Support
+</h3>
+
+<p>
+We provide continued coordination and communication.
+</p>
+
 </div>
+
 
 </div>
 
@@ -379,36 +550,133 @@ How It Works
 
 
 
+<!-- MEMBERSHIPS -->
+
 <section class="membership">
 
 <h2>
-LiveWell Concierge Membership
+LiveWell Memberships
 </h2>
 
-<div class="price">
-Starting at $249/month
+<p class="membership-intro">
+Flexible home concierge plans designed to give older adults and their families the right level of support, coordination, and peace of mind.
+</p>
+
+
+<div class="membership-plans">
+
+
+<!-- ESSENTIAL -->
+
+<div class="membership-card">
+
+<h3>
+LiveWell Essential
+</h3>
+
+<div class="membership-price">
+$99/month
 </div>
 
+<p>
+A simple way to have someone keeping an eye on the home and helping coordinate everyday needs.
+</p>
 
 <ul>
 
-<li>✓ Personalized home support plan</li>
-<li>✓ Seasonal check-ins</li>
-<li>✓ Trusted contractor coordination</li>
-<li>✓ Household project support</li>
-<li>✓ Family communication</li>
+<li>Home needs coordination</li>
+<li>Trusted vendor coordination</li>
+<li>Maintenance reminders</li>
+<li>Seasonal planning</li>
+<li>Basic family updates</li>
 
 </ul>
 
+</div>
 
-<a href="./contact.html" class="button">
-Speak With LiveWell
+
+
+<!-- CONCIERGE -->
+
+<div class="membership-card popular">
+
+<div class="popular-badge">
+MOST POPULAR
+</div>
+
+<h3>
+LiveWell Concierge
+</h3>
+
+<div class="membership-price">
+$199/month
+</div>
+
+<p>
+Our complete concierge membership for families who want ongoing support and coordination.
+</p>
+
+<ul>
+
+<li>Everything in Essential</li>
+<li>Appointment scheduling</li>
+<li>Maintenance coordination</li>
+<li>Contractor follow-up</li>
+<li>Family communication updates</li>
+<li>Technology assistance</li>
+<li>Mail and package coordination</li>
+<li>Household oversight</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- FAMILY -->
+
+<div class="membership-card">
+
+<h3>
+LiveWell Family
+</h3>
+
+<div class="membership-price">
+$349/month
+</div>
+
+<p>
+For families who want a higher level of involvement and additional peace of mind.
+</p>
+
+<ul>
+
+<li>Everything in Concierge</li>
+<li>Priority response support</li>
+<li>Enhanced home oversight</li>
+<li>Vendor management</li>
+<li>Full project coordination</li>
+<li>Seasonal home preparation</li>
+<li>Customized family reporting</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<a href="./memberships.html" class="button">
+View All Membership Plans
 </a>
 
 
 </section>
 
 
+
+<!-- SERVICE AREA -->
 
 <section class="area">
 
@@ -424,6 +692,8 @@ Newmarket • Aurora • Markham • Richmond Hill • Vaughan • North York �
 
 
 
+<!-- FOOTER -->
+
 <footer>
 
 © 2026 LiveWell Home Concierge. All Rights Reserved.
@@ -432,14 +702,18 @@ Newmarket • Aurora • Markham • Richmond Hill • Vaughan • North York �
 
 
 
+<!-- MOBILE MENU -->
+
 <script>
 
-const menuButton=document.getElementById("menu-toggle");
-const navLinks=document.getElementById("nav-links");
+const menuButton = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-menuButton.onclick=function(){
+menuButton.onclick = function(){
+
 navLinks.classList.toggle("active");
-}
+
+};
 
 </script>
 
@@ -447,3 +721,4 @@ navLinks.classList.toggle("active");
 </body>
 
 </html>
+```
