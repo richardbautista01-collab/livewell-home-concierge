@@ -1,916 +1,491 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- HERO -->
 
-<head>
+<div class="hero-content">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Services | LiveWell Home Concierge</title>
-
-<meta name="description" content="LiveWell Home Concierge provides trusted home coordination, maintenance support, aging-in-place coordination, and family peace of mind across the GTA and York Region.">
-
-<style>
-
-/* ==============================
-   GLOBAL
-================================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#211F1D;
-    color:#F4F4F4;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-}
-
-img{
-    max-width:100%;
-}
-
-
-/* ==============================
-   NAVIGATION
-================================= */
-
-nav{
-    height:55px;
-    background:#111111;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 36px;
-    position:relative;
-    z-index:1000;
-}
-
-.logo img{
-    height:38px;
-    width:auto;
-}
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:24px;
-}
-
-.nav-links a{
-    color:#F5F5F5;
-    font-size:12px;
-    font-weight:500;
-    transition:.2s ease;
-}
-
-.nav-links a:hover{
-    color:#78C7B8;
-}
-
-.menu-toggle{
-    display:none;
-    background:none;
-    border:none;
-    color:white;
-    font-size:28px;
-    cursor:pointer;
-}
-
-
-/* ==============================
-   HERO
-================================= */
-
-.hero{
-    background:#202825;
-    padding:58px 25px 62px;
-    text-align:center;
-}
-
-.hero-content{
-    max-width:900px;
-    margin:auto;
-}
-
-.tagline{
-    color:#78C7B8;
-    font-size:13px;
-    font-weight:bold;
-    letter-spacing:.5px;
-    margin-bottom:14px;
-}
-
-.hero h1{
-    color:#8BD0C2;
-    font-size:38px;
-    line-height:1.2;
-    margin-bottom:18px;
-    font-weight:700;
-}
-
-.hero p{
-    max-width:720px;
-    margin:auto;
-    color:#F0F0F0;
-    font-size:15px;
-    line-height:1.7;
-}
-
-
-/* ==============================
-   INTRO SECTION
-================================= */
-
-.intro{
-    padding:45px 25px 25px;
-    text-align:center;
-    background:#211F1D;
-}
-
-.intro-inner{
-    max-width:900px;
-    margin:auto;
-}
-
-.intro h2{
-    color:#73C3B4;
-    font-size:25px;
-    margin-bottom:10px;
-}
-
-.intro p{
-    color:#E6E6E6;
-    font-size:14px;
-    max-width:760px;
-    margin:auto;
-}
-
-
-/* ==============================
-   SERVICES
-================================= */
-
-.services{
-    padding:25px 7% 70px;
-    background:#211F1D;
-}
-
-.service-grid{
-    max-width:1050px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.service-card{
-    background:#111111;
-    border-radius:11px;
-    padding:27px 26px;
-    min-height:205px;
-    border:1px solid #151515;
-    transition:.2s ease;
-}
-
-.service-card:hover{
-    transform:translateY(-3px);
-    border-color:#397A6E;
-}
-
-.service-icon{
-    font-size:23px;
-    margin-bottom:13px;
-}
-
-.service-card h3{
-    color:#70C1B3;
-    font-size:18px;
-    line-height:1.3;
-    margin-bottom:10px;
-}
-
-.service-card p{
-    color:#E8E8E8;
-    font-size:13px;
-    line-height:1.65;
-}
-
-
-/* ==============================
-   FAMILY SECTION
-================================= */
-
-.family{
-    background:#202825;
-    padding:65px 25px;
-    text-align:center;
-}
-
-.family-inner{
-    max-width:850px;
-    margin:auto;
-}
-
-.family h2{
-    color:#84CDBF;
-    font-size:30px;
-    line-height:1.3;
-    margin-bottom:17px;
-}
-
-.family p{
-    color:#F1F1F1;
-    font-size:15px;
-    line-height:1.75;
-    max-width:730px;
-    margin:auto;
-}
-
-
-/* ==============================
-   HOW IT WORKS
-================================= */
-
-.how{
-    background:#211F1D;
-    padding:65px 7%;
-    text-align:center;
-}
-
-.how-inner{
-    max-width:1050px;
-    margin:auto;
-}
-
-.how h2{
-    color:#73C3B4;
-    font-size:29px;
-    margin-bottom:10px;
-}
-
-.how-intro{
-    color:#E5E5E5;
-    font-size:14px;
-    margin-bottom:38px;
-}
-
-.steps{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    text-align:left;
-}
-
-.step{
-    background:#111111;
-    border-radius:10px;
-    padding:23px;
-}
-
-.step-number{
-    color:#73C3B4;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:13px;
-}
-
-.step h3{
-    color:#F4F4F4;
-    font-size:17px;
-    margin-bottom:8px;
-}
-
-.step p{
-    color:#CFCFCF;
-    font-size:13px;
-    line-height:1.6;
-}
-
-
-/* ==============================
-   CTA
-================================= */
-
-.cta{
-    background:#202825;
-    padding:58px 25px;
-    text-align:center;
-}
-
-.cta-inner{
-    max-width:750px;
-    margin:auto;
-}
-
-.cta h2{
-    color:#82CDBF;
-    font-size:30px;
-    margin-bottom:12px;
-}
-
-.cta p{
-    color:#EEEEEE;
-    font-size:15px;
-    margin-bottom:25px;
-}
-
-.button{
-    display:inline-block;
-    background:#70BEB0;
-    color:#10211D;
-    padding:12px 27px;
-    border-radius:25px;
-    font-size:13px;
-    font-weight:bold;
-    transition:.2s ease;
-}
-
-.button:hover{
-    background:#8BD3C6;
-}
-
-
-/* ==============================
-   FOOTER
-================================= */
-
-footer{
-    background:#111111;
-    color:#D5D5D5;
-    padding:25px;
-    text-align:center;
-}
-
-footer p{
-    font-size:12px;
-}
-
-.footer-note{
-    margin-top:5px;
-    color:#999999;
-    font-size:11px;
-}
-
-
-/* ==============================
-   TABLET
-================================= */
-
-@media(max-width:950px){
-
-    .service-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .steps{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-
-/* ==============================
-   MOBILE
-================================= */
-
-@media(max-width:768px){
-
-    nav{
-        height:65px;
-        padding:0 20px;
-    }
-
-    .logo img{
-        height:40px;
-    }
-
-    .menu-toggle{
-        display:block;
-    }
-
-    .nav-links{
-        display:none;
-        position:absolute;
-        top:65px;
-        left:0;
-        width:100%;
-        background:#111111;
-        flex-direction:column;
-        gap:0;
-        padding:12px 0 18px;
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .nav-links a{
-        width:100%;
-        text-align:center;
-        padding:10px 0;
-        font-size:14px;
-    }
-
-    .hero{
-        padding:50px 22px 55px;
-    }
-
-    .hero h1{
-        font-size:31px;
-    }
-
-    .hero p{
-        font-size:14px;
-    }
-
-    .intro{
-        padding:40px 22px 20px;
-    }
-
-    .intro h2{
-        font-size:23px;
-    }
-
-    .services{
-        padding:20px 20px 55px;
-    }
-
-    .service-grid{
-        grid-template-columns:1fr;
-        gap:15px;
-    }
-
-    .service-card{
-        min-height:auto;
-        padding:24px;
-    }
-
-    .family{
-        padding:55px 22px;
-    }
-
-    .family h2{
-        font-size:27px;
-    }
-
-    .family p{
-        font-size:14px;
-    }
-
-    .how{
-        padding:55px 20px;
-    }
-
-    .steps{
-        grid-template-columns:1fr;
-        gap:14px;
-    }
-
-    .step{
-        padding:22px;
-    }
-
-    .cta{
-        padding:50px 22px;
-    }
-
-    .cta h2{
-        font-size:27px;
-    }
-
-}
-
-
-/* ==============================
-   SMALL PHONES
-================================= */
-
-@media(max-width:420px){
-
-    .hero h1{
-        font-size:28px;
-    }
-
-    .hero p{
-        font-size:13px;
-    }
-
-    .intro h2{
-        font-size:21px;
-    }
-
-    .service-card h3{
-        font-size:17px;
-    }
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<!-- ==============================
-     NAVIGATION
-================================= -->
-
-<nav>
-
-    <div class="logo">
-
-        <img
-            src="logo.png"
-            alt="LiveWell Home Concierge Logo">
-
+    <div class="tagline">
+        LIVEWELL HOME CONCIERGE
     </div>
 
-
-    <button
-        class="menu-toggle"
-        id="menu-toggle"
-        aria-label="Open navigation menu">
-
-        ☰
-
-    </button>
-
-
-    <div class="nav-links" id="nav-links">
-
-        <a href="./index.html">Home</a>
-
-        <a href="./services.html">Services</a>
-
-        <a href="./families.html">For Families</a>
-
-        <a href="./memberships.html">Memberships</a>
-
-        <a href="./resources.html">Resources</a>
-
-        <a href="./about.html">About</a>
-
-        <a href="./partners.html">Partners</a>
-
-        <a href="./contact.html">Contact</a>
-
-    </div>
-
-</nav>
-
-
-<!-- ==============================
-     HERO
-================================= -->
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <div class="tagline">
-            LIVEWELL HOME CONCIERGE
-        </div>
-
-        <h1>
-            Services Designed Around Your Home & Family
-        </h1>
-
-        <p>
-            LiveWell provides trusted coordination and practical support that helps older adults remain comfortable at home while giving families greater peace of mind.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     INTRO
-================================= -->
-
-<section class="intro">
-
-    <div class="intro-inner">
-
-        <h2>
-            More Than Home Maintenance.
-        </h2>
-
-        <p>
-            We help coordinate the details of everyday home life, connect families with trusted professionals, and provide a reliable local presence when you can't always be there.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     SERVICE CARDS
-================================= -->
-
-<section class="services">
-
-    <div class="service-grid">
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                🏡
-            </div>
-
-            <h3>
-                Home Care Coordination
-            </h3>
-
-            <p>
-                We help organize household needs, coordinate services, and keep everyday home responsibilities moving smoothly.
-            </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                🔧
-            </div>
-
-            <h3>
-                Home & Maintenance Coordination
-            </h3>
-
-            <p>
-                From repairs to routine maintenance, we coordinate trusted professionals, appointments, and follow-ups.
-            </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                🛠️
-            </div>
-
-            <h3>
-                Home Projects & Improvements
-            </h3>
-
-            <p>
-                We help coordinate projects and improvements so homeowners don't have to manage every contractor and detail themselves.
-            </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                ❄️
-            </div>
-
-            <h3>
-                Seasonal Home Care
-            </h3>
-
-            <p>
-                Seasonal preparation and preventative maintenance help keep the home comfortable and cared for throughout the year.
-            </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                ❤️
-            </div>
-
-            <h3>
-                Aging-In-Place Support
-            </h3>
-
-            <p>
-                Practical coordination designed to help older adults remain comfortable, supported, and independent at home.
-            </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                👨‍👩‍👧
-            </div>
-
-            <h3>
-                Family Communication
-            </h3>
-
-            <p>
-                Families receive updates and communication from a trusted local presence helping oversee the practical details.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     FAMILY SECTION
-================================= -->
-
-<section class="family">
-
-    <div class="family-inner">
-
-        <h2>
-            You Can't Be There For Everything. That's Why We Are.
-        </h2>
-
-        <p>
-            Whether you live nearby or across the country, LiveWell provides a trusted connection to the home and people you care about. We help with the practical details so your family doesn't have to manage everything alone.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     HOW IT WORKS
-================================= -->
-
-<section class="how">
-
-    <div class="how-inner">
-
-        <h2>
-            How LiveWell Works
-        </h2>
-
-        <p class="how-intro">
-            Simple, personal support built around your family and your loved one's home.
-        </p>
-
-
-        <div class="steps">
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    01
-                </div>
-
-                <h3>
-                    We Meet
-                </h3>
-
-                <p>
-                    We get to know your family, your home, and where additional support would make life easier.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    02
-                </div>
-
-                <h3>
-                    We Build Your Plan
-                </h3>
-
-                <p>
-                    Together, we determine what you'd like LiveWell to coordinate and how you'd like to stay informed.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    03
-                </div>
-
-                <h3>
-                    We Coordinate
-                </h3>
-
-                <p>
-                    We manage calls, scheduling, follow-ups, household coordination, and practical details.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    04
-                </div>
-
-                <h3>
-                    We Keep You Connected
-                </h3>
-
-                <p>
-                    You remain informed and involved without having to personally manage every detail.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     CTA
-================================= -->
-
-<section class="cta">
-
-    <div class="cta-inner">
-
-        <h2>
-            Ready To Experience LiveWell?
-        </h2>
-
-        <p>
-            Let LiveWell become the trusted local presence your family can rely on.
-        </p>
-
-        <a
-            href="./contact.html"
-            class="button">
-
-            Talk To A LiveWell Concierge
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     FOOTER
-================================= -->
-
-<footer>
+    <h1>
+        A Little Help. A Lot More Peace of Mind.
+    </h1>
 
     <p>
-        © 2026 LiveWell Home Concierge. All Rights Reserved.
+        Choose the level of support that works best for you, your home, and your family.
+        Every LiveWell membership includes an annual home walkthrough and ongoing support
+        tailored to your needs.
+    </p>
+
+</div>
+
+
+<!-- INTRO -->
+
+<div class="intro-inner">
+
+    <h2>
+        Choose the Support That Fits Your Home
+    </h2>
+
+    <p>
+        LiveWell memberships are designed to make homeownership easier to manage.
+        From coordinating everyday maintenance to providing hands-on help with small
+        household tasks, we're here to make sure things get done and nothing gets overlooked.
+    </p>
+
+</div>
+
+
+<!-- MEMBERSHIP PLANS -->
+
+<div class="service-grid">
+
+
+    <!-- ESSENTIAL -->
+
+    <div class="service-card">
+
+        <div class="service-icon">
+            🏡
+        </div>
+
+        <h3>
+            Essential
+        </h3>
+
+        <div class="price">
+            $99
+            <span>/month</span>
+        </div>
+
+        <p>
+            <strong>Coordinate.</strong>
+        </p>
+
+        <p>
+            A simple way to have someone help manage the practical details of your home.
+        </p>
+
+        <h4>
+            Includes
+        </h4>
+
+        <ul>
+            <li>Home maintenance coordination</li>
+            <li>Contractor and service scheduling</li>
+            <li>Vendor follow-up</li>
+            <li>Maintenance reminders</li>
+            <li>Seasonal maintenance coordination</li>
+            <li>Mail and package coordination</li>
+            <li>Bill and payment assistance</li>
+            <li>Annual LiveWell Home Walkthrough</li>
+            <li>Basic maintenance observations and recommendations</li>
+        </ul>
+
+        <p class="plan-note">
+            Family communication updates and handyman hours are not included.
+        </p>
+
+    </div>
+
+
+    <!-- CONCIERGE -->
+
+    <div class="service-card featured">
+
+        <div class="service-icon">
+            ⭐
+        </div>
+
+        <div class="popular">
+            MOST POPULAR
+        </div>
+
+        <h3>
+            Concierge
+        </h3>
+
+        <div class="price">
+            $199
+            <span>/month</span>
+        </div>
+
+        <p>
+            <strong>Coordinate + Help.</strong>
+        </p>
+
+        <p>
+            More hands-on support for homeowners and families who want to stay informed.
+        </p>
+
+        <h4>
+            Everything in Essential, plus:
+        </h4>
+
+        <ul>
+            <li>Up to 2 hours of basic handyman assistance per quarter</li>
+            <li>Basic family communication updates</li>
+            <li>Home condition updates</li>
+            <li>Maintenance recommendations</li>
+            <li>Updates on completed and outstanding work</li>
+            <li>Upcoming appointment and service updates</li>
+            <li>Annual LiveWell Home Walkthrough</li>
+        </ul>
+
+        <p class="plan-note">
+            Handyman time is limited to eligible basic, non-skilled household tasks.
+            Materials and third-party services are additional.
+        </p>
+
+    </div>
+
+
+    <!-- FAMILY PLUS -->
+
+    <div class="service-card">
+
+        <div class="service-icon">
+            👨‍👩‍👧
+        </div>
+
+        <h3>
+            Family Plus
+        </h3>
+
+        <div class="price">
+            $349
+            <span>/month</span>
+        </div>
+
+        <p>
+            <strong>Coordinate + Hands-On Support.</strong>
+        </p>
+
+        <p>
+            Designed for families who want a trusted local presence helping stay on top of the home.
+        </p>
+
+        <h4>
+            Everything in Concierge, plus:
+        </h4>
+
+        <ul>
+            <li>Up to 2 hours of basic handyman assistance every month</li>
+            <li>Regular family communication updates</li>
+            <li>Home maintenance status updates</li>
+            <li>Outstanding item tracking</li>
+            <li>Completed work updates</li>
+            <li>Upcoming maintenance recommendations</li>
+            <li>Vendor and contractor updates</li>
+            <li>Priority household coordination</li>
+            <li>Annual LiveWell Home Walkthrough</li>
+        </ul>
+
+        <p class="plan-note">
+            Handyman time is limited to eligible basic, non-skilled household tasks.
+            Materials and third-party services are additional.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+<!-- ANNUAL WALKTHROUGH -->
+
+<div class="family-inner">
+
+    <h2>
+        Every Member Gets an Annual Home Walkthrough
+    </h2>
+
+    <p>
+        Once a year, LiveWell walks through the home with you to identify visible
+        maintenance items and areas that may need attention.
+    </p>
+
+    <p>
+        We'll help identify things that may need to be repaired, maintained, replaced,
+        or monitored and can coordinate the appropriate service provider when requested.
     </p>
 
     <p class="footer-note">
-        LiveWell Home Concierge provides non-medical home concierge, coordination, and support services.
+        The LiveWell Home Walkthrough is a visual, non-invasive maintenance review.
+        It is not a professional home inspection, engineering assessment, safety
+        certification, or diagnosis of concealed defects.
     </p>
 
-</footer>
+</div>
 
 
-<script>
+<!-- WHAT HANDYMAN MEANS -->
 
-const menuButton = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+<div class="how-inner">
 
-menuButton.addEventListener("click", function(){
+    <h2>
+        What Counts as Basic Handyman Help?
+    </h2>
 
-    navLinks.classList.toggle("active");
-
-});
-
-</script>
+    <p class="how-intro">
+        Our handyman hours are intended for small, practical household tasks.
+    </p>
 
 
-</body>
+    <div class="steps">
 
-</html>
+
+        <div class="step">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <h3>
+                Small Household Tasks
+            </h3>
+
+            <p>
+                Changing light bulbs, replacing batteries, tightening cabinet hardware,
+                hanging pictures, and similar basic tasks.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <h3>
+                Minor Adjustments
+            </h3>
+
+            <p>
+                Small non-skilled household adjustments and basic assembly that do not
+                require specialized equipment or expertise.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <h3>
+                Need a Professional?
+            </h3>
+
+            <p>
+                If a job requires a licensed trade, specialized expertise, or major
+                repair, LiveWell can help coordinate the appropriate professional.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                04
+            </div>
+
+            <h3>
+                Materials Are Separate
+            </h3>
+
+            <p>
+                Your included handyman time covers eligible labour. Any bulbs, hardware,
+                supplies, materials, or third-party services are paid for separately.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- ADDITIONAL SERVICES -->
+
+<div class="intro-inner">
+
+    <h2>
+        Additional & Ad-Hoc Services
+    </h2>
+
+    <p>
+        Need something outside your membership? LiveWell can also arrange additional
+        services based on your home's needs.
+    </p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+    <div class="service-card">
+
+        <div class="service-icon">
+            ❄️
+        </div>
+
+        <h3>
+            Seasonal Home Preparation
+        </h3>
+
+        <p>
+            Help preparing the home for changing seasons and coordinating any services
+            that may be required.
+        </p>
+
+    </div>
+
+
+    <div class="service-card">
+
+        <div class="service-icon">
+            🔧
+        </div>
+
+        <h3>
+            Contractor Coordination
+        </h3>
+
+        <p>
+            Finding, scheduling and coordinating contractors and service providers for
+            repairs and maintenance.
+        </p>
+
+    </div>
+
+
+    <div class="service-card">
+
+        <div class="service-icon">
+            💻
+        </div>
+
+        <h3>
+            Technology Assistance
+        </h3>
+
+        <p>
+            Assistance with basic household technology setup and coordination.
+        </p>
+
+    </div>
+
+
+    <div class="service-card">
+
+        <div class="service-icon">
+            📦
+        </div>
+
+        <h3>
+            Home Organization & Downsizing
+        </h3>
+
+        <p>
+            Assistance coordinating organization, decluttering, downsizing, and
+            move-related services.
+        </p>
+
+    </div>
+
+
+    <div class="service-card">
+
+        <div class="service-icon">
+            📋
+        </div>
+
+        <h3>
+            Special Project Coordination
+        </h3>
+
+        <p>
+            Help coordinating larger or one-time household projects.
+        </p>
+
+    </div>
+
+
+    <div class="service-card">
+
+        <div class="service-icon">
+            🛠️
+        </div>
+
+        <h3>
+            Additional Handyman Services
+        </h3>
+
+        <p>
+            Additional basic handyman assistance beyond the hours included in your
+            membership.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+<!-- IMPORTANT INFORMATION -->
+
+<div class="family-inner">
+
+    <h2>
+        Your Home. Your Providers. Your Choice.
+    </h2>
+
+    <p>
+        LiveWell coordinates services and provides eligible basic household assistance.
+        We do not perform licensed trade work, medical services, nursing, personal support,
+        emergency response, or other regulated professional services.
+    </p>
+
+    <p>
+        Third-party contractors and service providers are independent providers and are
+        responsible for their own work, licensing, insurance, materials, workmanship,
+        and professional obligations.
+    </p>
+
+    <p>
+        Membership handyman hours do not roll over. Materials, third-party services,
+        licensed work, and additional services are billed separately.
+    </p>
+
+</div>
+
+
+<!-- CTA -->
+
+<div class="cta-inner">
+
+    <h2>
+        Ready to Make Homeownership Easier?
+    </h2>
+
+    <p>
+        Let's find the LiveWell membership that's right for you and your family.
+    </p>
+
+    <a
+        href="./contact.html"
+        class="button">
+
+        Speak With Your Concierge
+
+    </a>
+
+</div>
