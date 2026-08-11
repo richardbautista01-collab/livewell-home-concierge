@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,11 +37,6 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
 }
 
 .container {
@@ -139,6 +135,20 @@ nav a:hover {
 
 
 /* =========================
+   MOBILE MENU
+========================= */
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    color: #3f604b;
+    cursor: pointer;
+}
+
+
+/* =========================
    HERO
 ========================= */
 
@@ -150,6 +160,7 @@ nav a:hover {
             rgba(248,246,240,.94) 52%,
             rgba(248,246,240,.68) 100%
         );
+
     padding: 90px 0 80px;
 }
 
@@ -183,7 +194,7 @@ h1 {
 
 
 /* =========================
-   SECTION
+   SECTIONS
 ========================= */
 
 .section {
@@ -210,20 +221,11 @@ h1 {
     margin: 0 0 18px;
 }
 
-.section-heading p,
-.section > .container > p {
+.section-heading p {
     color: #6c766f;
     font-size: 17px;
     max-width: 780px;
-}
-
-.section > .container > h2 {
-    text-align: center;
-}
-
-.section > .container > h2 + p {
-    margin: 0 auto 45px;
-    text-align: center;
+    margin: 0 auto;
 }
 
 
@@ -399,7 +401,7 @@ h1 {
 
 
 /* =========================
-   HANDYMAN SECTION
+   HANDYMAN
 ========================= */
 
 .how-intro {
@@ -565,20 +567,6 @@ footer p {
     color: white;
     font-size: 20px;
     margin-bottom: 7px;
-}
-
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-.menu-toggle {
-    display: none;
-    border: none;
-    background: transparent;
-    font-size: 28px;
-    color: #3f604b;
-    cursor: pointer;
 }
 
 
@@ -901,11 +889,9 @@ footer p {
 
                     <li>Maintenance reminders</li>
 
-                    <li>Seasonal maintenance coordination</li>
-
-                    <li>Mail and package coordination</li>
-
-                    <li>Bill and payment assistance</li>
+                    <li>
+                        Seasonal maintenance planning and coordination
+                    </li>
 
                     <li>Annual LiveWell Home Walkthrough</li>
 
@@ -914,6 +900,9 @@ footer p {
                 </ul>
 
                 <p class="plan-note">
+                    LiveWell helps identify seasonal maintenance needs,
+                    coordinate appointments, and follow up with service providers.
+                    Contractor fees, materials, and third-party services are additional.
                     Family communication updates and handyman hours are not included.
                 </p>
 
@@ -957,25 +946,48 @@ footer p {
 
                 <ul>
 
-                    <li>Up to 2 hours of basic handyman assistance per quarter</li>
+                    <li>
+                        Up to 2 hours of basic handyman assistance per quarter
+                    </li>
 
-                    <li>Basic family communication updates</li>
+                    <li>
+                        Mail and package coordination
+                    </li>
 
-                    <li>Home condition updates</li>
+                    <li>
+                        Bill and payment assistance
+                    </li>
 
-                    <li>Maintenance recommendations</li>
+                    <li>
+                        Basic family communication updates
+                    </li>
 
-                    <li>Updates on completed and outstanding work</li>
+                    <li>
+                        Home condition updates
+                    </li>
 
-                    <li>Upcoming appointment and service updates</li>
+                    <li>
+                        Maintenance recommendations
+                    </li>
 
-                    <li>Annual LiveWell Home Walkthrough</li>
+                    <li>
+                        Updates on completed and outstanding work
+                    </li>
+
+                    <li>
+                        Upcoming appointment and service updates
+                    </li>
+
+                    <li>
+                        Annual LiveWell Home Walkthrough
+                    </li>
 
                 </ul>
 
                 <p class="plan-note">
                     Handyman time is limited to eligible basic, non-skilled
-                    household tasks. Materials and third-party services are additional.
+                    household tasks. Handyman hours do not roll over.
+                    Materials, contractor fees, and third-party services are additional.
                 </p>
 
             </div>
@@ -1014,29 +1026,48 @@ footer p {
 
                 <ul>
 
-                    <li>Up to 2 hours of basic handyman assistance every month</li>
+                    <li>
+                        Up to 2 hours of basic handyman assistance every month
+                    </li>
 
-                    <li>Regular family communication updates</li>
+                    <li>
+                        Regular family communication updates
+                    </li>
 
-                    <li>Home maintenance status updates</li>
+                    <li>
+                        Home maintenance status updates
+                    </li>
 
-                    <li>Outstanding item tracking</li>
+                    <li>
+                        Outstanding item tracking
+                    </li>
 
-                    <li>Completed work updates</li>
+                    <li>
+                        Completed work updates
+                    </li>
 
-                    <li>Upcoming maintenance recommendations</li>
+                    <li>
+                        Upcoming maintenance recommendations
+                    </li>
 
-                    <li>Vendor and contractor updates</li>
+                    <li>
+                        Vendor and contractor updates
+                    </li>
 
-                    <li>Priority household coordination</li>
+                    <li>
+                        Priority household coordination
+                    </li>
 
-                    <li>Annual LiveWell Home Walkthrough</li>
+                    <li>
+                        Annual LiveWell Home Walkthrough
+                    </li>
 
                 </ul>
 
                 <p class="plan-note">
                     Handyman time is limited to eligible basic, non-skilled
-                    household tasks. Materials and third-party services are additional.
+                    household tasks. Handyman hours do not roll over.
+                    Materials, contractor fees, and third-party services are additional.
                 </p>
 
             </div>
@@ -1210,8 +1241,10 @@ footer p {
             </h2>
 
             <p>
-                Need something outside your membership? LiveWell can also arrange
+                Need something outside your membership? LiveWell can coordinate
                 additional services based on your home's needs.
+                Third-party provider fees and any applicable additional service
+                fees are billed separately.
             </p>
 
         </div>
@@ -1363,7 +1396,8 @@ footer p {
 
             <p>
                 Membership handyman hours do not roll over. Materials, third-party
-                services, licensed work, and additional services are billed separately.
+                services, licensed work, contractor fees, and additional services
+                are billed separately.
             </p>
 
         </div>
@@ -1430,6 +1464,10 @@ footer p {
 
 
 
+<!-- =========================
+     MOBILE MENU SCRIPT
+========================= -->
+
 <script>
 
 function toggleMenu() {
@@ -1456,3 +1494,4 @@ document.querySelectorAll("#mainNav a").forEach(function(link) {
 </body>
 
 </html>
+```
