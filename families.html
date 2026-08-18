@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,9 +7,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Memberships | LiveWell Home Concierge</title>
+<title>Services | LiveWell Home Concierge</title>
 
-<meta name="description" content="LiveWell Home Concierge membership plans provide ongoing home support, maintenance coordination, and peace of mind for older homeowners and their families.">
+<meta name="description" content="LiveWell Home Concierge helps older homeowners and their families with home maintenance, repairs, household coordination and ongoing home support.">
 
 <style>
 
@@ -37,10 +38,10 @@ align-items:center;
 box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-.logo{
-font-size:24px;
-font-weight:bold;
-color:#2f6f62;
+.logo img{
+height:55px;
+width:auto;
+display:block;
 }
 
 nav a{
@@ -70,7 +71,7 @@ margin-bottom:20px;
 }
 
 .hero p{
-max-width:750px;
+max-width:780px;
 margin:auto;
 font-size:18px;
 }
@@ -104,114 +105,82 @@ margin:auto;
 }
 
 
-/* PLANS */
+/* SERVICES */
 
-.plans{
+.services{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(2,1fr);
 gap:25px;
 }
 
-.plan{
+.service{
 background:white;
 padding:35px;
 border-radius:15px;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
-display:flex;
-flex-direction:column;
 }
 
-.plan h2{
+.service h2{
 color:#2f6f62;
-margin-bottom:10px;
+margin-bottom:12px;
 font-size:25px;
 }
 
-.price{
-font-size:30px;
-font-weight:bold;
-margin:15px 0;
-color:#24584d;
-}
-
-.plan p{
-margin-bottom:20px;
-}
-
-.plan ul{
-margin-left:20px;
-margin-top:5px;
-}
-
-.plan li{
-margin-bottom:10px;
-}
-
-
-/* POPULAR */
-
-.popular{
-border:3px solid #2f6f62;
-transform:translateY(-5px);
-}
-
-.badge{
-background:#2f6f62;
-color:white;
-padding:6px 15px;
-border-radius:20px;
-display:inline-block;
-font-size:13px;
-font-weight:bold;
+.service p{
 margin-bottom:15px;
-align-self:flex-start;
+}
+
+.service ul{
+margin-left:20px;
+}
+
+.service li{
+margin-bottom:9px;
 }
 
 
-/* PLAN BUTTON */
+/* FAMILY SECTION */
 
-.plan-button{
-display:inline-block;
-margin-top:25px;
-background:#2f6f62;
-color:white;
-padding:11px 20px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-text-align:center;
-}
-
-.plan-button:hover{
-background:#24584d;
-}
-
-
-/* ADDONS */
-
-.addons{
+.family{
 background:white;
-padding:35px;
+padding:40px;
 border-radius:15px;
 margin-top:40px;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
+text-align:center;
 }
 
-.addons h2{
+.family h2{
 color:#2f6f62;
+font-size:30px;
 margin-bottom:15px;
 }
 
-.addons p{
+.family p{
+max-width:780px;
+margin:0 auto 15px;
+}
+
+
+/* WALKTHROUGH */
+
+.walkthrough{
+background:#e8f1ed;
+padding:40px;
+border-radius:15px;
+margin-top:40px;
+text-align:center;
+}
+
+.walkthrough h2{
+color:#24584d;
+font-size:28px;
 margin-bottom:15px;
 }
 
-.addons ul{
-margin-left:20px;
-}
-
-.addons li{
-margin-bottom:10px;
+.walkthrough p{
+max-width:750px;
+margin:auto;
 }
 
 
@@ -267,12 +236,8 @@ margin-top:50px;
 
 @media(max-width:900px){
 
-.plans{
+.services{
 grid-template-columns:1fr;
-}
-
-.popular{
-transform:none;
 }
 
 header{
@@ -297,6 +262,10 @@ font-size:32px;
 width:90%;
 }
 
+.logo img{
+height:50px;
+}
+
 }
 
 </style>
@@ -310,7 +279,7 @@ width:90%;
 <header>
 
 <div class="logo">
-LiveWell Home Concierge
+<img src="logo.png" alt="LiveWell Home Concierge">
 </div>
 
 <nav>
@@ -332,10 +301,10 @@ LiveWell Home Concierge
 
 <section class="hero">
 
-<h1>Membership Plans</h1>
+<h1>How We Can Help</h1>
 
 <p>
-Flexible home concierge plans designed to help older homeowners stay comfortable, supported, and independent while giving families peace of mind.
+When you can't always be there, LiveWell can. We help care for the home, coordinate the details, and provide a trusted local presence for the people you love.
 </p>
 
 </section>
@@ -347,185 +316,236 @@ Flexible home concierge plans designed to help older homeowners stay comfortable
 
 <div class="intro">
 
-<h2>Choose The Level Of Support That Fits Your Family</h2>
+<h2>Helping Take Care Of The Home</h2>
 
 <p>
-Every home is different. LiveWell provides ongoing coordination and support designed around your loved one's needs.
+As our loved ones get older, keeping up with everything around the home can become more difficult. LiveWell provides practical, ongoing support so families don't have to manage every repair, appointment, and household detail on their own.
 </p>
 
 </div>
 
 
 
-<div class="plans">
+<div class="services">
 
 
-<!-- ESSENTIAL -->
+<!-- HOME COORDINATION -->
 
-<div class="plan">
+<div class="service">
 
-<h2>Essential</h2>
-
-<div class="price">
-$99/month
-</div>
+<h2>Home Needs Coordination</h2>
 
 <p>
-A simple way to have someone keeping an eye on the home and helping coordinate everyday needs.
+Your loved one's home has everyday needs. We help coordinate them so your family doesn't have to keep track of everything alone.
 </p>
 
 <ul>
 
-<li>Home needs coordination</li>
+<li>Household requests</li>
 
-<li>Trusted vendor coordination</li>
+<li>Service appointments</li>
+
+<li>Maintenance needs</li>
+
+<li>Vendor communication</li>
+
+<li>Follow-up on outstanding items</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- MAINTENANCE -->
+
+<div class="service">
+
+<h2>Home Maintenance & Repairs</h2>
+
+<p>
+When something around the home needs attention, we help coordinate the right people and make sure the details don't get forgotten.
+</p>
+
+<ul>
+
+<li>Routine home maintenance</li>
+
+<li>Repair coordination</li>
+
+<li>Contractor scheduling</li>
+
+<li>Follow-up on completed work</li>
 
 <li>Maintenance reminders</li>
 
+</ul>
+
+</div>
+
+
+
+<!-- SEASONAL -->
+
+<div class="service">
+
+<h2>Seasonal Home Care</h2>
+
+<p>
+Every season brings another list of things to remember. We help your loved one's home stay cared for throughout the year.
+</p>
+
+<ul>
+
 <li>Seasonal maintenance planning</li>
 
-<li>Basic family updates</li>
+<li>Seasonal service coordination</li>
+
+<li>Home preparation</li>
+
+<li>Preventative maintenance reminders</li>
+
+<li>Follow-up on seasonal tasks</li>
 
 </ul>
 
-<a href="./contact.html" class="plan-button">
-Get Started
-</a>
-
 </div>
 
 
 
-<!-- LIVEWELL -->
+<!-- OVERSIGHT -->
 
-<div class="plan popular">
+<div class="service">
 
-<div class="badge">
-MOST POPULAR
-</div>
-
-<h2>LiveWell</h2>
-
-<div class="price">
-$199/month
-</div>
+<h2>Home Oversight</h2>
 
 <p>
-Our complete home concierge membership for families who want ongoing support and coordination.
+You may not be able to visit as often as you'd like. LiveWell provides a trusted local presence to help keep you connected to what's happening around the home.
 </p>
 
 <ul>
 
-<li>Everything in Essential</li>
+<li>Identify maintenance needs</li>
 
-<li>Appointment scheduling</li>
+<li>Monitor outstanding household items</li>
 
-<li>Maintenance coordination</li>
+<li>Coordinate needed services</li>
 
-<li>Contractor scheduling and follow-up</li>
+<li>Follow up on household concerns</li>
 
-<li>Family communication updates</li>
-
-<li>Home technology assistance</li>
-
-<li>Mail and package coordination</li>
-
-<li>Ongoing household oversight</li>
+<li>Keep families informed</li>
 
 </ul>
 
-<a href="./contact.html" class="plan-button">
-Speak With Your Concierge
-</a>
-
 </div>
 
 
 
-<!-- FAMILY CONCIERGE -->
+<!-- SMALL TASKS -->
 
-<div class="plan">
+<div class="service">
 
-<h2>Family Concierge</h2>
-
-<div class="price">
-$349/month
-</div>
+<h2>Small Household Tasks</h2>
 
 <p>
-For families who want a more hands-on level of support and someone they can rely on to coordinate the details.
+Sometimes it's the little things that make the biggest difference. Select LiveWell memberships include hands-on help with small household tasks.
 </p>
 
 <ul>
 
-<li>Everything in LiveWell</li>
+<li>Changing light bulbs</li>
 
-<li>Priority response support</li>
+<li>Replacing batteries</li>
 
-<li>Enhanced home oversight</li>
+<li>Basic assembly</li>
 
-<li>Full project coordination</li>
+<li>Hanging pictures</li>
 
-<li>Vendor management</li>
-
-<li>Seasonal home preparation</li>
-
-<li>Customized family reporting</li>
-
-<li>Additional family coordination</li>
+<li>Minor household adjustments</li>
 
 </ul>
 
-<a href="./contact.html" class="plan-button">
-Speak With Your Concierge
-</a>
-
-</div>
-
-
 </div>
 
 
 
-<div class="addons">
+<!-- FAMILY COMMUNICATION -->
 
-<h2>Additional Services</h2>
+<div class="service">
+
+<h2>Family Communication</h2>
 
 <p>
-Certain services can be arranged separately based on your home's needs. LiveWell coordinates with trusted service providers so your family does not have to manage every detail.
+One of the hardest parts of supporting a loved one from a distance is not knowing what is happening. We help keep your family informed.
 </p>
 
 <ul>
 
-<li>Home safety assessments</li>
+<li>Home and maintenance updates</li>
 
-<li>Seasonal home preparation</li>
+<li>Completed work updates</li>
 
-<li>Contractor coordination</li>
+<li>Outstanding items</li>
 
-<li>Technology setup and support</li>
+<li>Upcoming services</li>
 
-<li>Home organization and downsizing assistance</li>
-
-<li>Special project coordination</li>
+<li>Items that may need attention</li>
 
 </ul>
 
 </div>
 
+
+</div>
+
+
+
+<div class="family">
+
+<h2>For Your Loved One. For Your Family.</h2>
+
+<p>
+Your loved one deserves to feel comfortable and supported in their home. And your family deserves peace of mind knowing that someone local can help when you can't be there.
+</p>
+
+<p>
+LiveWell doesn't replace family. <strong>We support family.</strong>
+</p>
+
+<p>
+We help with the home, coordinate the details, and keep you connected — giving you more time to focus on what matters most: your loved one.
+</p>
+
+</div>
+
+
+
+<div class="walkthrough">
+
+<h2>Every Membership Includes An Annual Home Walkthrough</h2>
+
+<p>
+Once a year, we walk through the home with your loved one's needs in mind and help identify items that may need attention, maintenance, repair, or follow-up.
+</p>
+
+<p>
+It's one more way we help families stay ahead of the little things before they become bigger concerns.
+</p>
+
+</div>
 
 
 
 <div class="cta">
 
-<h2>Not Sure Which Plan Is Right For You?</h2>
+<h2>You Can't Be There For Everything. That's Why We Are.</h2>
 
 <p>
-Let's talk about your loved one's home, what support is needed, and how involved your family would like to be. We'll help you find the right level of LiveWell support.
+Whether you live nearby or miles away, LiveWell can provide a trusted local presence for your loved one's home. Let's talk about what your family needs.
 </p>
 
 <a href="./contact.html" class="button">
-Speak With Your Concierge
+Talk With LiveWell
 </a>
 
 </div>
@@ -549,3 +569,4 @@ Speak With Your Concierge
 </body>
 
 </html>
+```
