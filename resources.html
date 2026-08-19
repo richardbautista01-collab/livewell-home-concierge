@@ -8,7 +8,7 @@
 
 <title>Resources | LiveWell Home Concierge</title>
 
-<meta name="description" content="Helpful resources for families planning safe and comfortable aging at home with LiveWell Home Concierge.">
+<meta name="description" content="Helpful resources for families supporting aging parents at home, including the LiveWell Home Concierge fact sheet, family guide, home safety resources, and planning information.">
 
 <style>
 
@@ -16,7 +16,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -69,10 +69,82 @@ margin:auto;
 font-size:18px;
 }
 
+
+/* RESOURCES */
+
+.resources-intro{
+width:84%;
+max-width:1100px;
+margin:50px auto 30px;
+text-align:center;
+}
+
+.resources-intro h2{
+font-size:32px;
+color:#24584d;
+margin-bottom:12px;
+}
+
+.resources-intro p{
+max-width:700px;
+margin:auto;
+font-size:17px;
+}
+
+
+/* DOWNLOAD CARDS */
+
+.resource-grid{
+width:84%;
+max-width:1100px;
+margin:35px auto 55px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.resource-card{
+background:white;
+padding:35px;
+border-radius:14px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.resource-card h2{
+color:#2f6f62;
+font-size:25px;
+margin-bottom:15px;
+}
+
+.resource-card p{
+margin-bottom:20px;
+color:#555;
+}
+
+.resource-button{
+display:inline-block;
+background:#2f6f62;
+color:white;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:.2s;
+}
+
+.resource-button:hover{
+background:#24584d;
+transform:translateY(-1px);
+}
+
+
+/* CONTENT */
+
 .container{
 width:84%;
 max-width:1100px;
-margin:50px auto;
+margin:0 auto 50px;
 }
 
 .card{
@@ -102,17 +174,26 @@ margin:15px 0 0 20px;
 margin-bottom:8px;
 }
 
+
+/* CTA */
+
 .cta{
 background:#2f6f62;
 color:white;
 text-align:center;
-padding:45px 20px;
+padding:50px 25px;
 border-radius:14px;
+margin-top:10px;
 }
 
 .cta h2{
 margin-bottom:15px;
 font-size:30px;
+}
+
+.cta p{
+max-width:700px;
+margin:auto;
 }
 
 .button{
@@ -126,6 +207,13 @@ text-decoration:none;
 font-weight:bold;
 }
 
+.button:hover{
+background:#f1f1f1;
+}
+
+
+/* FOOTER */
+
 footer{
 text-align:center;
 padding:30px;
@@ -135,6 +223,8 @@ margin-top:50px;
 }
 
 
+/* MOBILE */
+
 @media(max-width:768px){
 
 header{
@@ -143,14 +233,29 @@ flex-direction:column;
 
 nav{
 margin-top:15px;
+text-align:center;
+}
+
+nav a{
+display:inline-block;
+margin:5px 8px;
 }
 
 .hero h1{
 font-size:32px;
 }
 
+.resource-grid{
+grid-template-columns:1fr;
+}
+
+.resource-card,
 .card{
 padding:25px;
+}
+
+.resources-intro h2{
+font-size:28px;
 }
 
 }
@@ -189,8 +294,68 @@ LiveWell Home Concierge
 <h1>Resources</h1>
 
 <p>
-Helping families make informed decisions about aging at home, home safety, and maintaining independence.
+Helpful information for families supporting aging parents, maintaining the home, and planning for the future.
 </p>
+
+</section>
+
+
+
+<section class="resources-intro">
+
+<h2>Want To Learn More About LiveWell?</h2>
+
+<p>
+We've created a few simple resources to help you understand how LiveWell supports families when they can't always be there.
+</p>
+
+</section>
+
+
+
+<section class="resource-grid">
+
+
+<div class="resource-card">
+
+<h2>Our 1-Page Overview</h2>
+
+<p>
+A quick overview of LiveWell Home Concierge, our services, memberships, and how we help families care for a parent's home from a distance.
+</p>
+
+<a
+class="resource-button"
+href="./documents/livewell-fact-sheet.pdf"
+target="_blank"
+rel="noopener"
+>
+Download Fact Sheet
+</a>
+
+</div>
+
+
+
+<div class="resource-card">
+
+<h2>The LiveWell Family Guide</h2>
+
+<p>
+Learn how LiveWell works, what we coordinate, our membership options, and how we provide a trusted local presence for your family.
+</p>
+
+<a
+class="resource-button"
+href="./documents/livewell-home-concierge-guide.pdf"
+target="_blank"
+rel="noopener"
+>
+View Family Guide
+</a>
+
+</div>
+
 
 </section>
 
@@ -204,11 +369,11 @@ Helping families make informed decisions about aging at home, home safety, and m
 <h2>Aging at Home: What Families Should Know</h2>
 
 <p>
-Many seniors want to remain in the homes they love for as long as possible. With the right planning and support, aging at home can provide comfort, independence, and peace of mind.
+Many older adults want to remain in the homes they love for as long as possible. With the right planning and support, aging at home can provide comfort, independence, and peace of mind.
 </p>
 
 <p>
-LiveWell helps families create proactive plans by coordinating household needs, identifying potential concerns, and providing reliable ongoing support.
+LiveWell helps families stay ahead of household needs by coordinating maintenance, identifying potential concerns, and providing reliable ongoing support.
 </p>
 
 </div>
@@ -251,7 +416,6 @@ LiveWell helps families create proactive plans by coordinating household needs, 
 
 <h2>Senior Home Safety Checklist</h2>
 
-
 <h3>Inside The Home</h3>
 
 <ul>
@@ -283,9 +447,7 @@ LiveWell helps families create proactive plans by coordinating household needs, 
 
 </ul>
 
-
 </div>
-
 
 
 
@@ -312,7 +474,6 @@ A home should continue supporting your lifestyle as your needs change.
 </ul>
 
 </div>
-
 
 
 
@@ -344,14 +505,14 @@ Many families live busy lives or cannot always be nearby. LiveWell provides a tr
 
 <div class="cta">
 
-<h2>Need Help Creating A Plan?</h2>
+<h2>You Can't Always Be There. But Someone Can.</h2>
 
 <p>
-Every home and family situation is different. Let LiveWell help your loved one stay safe, comfortable, and independent at home.
+LiveWell gives your family a trusted local presence to help care for the home, coordinate what needs to be done, and keep you connected.
 </p>
 
-<a class="button" href="contact.html">
-Book A Home Assessment
+<a class="button" href="./contact.html">
+Book A Free Consultation
 </a>
 
 </div>
@@ -375,3 +536,4 @@ Book A Home Assessment
 </body>
 
 </html>
+```
