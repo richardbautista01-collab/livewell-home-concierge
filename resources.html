@@ -8,255 +8,526 @@
 
 <title>Resources | LiveWell Home Concierge</title>
 
-<meta name="description" content="Helpful resources for families supporting aging parents at home, including the LiveWell Home Concierge fact sheet, family guide, home safety resources, and planning information.">
+<meta name="description"
+content="Helpful resources for families supporting aging parents at home, including the LiveWell Home Concierge fact sheet, family guide, home safety resources, and planning information.">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-background:#f8f7f2;
-color:#333;
-line-height:1.6;
+html {
+    scroll-behavior: smooth;
 }
 
-header{
-background:white;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #303b34;
+    background: #f8f6f0;
+    line-height: 1.7;
 }
 
-.logo{
-font-size:24px;
-font-weight:bold;
-color:#2f6f62;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#333;
-font-size:15px;
-}
-
-nav a:hover{
-color:#2f6f62;
-}
-
-.hero{
-padding:70px 8%;
-text-align:center;
-background:#e8f1ed;
-}
-
-.hero h1{
-font-size:42px;
-color:#24584d;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:700px;
-margin:auto;
-font-size:18px;
+.container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
 }
 
 
-/* RESOURCES */
+/* =========================
+   HEADER
+========================= */
 
-.resources-intro{
-width:84%;
-max-width:1100px;
-margin:50px auto 30px;
-text-align:center;
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e7e5dc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.resources-intro h2{
-font-size:32px;
-color:#24584d;
-margin-bottom:12px;
+.navbar {
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
 }
 
-.resources-intro p{
-max-width:700px;
-margin:auto;
-font-size:17px;
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-
-/* DOWNLOAD CARDS */
-
-.resource-grid{
-width:84%;
-max-width:1100px;
-margin:35px auto 55px;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:25px;
+.logo img {
+    display: block;
+    width: 190px;
+    height: auto;
+    max-height: 65px;
+    object-fit: contain;
 }
 
-.resource-card{
-background:white;
-padding:35px;
-border-radius:14px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-text-align:center;
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-.resource-card h2{
-color:#2f6f62;
-font-size:25px;
-margin-bottom:15px;
+nav a {
+    color: #455148;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color .2s ease;
 }
 
-.resource-card p{
-margin-bottom:20px;
-color:#555;
+nav a:hover {
+    color: #52745d;
 }
 
-.resource-button{
-display:inline-block;
-background:#2f6f62;
-color:white;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-transition:.2s;
+.nav-button {
+    background: #52745d;
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 25px;
 }
 
-.resource-button:hover{
-background:#24584d;
-transform:translateY(-1px);
+.nav-button:hover {
+    background: #3f604b;
 }
 
 
-/* CONTENT */
+/* =========================
+   MOBILE MENU
+========================= */
 
-.container{
-width:84%;
-max-width:1100px;
-margin:0 auto 50px;
-}
-
-.card{
-background:white;
-padding:35px;
-margin-bottom:30px;
-border-radius:14px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.card h2{
-color:#2f6f62;
-margin-bottom:15px;
-font-size:28px;
-}
-
-.card h3{
-color:#444;
-margin-top:20px;
-}
-
-.card ul{
-margin:15px 0 0 20px;
-}
-
-.card li{
-margin-bottom:8px;
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    color: #3f604b;
+    cursor: pointer;
 }
 
 
-/* CTA */
+/* =========================
+   HERO
+========================= */
 
-.cta{
-background:#2f6f62;
-color:white;
-text-align:center;
-padding:50px 25px;
-border-radius:14px;
-margin-top:10px;
+.hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(248,246,240,.98) 0%,
+            rgba(248,246,240,.94) 52%,
+            rgba(248,246,240,.68) 100%
+        );
+
+    padding: 90px 0 80px;
 }
 
-.cta h2{
-margin-bottom:15px;
-font-size:30px;
+.hero-content {
+    max-width: 850px;
 }
 
-.cta p{
-max-width:700px;
-margin:auto;
+.tagline {
+    color: #52745d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
 }
 
-.button{
-display:inline-block;
-margin-top:20px;
-background:white;
-color:#2f6f62;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.08;
+    font-weight: 500;
+    margin: 0 0 25px;
 }
 
-.button:hover{
-background:#f1f1f1;
-}
-
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:30px;
-background:#222;
-color:white;
-margin-top:50px;
+.hero p {
+    font-size: 19px;
+    color: #68736b;
+    max-width: 790px;
+    margin: 0;
 }
 
 
-/* MOBILE */
+/* =========================
+   SECTIONS
+========================= */
 
-@media(max-width:768px){
-
-header{
-flex-direction:column;
+.section {
+    padding: 85px 0;
 }
 
-nav{
-margin-top:15px;
-text-align:center;
+.section.white {
+    background: #ffffff;
 }
 
-nav a{
-display:inline-block;
-margin:5px 8px;
+.section-heading {
+    max-width: 780px;
+    margin: 0 auto 50px;
+    text-align: center;
 }
 
-.hero h1{
-font-size:32px;
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 18px;
 }
 
-.resource-grid{
-grid-template-columns:1fr;
+.section-heading p {
+    color: #6c766f;
+    font-size: 17px;
+    max-width: 780px;
+    margin: 0 auto;
 }
 
-.resource-card,
-.card{
-padding:25px;
+
+/* =========================
+   RESOURCE DOWNLOAD CARDS
+========================= */
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
-.resources-intro h2{
-font-size:28px;
+.resource-card {
+    background: #ffffff;
+    border: 1px solid #e5e6df;
+    border-radius: 22px;
+    padding: 38px 35px;
+    box-shadow: 0 10px 35px rgba(44, 63, 49, .06);
+    text-align: center;
+    transition: transform .25s ease, box-shadow .25s ease;
 }
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(44, 63, 49, .10);
+}
+
+.resource-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 18px;
+    background: #edf3ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    margin: 0 auto 22px;
+}
+
+.resource-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 29px;
+    font-weight: 500;
+    margin: 0 0 13px;
+}
+
+.resource-card p {
+    color: #69746c;
+    font-size: 14px;
+    max-width: 500px;
+    margin: 0 auto 24px;
+}
+
+.resource-button {
+    display: inline-block;
+    background: #52745d;
+    color: #ffffff;
+    padding: 13px 24px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all .2s ease;
+}
+
+.resource-button:hover {
+    background: #3f604b;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESOURCE CONTENT CARDS
+========================= */
+
+.resource-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.resource-content-card {
+    background: #ffffff;
+    border: 1px solid #e5e6df;
+    border-radius: 22px;
+    padding: 35px 32px;
+    box-shadow: 0 10px 35px rgba(44, 63, 49, .06);
+}
+
+.resource-content-card.full {
+    grid-column: 1 / -1;
+}
+
+.resource-content-card h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 29px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 17px;
+}
+
+.resource-content-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #405b47;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.resource-content-card p {
+    color: #69746c;
+    font-size: 14px;
+    margin: 0 0 17px;
+}
+
+.resource-content-card p:last-child {
+    margin-bottom: 0;
+}
+
+.resource-content-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+}
+
+.resource-content-card li {
+    position: relative;
+    padding: 9px 0 9px 27px;
+    border-bottom: 1px solid #eef0eb;
+    color: #5f6b63;
+    font-size: 13px;
+}
+
+.resource-content-card li:last-child {
+    border-bottom: none;
+}
+
+.resource-content-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    color: #52745d;
+    font-weight: 700;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    background: #3f604b;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 15px;
+}
+
+.cta p {
+    color: #dce6de;
+    font-size: 17px;
+    margin: 0 auto 30px;
+    max-width: 750px;
+}
+
+.button {
+    display: inline-block;
+    background: #ffffff;
+    color: #3f604b;
+    padding: 15px 27px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all .2s ease;
+}
+
+.button:hover {
+    background: #edf3ed;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #2f4937;
+    color: #d8e0d9;
+    padding: 35px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #bfcac1;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    width: 190px;
+    max-height: 65px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    nav {
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .resource-grid,
+    .resource-content-grid {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .resource-content-card.full {
+        grid-column: auto;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .navbar {
+        min-height: 76px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border-top: 1px solid #e7e5dc;
+        box-shadow: 0 12px 25px rgba(0,0,0,.08);
+        padding: 18px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 13px 0;
+        border-bottom: 1px solid #eef0eb;
+        font-size: 14px;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-button {
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .hero {
+        padding: 65px 0 60px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .resource-card,
+    .resource-content-card {
+        padding: 30px 25px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .logo img {
+        width: 155px;
+        max-height: 55px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .resource-card h3,
+    .resource-content-card h2 {
+        font-size: 27px;
+    }
 
 }
 
@@ -268,269 +539,561 @@ font-size:28px;
 <body>
 
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-<div class="logo">
-LiveWell Home Concierge
-</div>
+    <div class="container navbar">
 
-<nav>
-<a href="./index.html">Home</a>
-<a href="./services.html">Services</a>
-<a href="./families.html">For Families</a>
-<a href="./memberships.html">Memberships</a>
-<a href="./resources.html">Resources</a>
-<a href="./about.html">About</a>
-<a href="./partners.html">Partners</a>
-<a href="./contact.html">Contact</a>
-</nav>
+        <a href="./index.html" class="logo">
+
+            <img
+                src="./logo.png"
+                alt="LiveWell Home Concierge">
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            onclick="toggleMenu()"
+            aria-label="Open navigation">
+
+            ☰
+
+        </button>
+
+
+        <nav id="mainNav">
+
+            <a href="./index.html">
+                Home
+            </a>
+
+            <a href="./about.html">
+                About
+            </a>
+
+            <a href="./services.html">
+                Services
+            </a>
+
+            <a href="./families.html">
+                For Families
+            </a>
+
+            <a href="./memberships.html">
+                Memberships
+            </a>
+
+            <a href="./resources.html">
+                Resources
+            </a>
+
+            <a href="./partners.html">
+                Partners
+            </a>
+
+            <a href="./contact.html">
+                Contact
+            </a>
+
+            <a
+                href="./contact.html"
+                class="nav-button">
+
+                Speak With Your Concierge
+
+            </a>
+
+        </nav>
+
+    </div>
 
 </header>
 
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
-<h1>Resources</h1>
+    <div class="container">
 
-<p>
-Helpful information for families supporting aging parents, maintaining the home, and planning for the future.
-</p>
+        <div class="hero-content">
 
-</section>
+            <div class="tagline">
+                LIVEWELL HOME CONCIERGE
+            </div>
 
+            <h1>
+                Resources for You
+                and Your Family.
+            </h1>
 
+            <p>
+                Helpful information for families supporting aging parents,
+                maintaining the home, and planning for the future.
+            </p>
 
-<section class="resources-intro">
+        </div>
 
-<h2>Want To Learn More About LiveWell?</h2>
-
-<p>
-We've created a few simple resources to help you understand how LiveWell supports families when they can't always be there.
-</p>
-
-</section>
-
-
-
-<section class="resource-grid">
-
-
-<div class="resource-card">
-
-<h2>Our 1-Page Overview</h2>
-
-<p>
-A quick overview of LiveWell Home Concierge, our services, memberships, and how we help families care for a parent's home from a distance.
-</p>
-
-<a
-class="resource-button"
-href="./documents/livewell-fact-sheet.pdf"
-target="_blank"
-rel="noopener"
->
-Download Fact Sheet
-</a>
-
-</div>
-
-
-
-<div class="resource-card">
-
-<h2>The LiveWell Family Guide</h2>
-
-<p>
-Learn how LiveWell works, what we coordinate, our membership options, and how we provide a trusted local presence for your family.
-</p>
-
-<a
-class="resource-button"
-href="./documents/livewell-home-concierge-guide.pdf"
-target="_blank"
-rel="noopener"
->
-View Family Guide
-</a>
-
-</div>
-
+    </div>
 
 </section>
 
 
 
-<div class="container">
+<!-- =========================
+     RESOURCE DOWNLOADS
+========================= -->
 
+<section class="section white">
 
-<div class="card">
+    <div class="container">
 
-<h2>Aging at Home: What Families Should Know</h2>
+        <div class="section-heading">
 
-<p>
-Many older adults want to remain in the homes they love for as long as possible. With the right planning and support, aging at home can provide comfort, independence, and peace of mind.
-</p>
+            <h2>
+                Want to Learn More About LiveWell?
+            </h2>
 
-<p>
-LiveWell helps families stay ahead of household needs by coordinating maintenance, identifying potential concerns, and providing reliable ongoing support.
-</p>
+            <p>
+                We've created a few simple resources to help you understand
+                how LiveWell supports families when they can't always be there.
+            </p>
 
-</div>
+        </div>
 
 
+        <div class="resource-grid">
 
-<div class="card">
 
-<h2>10 Signs Your Loved One May Need More Support</h2>
+            <!-- FACT SHEET -->
 
-<ul>
+            <div class="resource-card">
 
-<li>The home is becoming harder to maintain</li>
+                <div class="resource-icon">
+                    📄
+                </div>
 
-<li>Small repairs are being ignored</li>
+                <h3>
+                    Our 1-Page Overview
+                </h3>
 
-<li>Yard work or seasonal tasks are becoming difficult</li>
+                <p>
+                    A quick overview of LiveWell Home Concierge, our services,
+                    memberships, and how we help families care for a parent's
+                    home from a distance.
+                </p>
 
-<li>Safety concerns are appearing around the home</li>
+                <a
+                    class="resource-button"
+                    href="./documents/livewell-fact-sheet.pdf"
+                    target="_blank"
+                    rel="noopener">
 
-<li>Family members are spending more time coordinating support</li>
+                    Download Fact Sheet
 
-<li>Household organization is becoming overwhelming</li>
+                </a>
 
-<li>Technology or appointments are becoming challenging</li>
+            </div>
 
-<li>There has been a fall or safety incident</li>
 
-<li>The home no longer feels as manageable</li>
 
-<li>Family members feel concerned because they cannot always be nearby</li>
+            <!-- FAMILY GUIDE -->
 
-</ul>
+            <div class="resource-card">
 
-</div>
+                <div class="resource-icon">
+                    📘
+                </div>
 
+                <h3>
+                    The LiveWell Family Guide
+                </h3>
 
+                <p>
+                    Learn how LiveWell works, what we coordinate, our membership
+                    options, and how we provide a trusted local presence for
+                    your family.
+                </p>
 
-<div class="card">
+                <a
+                    class="resource-button"
+                    href="./documents/livewell-home-concierge-guide.pdf"
+                    target="_blank"
+                    rel="noopener">
 
-<h2>Senior Home Safety Checklist</h2>
+                    View Family Guide
 
-<h3>Inside The Home</h3>
+                </a>
 
-<ul>
+            </div>
 
-<li>Clear walkways and remove trip hazards</li>
 
-<li>Improve lighting in hallways and stairs</li>
+        </div>
 
-<li>Check smoke and carbon monoxide detectors</li>
+    </div>
 
-<li>Install safety equipment when needed</li>
+</section>
 
-<li>Keep emergency contacts accessible</li>
 
-</ul>
 
+<!-- =========================
+     FAMILY RESOURCES
+========================= -->
 
-<h3>Outside The Home</h3>
+<section class="section">
 
-<ul>
+    <div class="container">
 
-<li>Maintain entrances and walkways</li>
+        <div class="section-heading">
 
-<li>Address seasonal hazards</li>
+            <h2>
+                Helpful Information for Families
+            </h2>
 
-<li>Check outdoor lighting</li>
+            <p>
+                A few things to consider as your loved one's needs change and
+                your family plans for the years ahead.
+            </p>
 
-<li>Maintain steps and railings</li>
+        </div>
 
-</ul>
 
-</div>
+        <div class="resource-content-grid">
 
 
+            <!-- AGING AT HOME -->
 
-<div class="card">
+            <div class="resource-content-card full">
 
-<h2>Preparing Your Home For Retirement</h2>
+                <h2>
+                    Aging at Home: What Families Should Know
+                </h2>
 
-<p>
-A home should continue supporting your lifestyle as your needs change.
-</p>
+                <p>
+                    Many older adults want to remain in the homes they love for
+                    as long as possible. With the right planning and support,
+                    aging at home can provide comfort, independence, and peace
+                    of mind.
+                </p>
 
-<ul>
+                <p>
+                    LiveWell helps families stay ahead of household needs by
+                    coordinating maintenance, identifying potential concerns,
+                    and providing reliable ongoing support.
+                </p>
 
-<li>Reduce maintenance responsibilities</li>
+            </div>
 
-<li>Improve accessibility</li>
 
-<li>Create emergency plans</li>
 
-<li>Organize important documents</li>
+            <!-- SIGNS -->
 
-<li>Build a trusted support network</li>
+            <div class="resource-content-card">
 
-</ul>
+                <h2>
+                    10 Signs Your Loved One May Need More Support
+                </h2>
 
-</div>
+                <ul>
 
+                    <li>
+                        The home is becoming harder to maintain
+                    </li>
 
+                    <li>
+                        Small repairs are being ignored
+                    </li>
 
-<div class="card">
+                    <li>
+                        Yard work or seasonal tasks are becoming difficult
+                    </li>
 
-<h2>Supporting Parents From A Distance</h2>
+                    <li>
+                        Safety concerns are appearing around the home
+                    </li>
 
-<p>
-Many families live busy lives or cannot always be nearby. LiveWell provides a trusted local presence to help families stay connected and informed.
-</p>
+                    <li>
+                        Family members are spending more time coordinating support
+                    </li>
 
-<ul>
+                    <li>
+                        Household organization is becoming overwhelming
+                    </li>
 
-<li>Home check-ins</li>
+                    <li>
+                        Technology or appointments are becoming challenging
+                    </li>
 
-<li>Maintenance coordination</li>
+                    <li>
+                        There has been a fall or safety incident
+                    </li>
 
-<li>Family updates</li>
+                    <li>
+                        The home no longer feels as manageable
+                    </li>
 
-<li>Household support</li>
+                    <li>
+                        Family members feel concerned because they cannot always
+                        be nearby
+                    </li>
 
-<li>Trusted contractor coordination</li>
+                </ul>
 
-</ul>
+            </div>
 
-</div>
 
 
+            <!-- SAFETY -->
 
-<div class="cta">
+            <div class="resource-content-card">
 
-<h2>You Can't Always Be There. But Someone Can.</h2>
+                <h2>
+                    Senior Home Safety Checklist
+                </h2>
 
-<p>
-LiveWell gives your family a trusted local presence to help care for the home, coordinate what needs to be done, and keep you connected.
-</p>
+                <h3>
+                    Inside the Home
+                </h3>
 
-<a class="button" href="./contact.html">
-Book A Free Consultation
-</a>
+                <ul>
 
-</div>
+                    <li>
+                        Clear walkways and remove trip hazards
+                    </li>
 
+                    <li>
+                        Improve lighting in hallways and stairs
+                    </li>
 
+                    <li>
+                        Check smoke and carbon monoxide detectors
+                    </li>
 
-</div>
+                    <li>
+                        Install safety equipment when needed
+                    </li>
 
+                    <li>
+                        Keep emergency contacts accessible
+                    </li>
 
+                </ul>
+
+
+                <h3>
+                    Outside the Home
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Maintain entrances and walkways
+                    </li>
+
+                    <li>
+                        Address seasonal hazards
+                    </li>
+
+                    <li>
+                        Check outdoor lighting
+                    </li>
+
+                    <li>
+                        Maintain steps and railings
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- RETIREMENT -->
+
+            <div class="resource-content-card">
+
+                <h2>
+                    Preparing Your Home for Retirement
+                </h2>
+
+                <p>
+                    A home should continue supporting your lifestyle as your
+                    needs change.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Reduce maintenance responsibilities
+                    </li>
+
+                    <li>
+                        Improve accessibility
+                    </li>
+
+                    <li>
+                        Create emergency plans
+                    </li>
+
+                    <li>
+                        Organize important documents
+                    </li>
+
+                    <li>
+                        Build a trusted support network
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- DISTANCE -->
+
+            <div class="resource-content-card">
+
+                <h2>
+                    Supporting Parents From a Distance
+                </h2>
+
+                <p>
+                    Many families live busy lives or cannot always be nearby.
+                    LiveWell provides a trusted local presence to help families
+                    stay connected and informed.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Home check-ins
+                    </li>
+
+                    <li>
+                        Maintenance coordination
+                    </li>
+
+                    <li>
+                        Family updates
+                    </li>
+
+                    <li>
+                        Household support
+                    </li>
+
+                    <li>
+                        Trusted contractor coordination
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            You Can't Always Be There.
+            But Someone Can.
+        </h2>
+
+        <p>
+            LiveWell gives your family a trusted local presence to help care
+            for the home, coordinate what needs to be done, and keep you
+            connected.
+        </p>
+
+        <a
+            class="button"
+            href="./contact.html">
+
+            Book a Free Consultation
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<p>
-© 2026 LiveWell Home Concierge. All Rights Reserved.
-</p>
+    <div class="container">
+
+        <div class="footer-logo">
+
+            <img
+                src="./logo.png"
+                alt="LiveWell Home Concierge">
+
+        </div>
+
+        <p>
+            Helping you stay in the home you love.
+        </p>
+
+        <p style="margin-top:12px;">
+            © 2026 LiveWell Home Concierge. All rights reserved.
+        </p>
+
+    </div>
 
 </footer>
 
+
+
+<!-- =========================
+     MOBILE MENU SCRIPT
+========================= -->
+
+<script>
+
+function toggleMenu() {
+
+    const nav = document.getElementById("mainNav");
+
+    nav.classList.toggle("active");
+
+}
+
+document.querySelectorAll("#mainNav a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        document.getElementById("mainNav").classList.remove("active");
+
+    });
+
+});
+
+</script>
 
 
 </body>
