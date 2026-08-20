@@ -8,7 +8,8 @@
 
 <title>LiveWell Home Concierge | Trusted Support for Families</title>
 
-<meta name="description" content="LiveWell Home Concierge provides trusted home and family support for families helping their loved ones age comfortably and independently at home across the GTA and York Region.">
+<meta name="description"
+content="LiveWell Home Concierge provides trusted home and family support for families helping their loved ones age comfortably and independently at home across the GTA and York Region.">
 
 <style>
 
@@ -16,93 +17,108 @@
    GLOBAL
 ========================= */
 
-:root{
-    --green:#2F6B4F;
-    --deep-green:#1E4534;
-    --dark-green:#153526;
-
-    --sage:#E8EFE9;
-    --cream:#F8F5F0;
-    --warm-white:#FFFDF9;
-
-    --sand:#D8C9AD;
-
-    --text:#29352F;
-    --muted:#66736C;
-
-    --border:#E8E3DA;
+* {
+    box-sizing: border-box;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
-html{
-    scroll-behavior:smooth;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #303b34;
+    background: #f8f6f0;
+    line-height: 1.7;
 }
 
-body{
-    color:var(--text);
-    line-height:1.6;
-    background:var(--warm-white);
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
 }
 
 
 /* =========================
-   NAVIGATION
+   HEADER
 ========================= */
 
-nav{
-    background:var(--warm-white);
-    padding:10px 10%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:relative;
-    z-index:100;
-    border-bottom:1px solid var(--border);
-    min-height:88px;
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e7e5dc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
+.navbar {
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
 }
 
-.logo img{
-    height:62px;
-    width:auto;
-    display:block;
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.nav-links{
-    display:flex;
-    align-items:center;
+.logo img {
+    display: block;
+    width: 190px;
+    height: auto;
+    max-height: 65px;
+    object-fit: contain;
 }
 
-nav a{
-    color:var(--deep-green);
-    text-decoration:none;
-    margin-left:25px;
-    font-weight:600;
-    font-size:15px;
-    transition:.2s;
+nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
 }
 
-nav a:hover{
-    color:var(--green);
+nav a {
+    color: #455148;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color .2s ease;
 }
 
-.menu-toggle{
-    display:none;
-    background:none;
-    border:none;
-    color:var(--deep-green);
-    font-size:32px;
-    cursor:pointer;
+nav a:hover {
+    color: #52745d;
+}
+
+.nav-button {
+    background: #52745d;
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 25px;
+}
+
+.nav-button:hover {
+    background: #3f604b;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    color: #3f604b;
+    cursor: pointer;
 }
 
 
@@ -110,66 +126,68 @@ nav a:hover{
    HERO
 ========================= */
 
-.hero{
-    min-height:88vh;
-    display:flex;
-    align-items:center;
-    padding:90px 10%;
+.hero {
+    position: relative;
 
     background:
         linear-gradient(
-            rgba(21,53,38,.58),
-            rgba(21,53,38,.58)
+            90deg,
+            rgba(248,246,240,.97) 0%,
+            rgba(248,246,240,.93) 52%,
+            rgba(248,246,240,.68) 100%
         ),
-        url("hero.jpg") center/cover;
+        url("./hero.jpg") center/cover no-repeat;
 
-    color:white;
+    padding: 105px 0 95px;
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
 }
 
-.hero-content{
-    max-width:850px;
+.hero-content {
+    max-width: 850px;
 }
 
-.tagline{
-    font-size:17px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    margin-bottom:22px;
-    color:#F3EDE2;
-    font-weight:bold;
+.tagline {
+    color: #52745d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
 }
 
-.hero h1{
-    font-size:60px;
-    line-height:1.08;
-    margin-bottom:28px;
-    max-width:850px;
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(44px, 5vw, 68px);
+    line-height: 1.08;
+    font-weight: 500;
+    margin: 0 0 25px;
+    max-width: 850px;
 }
 
-.hero p{
-    font-size:21px;
-    line-height:1.7;
-    margin-bottom:38px;
-    max-width:760px;
-    color:#F7F5EF;
+.hero p {
+    font-size: 19px;
+    color: #68736b;
+    max-width: 790px;
+    margin: 0 0 32px;
 }
 
-.button{
-    display:inline-block;
-    background:var(--green);
-    color:white;
-    padding:16px 34px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.2s;
-    border:2px solid var(--green);
+.button {
+    display: inline-block;
+    background: #52745d;
+    color: white;
+    padding: 15px 27px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all .2s ease;
 }
 
-.button:hover{
-    background:var(--deep-green);
-    border-color:var(--deep-green);
-    transform:translateY(-1px);
+.button:hover {
+    background: #3f604b;
+    transform: translateY(-2px);
 }
 
 
@@ -177,26 +195,39 @@ nav a:hover{
    FAMILY MESSAGE
 ========================= */
 
-.family-message{
-    background:var(--sage);
-    padding:95px 10%;
-    text-align:center;
+.family-message {
+    background: #edf3ed;
+    padding: 85px 0;
 }
 
-.family-message h2{
-    color:var(--deep-green);
-    font-size:44px;
-    line-height:1.2;
-    max-width:900px;
-    margin:0 auto 25px;
+.family-message-box {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.family-message p{
-    max-width:780px;
-    margin:0 auto;
-    color:#4F5D55;
-    font-size:19px;
-    line-height:1.8;
+.family-label {
+    color: #52745d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.family-message h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(34px, 4vw, 46px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.family-message p {
+    color: #647168;
+    font-size: 17px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 
@@ -204,24 +235,34 @@ nav a:hover{
    GENERAL SECTIONS
 ========================= */
 
-.section{
-    padding:90px 10%;
-    text-align:center;
-    background:var(--warm-white);
+.section {
+    padding: 85px 0;
 }
 
-.section h2{
-    font-size:42px;
-    color:var(--deep-green);
-    margin-bottom:20px;
-    line-height:1.2;
+.section.white {
+    background: #ffffff;
 }
 
-.section > p{
-    max-width:760px;
-    margin:0 auto;
-    color:var(--muted);
-    font-size:18px;
+.section-heading {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 18px;
+}
+
+.section-heading p {
+    color: #6c766f;
+    font-size: 17px;
+    max-width: 780px;
+    margin: 0 auto;
 }
 
 
@@ -229,35 +270,53 @@ nav a:hover{
    SERVICES
 ========================= */
 
-.services{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:28px;
-    margin-top:50px;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
 }
 
-.card{
-    background:var(--cream);
-    padding:38px 30px;
-    border-radius:18px;
-    text-align:left;
-    border:1px solid #EEE8DF;
-    transition:.2s;
+.service-card {
+    background: #ffffff;
+    border: 1px solid #e5e6df;
+    border-radius: 22px;
+    padding: 32px 28px;
+    box-shadow: 0 10px 35px rgba(44, 63, 49, .06);
+    transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 30px rgba(21,53,38,.08);
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(44, 63, 49, .10);
 }
 
-.card h3{
-    color:var(--deep-green);
-    margin-bottom:15px;
-    font-size:20px;
+.service-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 17px;
+    background: #edf3ed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+    margin-bottom: 21px;
 }
 
-.card p{
-    color:var(--muted);
+.service-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 0 0 13px;
+    font-weight: 500;
+}
+
+.service-card p {
+    color: #69746c;
+    font-size: 14px;
+    margin: 0;
 }
 
 
@@ -265,146 +324,257 @@ nav a:hover{
    HOW IT WORKS
 ========================= */
 
-.steps{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:28px;
-    margin-top:50px;
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.step{
-    background:white;
-    padding:38px 30px;
-    border-radius:18px;
-    text-align:center;
-    border:1px solid var(--border);
-    transition:.2s;
+.step {
+    background: #ffffff;
+    border: 1px solid #e5e6df;
+    border-radius: 20px;
+    padding: 30px 25px;
+    transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.step:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 30px rgba(21,53,38,.08);
+.step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(44,63,49,.08);
 }
 
-.step-number{
-    width:48px;
-    height:48px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    margin:0 auto 20px;
-
-    border-radius:50%;
-
-    background:var(--green);
-    color:white;
-
-    font-weight:bold;
+.step-number {
+    color: #52745d;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 17px;
 }
 
-.step h3{
-    color:var(--deep-green);
-    margin-bottom:15px;
-    font-size:20px;
+.step h3 {
+    color: #344d3b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0 0 12px;
 }
 
-.step p{
-    color:var(--muted);
+.step p {
+    color: #6c766f;
+    font-size: 13px;
+    margin: 0;
 }
 
 
 /* =========================
-   MEMBERSHIP
+   MEMBERSHIP PREVIEW
 ========================= */
 
-.membership{
-    background:var(--cream);
-    padding:90px 10%;
-    text-align:center;
+.membership-section {
+    background: #f8f6f0;
 }
 
-.membership h2{
-    font-size:42px;
-    color:var(--deep-green);
-    margin-bottom:20px;
+.membership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: stretch;
 }
 
-.membership-intro{
-    font-size:19px;
-    max-width:750px;
-    margin:0 auto 50px;
-    color:var(--muted);
+.membership-card {
+    background: #ffffff;
+    border: 1px solid #e5e6df;
+    border-radius: 22px;
+    padding: 35px 32px;
+    box-shadow: 0 10px 35px rgba(44, 63, 49, .06);
+    position: relative;
 }
 
-.membership-plans{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    max-width:1100px;
-    margin:0 auto 45px;
+.membership-card.featured {
+    border: 2px solid #52745d;
+    box-shadow: 0 18px 50px rgba(62, 91, 69, .14);
+    transform: translateY(-8px);
 }
 
-.membership-card{
-    background:white;
-    padding:38px 28px;
-    border-radius:18px;
-    box-shadow:0 5px 20px rgba(21,53,38,.08);
-    text-align:left;
-    border:1px solid #EEE8DF;
+.popular {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #52745d;
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    padding: 7px 11px;
+    border-radius: 20px;
 }
 
-.membership-card h3{
-    font-size:25px;
-    color:var(--deep-green);
-    margin-bottom:10px;
+.membership-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 17px;
+    background: #edf3ed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+    margin-bottom: 22px;
 }
 
-.membership-price{
-    font-size:32px;
-    font-weight:bold;
-    color:var(--green);
-    margin:15px 0 20px;
+.membership-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 27px;
+    font-weight: 500;
+    margin: 0 0 7px;
 }
 
-.membership-card p{
-    margin-bottom:22px;
-    color:var(--muted);
+.price {
+    color: #52745d;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 14px;
 }
 
-.membership-card ul{
-    list-style:none;
-    padding:0;
+.price span {
+    color: #89938c;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-.membership-card li{
-    margin:11px 0;
-    font-size:15px;
-    color:#4D5A53;
+.membership-card p {
+    color: #69746c;
+    font-size: 14px;
+    margin: 0 0 18px;
 }
 
-.membership-card li::before{
-    content:"✓";
-    color:var(--green);
-    font-weight:bold;
-    margin-right:8px;
+.membership-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 22px;
 }
 
-.membership-card.popular{
-    border:3px solid var(--green);
-    transform:translateY(-8px);
+.membership-card li {
+    position: relative;
+    padding: 8px 0 8px 25px;
+    border-bottom: 1px solid #eef0eb;
+    color: #5f6b63;
+    font-size: 13px;
 }
 
-.popular-badge{
-    display:inline-block;
-    background:var(--green);
-    color:white;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:15px;
+.membership-card li:last-child {
+    border-bottom: none;
+}
+
+.membership-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #52745d;
+    font-weight: 700;
+}
+
+.membership-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* =========================
+   TRUST / LOCAL PRESENCE
+========================= */
+
+.trust-section {
+    background: #ffffff;
+}
+
+.trust-box {
+    background: #edf3ed;
+    border-radius: 28px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.trust-label {
+    color: #52745d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.trust-box h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.trust-box p {
+    color: #637067;
+    font-size: 16px;
+    margin: 0 0 17px;
+}
+
+.trust-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 25px;
+}
+
+.trust-list div {
+    position: relative;
+    padding: 11px 0 11px 27px;
+    border-bottom: 1px solid #d9e2da;
+    color: #5f6b63;
+    font-size: 14px;
+}
+
+.trust-list div::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    color: #52745d;
+    font-weight: 700;
+}
+
+.trust-side {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 35px;
+    border: 1px solid #e3e7e1;
+}
+
+.trust-side h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 27px;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+.trust-side p {
+    font-size: 14px;
+    color: #617067;
+}
+
+.trust-side-note {
+    margin-top: 25px !important;
+    padding-top: 20px;
+    border-top: 1px solid #dce4dd;
+    font-size: 12px !important;
+    color: #748078 !important;
 }
 
 
@@ -412,23 +582,27 @@ nav a:hover{
    SERVICE AREA
 ========================= */
 
-.area{
-    background:var(--deep-green);
-    color:white;
-    padding:80px 10%;
-    text-align:center;
+.area {
+    background: #3f604b;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
 }
 
-.area h2{
-    font-size:40px;
-    margin-bottom:18px;
+.area h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 18px;
 }
 
-.area p{
-    max-width:850px;
-    margin:auto;
-    color:#E9EFEA;
-    font-size:18px;
+.area p {
+    color: #dce6de;
+    font-size: 17px;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
 }
 
 
@@ -436,25 +610,26 @@ nav a:hover{
    FINAL CTA
 ========================= */
 
-.final-cta{
-    background:var(--warm-white);
-    padding:85px 10%;
-    text-align:center;
+.cta {
+    background: #ffffff;
+    color: #304a38;
+    text-align: center;
+    padding: 85px 20px;
 }
 
-.final-cta h2{
-    color:var(--deep-green);
-    font-size:40px;
-    max-width:750px;
-    margin:0 auto 18px;
-    line-height:1.2;
+.cta h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 15px;
 }
 
-.final-cta p{
-    max-width:650px;
-    margin:0 auto 30px;
-    color:var(--muted);
-    font-size:18px;
+.cta p {
+    color: #68736b;
+    font-size: 17px;
+    margin: 0 auto 30px;
+    max-width: 700px;
 }
 
 
@@ -462,193 +637,212 @@ nav a:hover{
    FOOTER
 ========================= */
 
-footer{
-    background:var(--dark-green);
-    color:#DCE5DF;
-    padding:30px;
-    text-align:center;
-    font-size:14px;
+footer {
+    background: #2f4937;
+    color: #d8e0d9;
+    padding: 35px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #bfcac1;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    width: 190px;
+    max-height: 65px;
+    object-fit: contain;
 }
 
 
 /* =========================
-   TABLET
+   RESPONSIVE
 ========================= */
 
-@media(max-width:1100px){
+@media (max-width: 1100px) {
 
-    .services{
-        grid-template-columns:repeat(2,1fr);
+    nav {
+        gap: 17px;
     }
 
-    .steps{
-        grid-template-columns:repeat(2,1fr);
+    nav a {
+        font-size: 13px;
     }
 
-    .membership-plans{
-        grid-template-columns:1fr;
-        max-width:600px;
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .membership-card.popular{
-        transform:none;
+    .membership-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        margin: 0 auto;
     }
 
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-    nav{
-        padding:10px 6%;
-        min-height:76px;
+    .membership-card.featured {
+        transform: none;
     }
 
-    .logo img{
-        height:55px;
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .menu-toggle{
-        display:block;
-    }
-
-    .nav-links{
-        display:none;
-
-        position:absolute;
-
-        top:76px;
-        left:0;
-
-        width:100%;
-
-        background:var(--warm-white);
-
-        flex-direction:column;
-        text-align:center;
-
-        padding:20px;
-
-        border-top:1px solid var(--border);
-
-        box-shadow:0 8px 20px rgba(21,53,38,.10);
-    }
-
-    .nav-links a{
-        margin:12px;
-        color:var(--deep-green);
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-
-    .hero{
-        padding:65px 8%;
-        min-height:78vh;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
-
-    .tagline{
-        font-size:14px;
-    }
-
-
-    .family-message{
-        padding:70px 8%;
-    }
-
-    .family-message h2{
-        font-size:34px;
-    }
-
-    .family-message p{
-        font-size:17px;
-    }
-
-
-    .section{
-        padding:65px 8%;
-    }
-
-    .section h2{
-        font-size:32px;
-    }
-
-    .services{
-        grid-template-columns:1fr;
-    }
-
-    .steps{
-        grid-template-columns:1fr;
-    }
-
-
-    .membership{
-        padding:65px 8%;
-    }
-
-    .membership h2{
-        font-size:32px;
-    }
-
-    .membership-intro{
-        font-size:18px;
-    }
-
-
-    .area{
-        padding:60px 8%;
-    }
-
-    .area h2{
-        font-size:32px;
-    }
-
-
-    .final-cta{
-        padding:65px 8%;
-    }
-
-    .final-cta h2{
-        font-size:32px;
+    .trust-box {
+        grid-template-columns: 1fr;
     }
 
 }
 
 
-/* =========================
-   SMALL MOBILE
-========================= */
+@media (max-width: 800px) {
 
-@media(max-width:480px){
-
-    .hero h1{
-        font-size:34px;
+    .navbar {
+        min-height: 76px;
     }
 
-    .hero p{
-        font-size:17px;
+    .menu-toggle {
+        display: block;
     }
 
-    .button{
-        padding:14px 25px;
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+        left: 0;
+        right: 0;
+
+        background: #ffffff;
+
+        border-top: 1px solid #e7e5dc;
+
+        box-shadow: 0 12px 25px rgba(0,0,0,.08);
+
+        padding: 18px 5%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
     }
 
-    .family-message h2{
-        font-size:30px;
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 13px 0;
+        border-bottom: 1px solid #eef0eb;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-button {
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .hero {
+        padding: 70px 0 65px;
+        min-height: 560px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .family-message {
+        padding: 65px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-box {
+        padding: 35px 28px;
+        gap: 35px;
+    }
+
+    .trust-list {
+        grid-template-columns: 1fr;
+    }
+
+    .area {
+        padding: 65px 20px;
+    }
+
+    .cta {
+        padding: 65px 20px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .logo img {
+        width: 155px;
+        max-height: 55px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .button {
+        padding: 14px 24px;
+    }
+
+    .service-card {
+        padding: 30px 24px;
+    }
+
+    .membership-card {
+        padding: 30px 24px;
+    }
+
+    .popular {
+        position: static;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .family-message h2 {
+        font-size: 32px;
+    }
+
+    .trust-box h2 {
+        font-size: 32px;
     }
 
 }
@@ -662,43 +856,80 @@ footer{
 
 
 <!-- =========================
-     NAVIGATION
+     HEADER
 ========================= -->
 
-<nav>
+<header>
 
-    <div class="logo">
-        <img src="logo.png" alt="LiveWell Home Concierge">
+    <div class="container navbar">
+
+        <a href="./index.html" class="logo">
+
+            <img
+                src="./logo.png"
+                alt="LiveWell Home Concierge">
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            onclick="toggleMenu()"
+            aria-label="Open navigation">
+
+            ☰
+
+        </button>
+
+
+        <nav id="mainNav">
+
+            <a href="./index.html">
+                Home
+            </a>
+
+            <a href="./about.html">
+                About
+            </a>
+
+            <a href="./services.html">
+                Services
+            </a>
+
+            <a href="./families.html">
+                For Families
+            </a>
+
+            <a href="./memberships.html">
+                Memberships
+            </a>
+
+            <a href="./resources.html">
+                Resources
+            </a>
+
+            <a href="./partners.html">
+                Partners
+            </a>
+
+            <a href="./contact.html">
+                Contact
+            </a>
+
+            <a
+                href="./contact.html"
+                class="nav-button">
+
+                Speak With Your Concierge
+
+            </a>
+
+        </nav>
+
     </div>
 
-    <button
-        class="menu-toggle"
-        id="menu-toggle"
-        aria-label="Open navigation menu">
-        ☰
-    </button>
+</header>
 
-    <div class="nav-links" id="nav-links">
-
-        <a href="./index.html">Home</a>
-
-        <a href="./services.html">Services</a>
-
-        <a href="./families.html">For Families</a>
-
-        <a href="./memberships.html">Memberships</a>
-
-        <a href="./resources.html">Resources</a>
-
-        <a href="./about.html">About</a>
-
-        <a href="./partners.html">Partners</a>
-
-        <a href="./contact.html">Contact</a>
-
-    </div>
-
-</nav>
 
 
 <!-- =========================
@@ -707,27 +938,39 @@ footer{
 
 <section class="hero">
 
-    <div class="hero-content">
+    <div class="container">
 
-        <div class="tagline">
-            Serving Families Across the GTA & York Region
+        <div class="hero-content">
+
+            <div class="tagline">
+                SERVING FAMILIES ACROSS THE GTA &amp; YORK REGION
+            </div>
+
+            <h1>
+                You Can't Be There for Everything.<br>
+                That's Why We Are.
+            </h1>
+
+            <p>
+                LiveWell Home Concierge provides a trusted local presence for
+                families helping their loved ones remain comfortable, supported,
+                and independent at home.
+            </p>
+
+            <a
+                href="./contact.html"
+                class="button">
+
+                Talk to a LiveWell Concierge
+
+            </a>
+
         </div>
-
-        <h1>
-            You Can’t Be There for Everything. That’s Why We Are.
-        </h1>
-
-        <p>
-            LiveWell Home Concierge provides a trusted local presence for families helping their loved ones remain comfortable, supported, and independent at home.
-        </p>
-
-        <a href="./contact.html" class="button">
-            Talk to a LiveWell Concierge
-        </a>
 
     </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -736,91 +979,145 @@ footer{
 
 <section class="family-message">
 
-    <h2>
-        Your Family. Their Home. Our Support.
-    </h2>
+    <div class="container">
 
-    <p>
-        You want your loved ones to remain in the home they know and love. But being there for every repair, appointment, household need, and unexpected issue isn't always possible.
-        LiveWell helps bridge that gap — providing trusted coordination, ongoing support, and communication so your family doesn't have to manage everything alone.
-    </p>
+        <div class="family-message-box">
+
+            <div class="family-label">
+                WHEN YOU CAN'T BE THERE FOR EVERYTHING
+            </div>
+
+            <h2>
+                Your Family. Their Home. Our Support.
+            </h2>
+
+            <p>
+                You want your loved ones to remain in the home they know and love.
+                But being there for every repair, appointment, household need,
+                and unexpected issue isn't always possible.
+            </p>
+
+            <p style="margin-top:18px;">
+                LiveWell helps bridge that gap — providing trusted coordination,
+                ongoing support, and communication so your family doesn't have
+                to manage everything alone.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
+
 
 
 <!-- =========================
      SERVICES
 ========================= -->
 
-<section class="section">
+<section class="section white">
 
-    <h2>
-        More Than Home Maintenance.
-    </h2>
+    <div class="container">
 
-    <p>
-        LiveWell provides the trusted local support that helps families stay connected to the people and homes that matter most.
-    </p>
+        <div class="section-heading">
 
-
-    <div class="services">
-
-
-        <div class="card">
-
-            <h3>
-                🏡 Home Check-In Visits
-            </h3>
+            <h2>
+                More Than Home Maintenance.
+            </h2>
 
             <p>
-                Regular visits to help identify issues early, keep the home running smoothly, and provide reassurance to families.
+                LiveWell provides the trusted local support that helps families
+                stay connected to the people and homes that matter most.
             </p>
 
         </div>
 
 
-        <div class="card">
+        <div class="services-grid">
 
-            <h3>
-                🔧 Home & Maintenance Coordination
-            </h3>
 
-            <p>
-                We coordinate trusted professionals, appointments, repairs, and household needs so you don't have to manage every detail.
-            </p>
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🏡
+                </div>
+
+                <h3>
+                    Home Check-In Visits
+                </h3>
+
+                <p>
+                    Regular visits to help identify issues early, keep the home
+                    running smoothly, and provide reassurance to families.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Home &amp; Maintenance Coordination
+                </h3>
+
+                <p>
+                    We coordinate trusted professionals, appointments, repairs,
+                    and household needs so you don't have to manage every detail.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ❄️
+                </div>
+
+                <h3>
+                    Seasonal Home Care
+                </h3>
+
+                <p>
+                    From seasonal preparation to preventative maintenance,
+                    we help keep the home comfortable and cared for throughout
+                    the year.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Family Communication
+                </h3>
+
+                <p>
+                    Stay informed with updates and communication from someone
+                    you trust to be your eyes and ears locally.
+                </p>
+
+            </div>
+
 
         </div>
-
-
-        <div class="card">
-
-            <h3>
-                ❄️ Seasonal Home Care
-            </h3>
-
-            <p>
-                From seasonal preparation to preventative maintenance, we help keep the home comfortable and cared for throughout the year.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                ❤️ Family Communication
-            </h3>
-
-            <p>
-                Stay informed with updates and communication from someone you trust to be your eyes and ears locally.
-            </p>
-
-        </div>
-
 
     </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -829,262 +1126,428 @@ footer{
 
 <section class="section">
 
-    <h2>
-        How LiveWell Works
-    </h2>
+    <div class="container">
 
-    <p>
-        Simple, personal support built around your family and your loved one's home.
-    </p>
+        <div class="section-heading">
 
-
-    <div class="steps">
-
-
-        <div class="step">
-
-            <div class="step-number">
-                01
-            </div>
-
-            <h3>
-                We Meet
-            </h3>
+            <h2>
+                How LiveWell Works
+            </h2>
 
             <p>
-                We get to know your family, your loved one's home, and the areas where additional support would make life easier.
+                Simple, personal support built around your family and your
+                loved one's home.
             </p>
 
         </div>
 
 
-        <div class="step">
+        <div class="steps">
 
-            <div class="step-number">
-                02
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    We Meet
+                </h3>
+
+                <p>
+                    We get to know your family, your loved one's home, and the
+                    areas where additional support would make life easier.
+                </p>
+
             </div>
 
-            <h3>
-                We Build Your Plan
-            </h3>
-
-            <p>
-                Together, we determine what you'd like LiveWell to coordinate and how you'd like your family kept informed.
-            </p>
-
-        </div>
 
 
-        <div class="step">
+            <div class="step">
 
-            <div class="step-number">
-                03
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    We Build Your Plan
+                </h3>
+
+                <p>
+                    Together, we determine what you'd like LiveWell to coordinate
+                    and how you'd like your family kept informed.
+                </p>
+
             </div>
 
-            <h3>
-                We Coordinate
-            </h3>
-
-            <p>
-                We handle the calls, scheduling, follow-ups, household coordination, and practical details.
-            </p>
-
-        </div>
 
 
-        <div class="step">
+            <div class="step">
 
-            <div class="step-number">
-                04
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    We Coordinate
+                </h3>
+
+                <p>
+                    We handle the calls, scheduling, follow-ups, household
+                    coordination, and practical details.
+                </p>
+
             </div>
 
-            <h3>
-                We Keep You Connected
-            </h3>
 
-            <p>
-                You remain informed and involved without having to personally manage every detail from a distance.
-            </p>
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <h3>
+                    We Keep You Connected
+                </h3>
+
+                <p>
+                    You remain informed and involved without having to personally
+                    manage every detail from a distance.
+                </p>
+
+            </div>
+
 
         </div>
-
 
     </div>
 
 </section>
+
 
 
 <!-- =========================
-     MEMBERSHIPS
+     MEMBERSHIP PREVIEW
 ========================= -->
 
-<section class="membership">
+<section class="section membership-section">
 
-    <h2>
-        LiveWell Memberships
-    </h2>
+    <div class="container">
 
-    <p class="membership-intro">
-        Flexible home concierge plans designed to give older adults and their families the right level of support, coordination, and peace of mind.
-    </p>
+        <div class="section-heading">
 
-
-    <div class="membership-plans">
-
-
-        <!-- ESSENTIAL -->
-
-        <div class="membership-card">
-
-            <h3>
-                LiveWell Essential
-            </h3>
-
-            <div class="membership-price">
-                $99/month
-            </div>
+            <h2>
+                Support That Fits Your Family
+            </h2>
 
             <p>
-                A simple way to have a trusted local presence keeping an eye on the home and helping coordinate everyday needs.
+                Choose the level of ongoing support that works best for your
+                home, your loved one, and your family.
             </p>
-
-            <ul>
-
-                <li>
-                    Home needs coordination
-                </li>
-
-                <li>
-                    Trusted vendor coordination
-                </li>
-
-                <li>
-                    Maintenance reminders
-                </li>
-
-                <li>
-                    Seasonal planning
-                </li>
-
-                <li>
-                    Basic family updates
-                </li>
-
-            </ul>
 
         </div>
 
 
-        <!-- CONCIERGE -->
+        <div class="membership-grid">
 
-        <div class="membership-card popular">
 
-            <div class="popular-badge">
-                MOST POPULAR
+            <!-- ESSENTIAL -->
+
+            <div class="membership-card">
+
+                <div class="membership-icon">
+                    🏡
+                </div>
+
+                <h3>
+                    Essential
+                </h3>
+
+                <div class="price">
+                    $99
+                    <span>/month</span>
+                </div>
+
+                <p>
+                    A simple way to have a trusted local presence helping
+                    coordinate the practical details of the home.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Home maintenance coordination
+                    </li>
+
+                    <li>
+                        Contractor and service scheduling
+                    </li>
+
+                    <li>
+                        Vendor follow-up
+                    </li>
+
+                    <li>
+                        Maintenance reminders
+                    </li>
+
+                    <li>
+                        Seasonal maintenance planning
+                    </li>
+
+                    <li>
+                        Annual home walkthrough
+                    </li>
+
+                </ul>
+
             </div>
 
-            <h3>
-                LiveWell Concierge
-            </h3>
 
-            <div class="membership-price">
-                $199/month
+
+            <!-- CONCIERGE -->
+
+            <div class="membership-card featured">
+
+                <div class="popular">
+                    MOST POPULAR
+                </div>
+
+                <div class="membership-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Concierge
+                </h3>
+
+                <div class="price">
+                    $199
+                    <span>/month</span>
+                </div>
+
+                <p>
+                    More hands-on support for homeowners and families who want
+                    ongoing help and communication.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Everything in Essential
+                    </li>
+
+                    <li>
+                        Up to 2 hours of basic handyman assistance per quarter
+                    </li>
+
+                    <li>
+                        Mail and package coordination
+                    </li>
+
+                    <li>
+                        Basic family communication updates
+                    </li>
+
+                    <li>
+                        Home condition updates
+                    </li>
+
+                    <li>
+                        Maintenance recommendations
+                    </li>
+
+                    <li>
+                        Annual home walkthrough
+                    </li>
+
+                </ul>
+
             </div>
 
-            <p>
-                Our complete concierge membership for families who want ongoing support, coordination, and communication.
-            </p>
 
-            <ul>
 
-                <li>
-                    Everything in Essential
-                </li>
+            <!-- FAMILY PLUS -->
 
-                <li>
-                    Appointment scheduling
-                </li>
+            <div class="membership-card">
 
-                <li>
-                    Maintenance coordination
-                </li>
+                <div class="membership-icon">
+                    👨‍👩‍👧
+                </div>
 
-                <li>
-                    Contractor follow-up
-                </li>
+                <h3>
+                    Family Plus
+                </h3>
 
-                <li>
-                    Family communication updates
-                </li>
+                <div class="price">
+                    $349
+                    <span>/month</span>
+                </div>
 
-                <li>
-                    Household oversight
-                </li>
+                <p>
+                    A higher level of involvement for families who want a
+                    trusted local presence helping stay on top of the home.
+                </p>
 
-            </ul>
+                <ul>
+
+                    <li>
+                        Everything in Concierge
+                    </li>
+
+                    <li>
+                        Up to 2 hours of handyman assistance every month
+                    </li>
+
+                    <li>
+                        Regular family communication updates
+                    </li>
+
+                    <li>
+                        Home maintenance status updates
+                    </li>
+
+                    <li>
+                        Priority household coordination
+                    </li>
+
+                    <li>
+                        Annual home walkthrough
+                    </li>
+
+                </ul>
+
+            </div>
+
 
         </div>
 
 
-        <!-- FAMILY -->
+        <div class="membership-cta">
 
-        <div class="membership-card">
+            <a
+                href="./memberships.html"
+                class="button">
 
-            <h3>
-                LiveWell Family
-            </h3>
+                Explore LiveWell Memberships
 
-            <div class="membership-price">
-                $349/month
-            </div>
-
-            <p>
-                For families who want a higher level of involvement, oversight, and peace of mind.
-            </p>
-
-            <ul>
-
-                <li>
-                    Everything in Concierge
-                </li>
-
-                <li>
-                    Priority response support
-                </li>
-
-                <li>
-                    Enhanced home oversight
-                </li>
-
-                <li>
-                    Vendor management
-                </li>
-
-                <li>
-                    Full project coordination
-                </li>
-
-                <li>
-                    Seasonal home preparation
-                </li>
-
-                <li>
-                    Customized family reporting
-                </li>
-
-            </ul>
+            </a>
 
         </div>
-
 
     </div>
 
+</section>
 
-    <a href="./memberships.html" class="button">
-        Explore LiveWell Memberships
-    </a>
+
+
+<!-- =========================
+     TRUST / LOCAL PRESENCE
+========================= -->
+
+<section class="section trust-section">
+
+    <div class="container">
+
+        <div class="trust-box">
+
+            <div>
+
+                <div class="trust-label">
+                    A TRUSTED LOCAL PRESENCE
+                </div>
+
+                <h2>
+                    When You Can't Be There, We Can.
+                </h2>
+
+                <p>
+                    Managing a loved one's home from a distance can become
+                    overwhelming quickly.
+                </p>
+
+                <p>
+                    A small repair turns into a phone call. A contractor needs
+                    access. A maintenance issue needs attention. Someone needs
+                    to be there.
+                </p>
+
+                <p>
+                    LiveWell becomes your local point of contact — helping
+                    coordinate the details and keeping your family informed.
+                </p>
+
+                <div class="trust-list">
+
+                    <div>
+                        Local home support
+                    </div>
+
+                    <div>
+                        Maintenance coordination
+                    </div>
+
+                    <div>
+                        Family communication
+                    </div>
+
+                    <div>
+                        Contractor coordination
+                    </div>
+
+                    <div>
+                        Seasonal planning
+                    </div>
+
+                    <div>
+                        Ongoing oversight
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="trust-side">
+
+                <h3>
+                    You Stay Connected.
+                </h3>
+
+                <p>
+                    Your loved one gets to remain in the home they know.
+                </p>
+
+                <p>
+                    And you have someone local who can help with the things
+                    you can't always be there for.
+                </p>
+
+                <p>
+                    <strong>
+                        It's not about taking over your family's role.
+                        It's about making that role easier.
+                    </strong>
+                </p>
+
+                <p class="trust-side-note">
+                    LiveWell provides non-medical home concierge, coordination,
+                    and household support services. We do not provide medical
+                    care, nursing, personal support, or emergency services.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -1093,36 +1556,54 @@ footer{
 
 <section class="area">
 
-    <h2>
-        A Trusted Presence, Close to Home.
-    </h2>
+    <div class="container">
 
-    <p>
-        Serving families across Newmarket • Aurora • Markham • Richmond Hill • Vaughan • North York • Toronto • Scarborough and surrounding communities.
-    </p>
+        <h2>
+            A Trusted Presence, Close to Home.
+        </h2>
+
+        <p>
+            Serving families across Newmarket • Aurora • Markham • Richmond Hill
+            • Vaughan • North York • Toronto • Scarborough and surrounding
+            communities.
+        </p>
+
+    </div>
 
 </section>
+
 
 
 <!-- =========================
      FINAL CTA
 ========================= -->
 
-<section class="final-cta">
+<section class="cta">
 
-    <h2>
-        You Don't Have to Manage Everything Alone.
-    </h2>
+    <div class="container">
 
-    <p>
-        Let LiveWell become the trusted local presence your family can rely on.
-    </p>
+        <h2>
+            You Don't Have to Manage Everything Alone.
+        </h2>
 
-    <a href="./contact.html" class="button">
-        Talk to a LiveWell Concierge
-    </a>
+        <p>
+            Let LiveWell become the trusted local presence your family can
+            rely on — whether you need ongoing support or help with something
+            unexpected.
+        </p>
+
+        <a
+            href="./contact.html"
+            class="button">
+
+            Speak With Your Concierge
+
+        </a>
+
+    </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -1131,25 +1612,53 @@ footer{
 
 <footer>
 
-    © 2026 LiveWell Home Concierge. All Rights Reserved.
+    <div class="container">
+
+        <div class="footer-logo">
+
+            <img
+                src="./logo.png"
+                alt="LiveWell Home Concierge">
+
+        </div>
+
+        <p>
+            Helping you stay in the home you love.
+        </p>
+
+        <p style="margin-top:12px;">
+            © 2026 LiveWell Home Concierge. All rights reserved.
+        </p>
+
+    </div>
 
 </footer>
 
 
+
 <!-- =========================
-     MOBILE MENU
+     MOBILE MENU SCRIPT
 ========================= -->
 
 <script>
 
-const menuButton = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+function toggleMenu() {
 
-menuButton.onclick = function(){
+    const nav = document.getElementById("mainNav");
 
-    navLinks.classList.toggle("active");
+    nav.classList.toggle("active");
 
-};
+}
+
+document.querySelectorAll("#mainNav a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        document.getElementById("mainNav").classList.remove("active");
+
+    });
+
+});
 
 </script>
 
