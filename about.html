@@ -8,174 +8,727 @@
 
 <title>About | LiveWell Home Concierge</title>
 
-<meta name="description" content="Learn about LiveWell Home Concierge, founded by professionals with experience in finance, nursing, and senior support.">
-
+<meta name="description"
+content="Learn about LiveWell Home Concierge and our mission to help older adults remain comfortable and independent at home while giving families greater peace of mind.">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
 }
 
-body{
-background:#f8f7f2;
-color:#333;
-line-height:1.6;
+html {
+    scroll-behavior: smooth;
 }
 
-
-header{
-background:white;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #303b34;
+    background: #f8f6f0;
+    line-height: 1.7;
 }
 
-
-.logo{
-font-size:24px;
-font-weight:bold;
-color:#2f6f62;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#333;
-font-size:15px;
+.container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
 }
 
 
-nav a:hover{
-color:#2f6f62;
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e7e5dc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: 190px;
+    height: auto;
+    max-height: 65px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+nav a {
+    color: #455148;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color .2s ease;
+}
+
+nav a:hover {
+    color: #52745d;
+}
+
+.nav-button {
+    background: #52745d;
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 25px;
+}
+
+.nav-button:hover {
+    background: #3f604b;
 }
 
 
+/* =========================
+   MOBILE MENU
+========================= */
 
-.hero{
-background:#e8f1ed;
-padding:70px 8%;
-text-align:center;
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    color: #3f604b;
+    cursor: pointer;
 }
 
 
-.hero h1{
-font-size:42px;
-color:#24584d;
-margin-bottom:20px;
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(248,246,240,.98) 0%,
+            rgba(248,246,240,.94) 55%,
+            rgba(248,246,240,.78) 100%
+        );
+
+    padding: 90px 0 80px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.tagline {
+    color: #52745d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(42px, 5vw, 62px);
+    line-height: 1.08;
+    font-weight: 500;
+    margin: 0 0 25px;
+}
+
+.hero p {
+    font-size: 19px;
+    color: #68736b;
+    max-width: 790px;
+    margin: 0;
 }
 
 
-.hero p{
-max-width:750px;
-margin:auto;
-font-size:18px;
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 85px 0;
+}
+
+.section.white {
+    background: #ffffff;
+}
+
+.section-heading {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 18px;
+}
+
+.section-heading p {
+    color: #6c766f;
+    font-size: 17px;
+    max-width: 780px;
+    margin: 0 auto;
 }
 
 
+/* =========================
+   STORY SECTION
+========================= */
 
-.container{
-width:84%;
-max-width:1100px;
-margin:50px auto;
+.story-box {
+    background: #ffffff;
+    border: 1px solid #e5e6df;
+    border-radius: 28px;
+    padding: 55px;
+    max-width: 950px;
+    margin: 0 auto;
+    box-shadow: 0 12px 40px rgba(44, 63, 49, .06);
+}
+
+.story-label {
+    color: #52745d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 14px;
+}
+
+.story-box h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(34px, 4vw, 45px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 22px;
+}
+
+.story-box p {
+    color: #68736b;
+    font-size: 16px;
+    margin: 0 0 18px;
+}
+
+.story-box p:last-child {
+    margin-bottom: 0;
 }
 
 
-.card{
-background:white;
-padding:35px;
-margin-bottom:30px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+/* =========================
+   FOUNDING TEAM
+========================= */
+
+.team-section {
+    background: #ffffff;
+}
+
+.team-box {
+    background: #edf3ed;
+    border-radius: 28px;
+    padding: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.team-label {
+    color: #52745d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 14px;
+}
+
+.team-box h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.team-box p {
+    color: #637067;
+    font-size: 15px;
+    margin: 0 0 17px;
+}
+
+.team-side {
+    background: #ffffff;
+    border: 1px solid #e2e7e2;
+    border-radius: 22px;
+    padding: 35px;
+}
+
+.team-side h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 27px;
+    font-weight: 500;
+    margin: 0 0 18px;
+}
+
+.team-side ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-side li {
+    position: relative;
+    padding: 11px 0 11px 27px;
+    border-bottom: 1px solid #eef0eb;
+    color: #5f6b63;
+    font-size: 14px;
+}
+
+.team-side li:last-child {
+    border-bottom: none;
+}
+
+.team-side li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    color: #52745d;
+    font-weight: 700;
+}
+
+.team-note {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #dce4dd;
+    color: #748078 !important;
+    font-size: 12px !important;
 }
 
 
-.card h2{
-color:#2f6f62;
-font-size:28px;
-margin-bottom:15px;
+/* =========================
+   WHAT WE DO
+========================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: #ffffff;
+    border: 1px solid #e5e6df;
+    border-radius: 22px;
+    padding: 32px 28px;
+    box-shadow: 0 10px 35px rgba(44, 63, 49, .06);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(44, 63, 49, .10);
+}
+
+.service-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 17px;
+    background: #edf3ed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+    margin-bottom: 21px;
+}
+
+.service-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 23px;
+    line-height: 1.25;
+    margin: 0 0 13px;
+    font-weight: 500;
+}
+
+.service-card p {
+    color: #69746c;
+    font-size: 14px;
+    margin: 0;
 }
 
 
-.card p{
-margin-bottom:15px;
+/* =========================
+   VALUES
+========================= */
+
+.values-section {
+    background: #f8f6f0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.value-card {
+    background: #ffffff;
+    border: 1px solid #e5e6df;
+    border-radius: 22px;
+    padding: 35px 30px;
+    text-align: center;
+}
+
+.value-number {
+    color: #52745d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 13px;
+}
+
+.value-card p {
+    color: #69746c;
+    font-size: 14px;
+    margin: 0;
 }
 
 
-.card ul{
-margin-left:20px;
+/* =========================
+   COMMITMENT
+========================= */
+
+.commitment {
+    background: #ffffff;
+}
+
+.commitment-box {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #edf3ed;
+    border-radius: 28px;
+    padding: 60px;
+    text-align: center;
+}
+
+.commitment-label {
+    color: #52745d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.commitment-box h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(34px, 4vw, 46px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.commitment-box p {
+    color: #637067;
+    font-size: 16px;
+    max-width: 780px;
+    margin: 0 auto 17px;
+}
+
+.commitment-box p:last-child {
+    margin-bottom: 0;
 }
 
 
-.card li{
-margin-bottom:10px;
+/* =========================
+   IMPORTANT DISTINCTION
+========================= */
+
+.disclaimer-box {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e4e6df;
+    border-radius: 22px;
+    padding: 45px 50px;
+}
+
+.disclaimer-box h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0 0 22px;
+}
+
+.disclaimer-box p {
+    color: #69746c;
+    font-size: 14px;
+    margin: 0 0 17px;
+}
+
+.disclaimer-box p:last-child {
+    margin-bottom: 0;
 }
 
 
+/* =========================
+   CTA
+========================= */
 
-.cta{
-background:#2f6f62;
-color:white;
-padding:45px 20px;
-text-align:center;
-border-radius:15px;
+.cta {
+    background: #3f604b;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 15px;
+}
+
+.cta p {
+    color: #dce6de;
+    font-size: 17px;
+    margin: 0 auto 30px;
+    max-width: 750px;
+}
+
+.button {
+    display: inline-block;
+    background: #ffffff;
+    color: #3f604b;
+    padding: 15px 27px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all .2s ease;
+}
+
+.button:hover {
+    background: #edf3ed;
+    transform: translateY(-2px);
 }
 
 
-.cta h2{
-font-size:30px;
-margin-bottom:15px;
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #2f4937;
+    color: #d8e0d9;
+    padding: 35px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #bfcac1;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    width: 190px;
+    max-height: 65px;
+    object-fit: contain;
 }
 
 
-.button{
-display:inline-block;
-margin-top:20px;
-background:white;
-color:#2f6f62;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-}
+/* =========================
+   RESPONSIVE
+========================= */
 
+@media (max-width: 1050px) {
 
+    nav {
+        gap: 17px;
+    }
 
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:50px;
-}
+    nav a {
+        font-size: 13px;
+    }
 
+    .services-grid,
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-
-@media(max-width:900px){
-
-header{
-flex-direction:column;
-}
-
-nav{
-margin-top:15px;
-}
-
-.hero h1{
-font-size:32px;
-}
+    .team-box {
+        grid-template-columns: 1fr;
+    }
 
 }
 
+
+@media (max-width: 800px) {
+
+    .navbar {
+        min-height: 76px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+        left: 0;
+        right: 0;
+
+        background: #ffffff;
+
+        border-top: 1px solid #e7e5dc;
+
+        box-shadow: 0 12px 25px rgba(0,0,0,.08);
+
+        padding: 18px 5%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 13px 0;
+        border-bottom: 1px solid #eef0eb;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-button {
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .hero {
+        padding: 65px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .story-box,
+    .team-box,
+    .commitment-box {
+        padding: 35px 28px;
+    }
+
+    .services-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .disclaimer-box {
+        padding: 35px 28px;
+    }
+
+    .cta {
+        padding: 65px 20px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .logo img {
+        width: 155px;
+        max-height: 55px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .service-card {
+        padding: 30px 24px;
+    }
+
+    .commitment-box h2 {
+        font-size: 32px;
+    }
+
+    .disclaimer-box h2 {
+        font-size: 30px;
+    }
+
+}
 
 </style>
-
 
 </head>
 
@@ -183,169 +736,686 @@ font-size:32px;
 <body>
 
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-<div class="logo">
-LiveWell Home Concierge
-</div>
+    <div class="container navbar">
+
+        <a href="./index.html" class="logo">
+
+            <img
+                src="./logo.png"
+                alt="LiveWell Home Concierge">
+
+        </a>
 
 
-<nav>
+        <button
+            class="menu-toggle"
+            onclick="toggleMenu()"
+            aria-label="Open navigation">
 
-<a href="./index.html">Home</a>
-<a href="./services.html">Services</a>
-<a href="./families.html">For Families</a>
-<a href="./memberships.html">Memberships</a>
-<a href="./resources.html">Resources</a>
-<a href="./about.html">About</a>
-<a href="./partners.html">Partners</a>
-<a href="./contact.html">Contact</a>
+            ☰
 
-</nav>
+        </button>
 
+
+        <nav id="mainNav">
+
+            <a href="./index.html">
+                Home
+            </a>
+
+            <a href="./about.html">
+                About
+            </a>
+
+            <a href="./services.html">
+                Services
+            </a>
+
+            <a href="./families.html">
+                For Families
+            </a>
+
+            <a href="./memberships.html">
+                Memberships
+            </a>
+
+            <a href="./resources.html">
+                Resources
+            </a>
+
+            <a href="./partners.html">
+                Partners
+            </a>
+
+            <a href="./contact.html">
+                Contact
+            </a>
+
+            <a
+                href="./contact.html"
+                class="nav-button">
+
+                Speak With Your Concierge
+
+            </a>
+
+        </nav>
+
+    </div>
 
 </header>
 
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
-<h1>About LiveWell Home Concierge</h1>
+    <div class="container">
 
-<p>
-Supporting seniors, connecting families, and helping homes remain safe, comfortable, and well managed.
-</p>
+        <div class="hero-content">
+
+            <div class="tagline">
+                ABOUT LIVEWELL HOME CONCIERGE
+            </div>
+
+            <h1>
+                Helping Families.<br>
+                Supporting Independence.
+            </h1>
+
+            <p>
+                LiveWell Home Concierge helps older adults remain comfortable
+                and independent in the homes they know while giving their
+                families a trusted local presence they can rely on.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 
 
-<div class="container">
+<!-- =========================
+     OUR STORY
+========================= -->
 
+<section class="section white">
 
-<div class="card">
+    <div class="container">
 
-<h2>Our Story</h2>
+        <div class="story-box">
 
-<p>
-LiveWell Home Concierge was founded with one mission: to help seniors remain comfortable, confident, and independent in the homes they love while providing families with peace of mind.
-</p>
+            <div class="story-label">
+                OUR STORY
+            </div>
 
-<p>
-We understand that managing a home can become more challenging over time. Everyday responsibilities, home maintenance, organization, and coordinating support can create stress for seniors and their families.
-</p>
+            <h2>
+                A Different Kind of Home Support.
+            </h2>
 
-<p>
-LiveWell provides trusted home concierge services designed to simplify these challenges and help families stay connected.
-</p>
+            <p>
+                LiveWell Home Concierge was founded with one simple mission:
+                to help older adults remain comfortable, confident, and
+                independent in the homes they love while providing families
+                with greater peace of mind.
+            </p>
 
-</div>
+            <p>
+                We understand that managing a home can become more challenging
+                over time. Everyday responsibilities, home maintenance,
+                appointments, organization, and coordinating support can create
+                stress for both older adults and their families.
+            </p>
 
+            <p>
+                And for families who live across town, across the GTA, or simply
+                have busy lives of their own, being there for every little thing
+                isn't always possible.
+            </p>
 
+            <p>
+                That's where LiveWell comes in.
+            </p>
 
+            <p>
+                We provide trusted home concierge services designed to simplify
+                the practical details, help families stay connected, and make
+                staying at home easier to manage.
+            </p>
 
-<div class="card">
+        </div>
 
-<h2>Our Founding Team</h2>
+    </div>
 
-<p>
-LiveWell was founded by professionals with complementary backgrounds in finance, business, nursing, and senior support.
-</p>
-
-<p>
-Our Founder brings experience in corporate finance, business advisory, and strategic planning, helping individuals and organizations navigate complex decisions and long-term planning.
-</p>
-
-<p>
-Our founding team also includes Registered Nurses (RNs), Registered Practical Nurses (RPNs), and Personal Support Workers (PSWs) with years of experience working with seniors and within retirement home environments.
-</p>
-
-<p>
-While LiveWell does not provide medical care or healthcare services, our team's experience provides valuable insight into the challenges seniors and families face when planning for safe and comfortable aging at home.
-</p>
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h2>What We Do</h2>
-
-<ul>
-
-<li>Home check-ins and wellness visits</li>
-
-<li>Household organization and support</li>
-
-<li>Maintenance coordination</li>
-
-<li>Contractor coordination</li>
-
-<li>Seasonal home preparation</li>
-
-<li>Family communication and updates</li>
-
-</ul>
-
-</div>
+</section>
 
 
 
+<!-- =========================
+     FOUNDING TEAM
+========================= -->
+
+<section class="section team-section">
+
+    <div class="container">
+
+        <div class="team-box">
+
+            <div>
+
+                <div class="team-label">
+                    OUR FOUNDING TEAM
+                </div>
+
+                <h2>
+                    Experience From Different Perspectives.
+                </h2>
+
+                <p>
+                    LiveWell was founded by professionals with complementary
+                    backgrounds in corporate finance, business advisory,
+                    nursing, and senior support.
+                </p>
+
+                <p>
+                    Our Founder brings experience in corporate finance, business
+                    advisory, and strategic planning, helping individuals and
+                    organizations navigate complex decisions and long-term
+                    planning.
+                </p>
+
+                <p>
+                    Our broader founding team also includes Registered Nurses
+                    (RNs), Registered Practical Nurses (RPNs), and Personal
+                    Support Workers (PSWs) with experience working with older
+                    adults and within retirement home environments.
+                </p>
+
+                <p>
+                    Together, these perspectives help us understand both sides
+                    of the equation: the practical realities of managing a home
+                    and the importance of supporting older adults and their
+                    families.
+                </p>
+
+            </div>
 
 
-<div class="card">
+            <div class="team-side">
 
-<h2>Our Commitment</h2>
+                <h3>
+                    What That Means for Your Family
+                </h3>
 
-<p>
-We believe seniors should have the opportunity to remain in the homes they love while having the right support around them.
-</p>
+                <ul>
 
-<p>
-Our role is to provide a reliable presence, help families stay proactive, and make managing a home easier.
-</p>
+                    <li>
+                        A practical understanding of home and household needs
+                    </li>
 
-</div>
+                    <li>
+                        Experience coordinating people, services, and details
+                    </li>
+
+                    <li>
+                        An understanding of the challenges families face
+                    </li>
+
+                    <li>
+                        A focus on communication and reliability
+                    </li>
+
+                    <li>
+                        A commitment to helping older adults remain independent
+                    </li>
+
+                </ul>
+
+                <p class="team-note">
+                    LiveWell Home Concierge does not provide medical care,
+                    nursing, personal support, or other healthcare services.
+                    Our healthcare-related experience informs how we understand
+                    the needs of families, but LiveWell's role is focused on
+                    non-medical home concierge and coordination support.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
+<!-- =========================
+     WHAT WE DO
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                What We Do
+            </h2>
+
+            <p>
+                We help with the practical details that can become difficult
+                to manage alone — especially when family members aren't always
+                able to be there.
+            </p>
+
+        </div>
 
 
-<div class="cta">
-
-<h2>Ready To Learn More?</h2>
-
-<p>
-Discover how LiveWell can help your family create a safer and more comfortable aging-at-home plan.
-</p>
+        <div class="services-grid">
 
 
-<a href="./contact.html" class="button">
-Book A Home Assessment
-</a>
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🏡
+                </div>
+
+                <h3>
+                    Home Check-Ins
+                </h3>
+
+                <p>
+                    Local visits to help identify household issues, monitor
+                    outstanding maintenance, and provide families with greater
+                    peace of mind.
+                </p>
+
+            </div>
 
 
-</div>
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Maintenance Coordination
+                </h3>
+
+                <p>
+                    We help schedule repairs, coordinate service providers,
+                    follow up on outstanding work, and keep household tasks
+                    moving.
+                </p>
+
+            </div>
 
 
 
-</div>
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📅
+                </div>
+
+                <h3>
+                    Appointment Coordination
+                </h3>
+
+                <p>
+                    From arranging household services to coordinating access,
+                    we help manage the practical details around appointments.
+                </p>
+
+            </div>
 
 
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ❄️
+                </div>
+
+                <h3>
+                    Seasonal Home Care
+                </h3>
+
+                <p>
+                    We help families stay ahead of seasonal maintenance,
+                    preparation, and household needs throughout the year.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Family Communication
+                </h3>
+
+                <p>
+                    Families can receive updates on home conditions, completed
+                    work, outstanding items, and upcoming maintenance needs.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    Project Coordination
+                </h3>
+
+                <p>
+                    For larger household needs, LiveWell can coordinate multiple
+                    providers, appointments, estimates, access, and follow-ups.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     VALUES
+========================= -->
+
+<section class="section values-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                How We Think About Care
+            </h2>
+
+            <p>
+                LiveWell isn't about taking over your family's role.
+                It's about making that role easier.
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+            <div class="value-card">
+
+                <div class="value-number">
+                    01
+                </div>
+
+                <h3>
+                    Independence
+                </h3>
+
+                <p>
+                    We believe older adults should have the opportunity to
+                    remain in the homes they know and love for as long as
+                    possible.
+                </p>
+
+            </div>
+
+
+
+            <div class="value-card">
+
+                <div class="value-number">
+                    02
+                </div>
+
+                <h3>
+                    Reliability
+                </h3>
+
+                <p>
+                    When something needs attention, families should know
+                    someone local is there to help coordinate it.
+                </p>
+
+            </div>
+
+
+
+            <div class="value-card">
+
+                <div class="value-number">
+                    03
+                </div>
+
+                <h3>
+                    Connection
+                </h3>
+
+                <p>
+                    Families should be able to stay informed and involved
+                    without having to personally manage every detail.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     COMMITMENT
+========================= -->
+
+<section class="section commitment">
+
+    <div class="container">
+
+        <div class="commitment-box">
+
+            <div class="commitment-label">
+                OUR COMMITMENT
+            </div>
+
+            <h2>
+                Your Loved One Gets to Stay Home.
+            </h2>
+
+            <p>
+                We believe home is more than a building. It's familiarity,
+                independence, memories, routines, and the comfort of being
+                somewhere you know.
+            </p>
+
+            <p>
+                Our goal is to help families support that experience by
+                providing a reliable local presence for the practical things
+                that come with maintaining a home.
+            </p>
+
+            <p>
+                When you can't be there for everything, LiveWell can be.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     IMPORTANT DISTINCTION
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="disclaimer-box">
+
+            <h2>
+                What LiveWell Is — And Isn't
+            </h2>
+
+            <p>
+                LiveWell Home Concierge provides non-medical home concierge,
+                household coordination, maintenance coordination, and practical
+                support services.
+            </p>
+
+            <p>
+                We do not provide medical care, nursing, personal support,
+                emergency response, professional home inspections, engineering
+                services, or other regulated professional services.
+            </p>
+
+            <p>
+                When a situation requires specialized or licensed expertise,
+                LiveWell can help coordinate the appropriate third-party
+                professional.
+            </p>
+
+            <p>
+                Our role is simple: help with the practical details, keep
+                things organized, and help families stay connected.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            You Don't Have to Manage Everything Alone.
+        </h2>
+
+        <p>
+            Whether you're looking for ongoing home support or simply want to
+            understand how LiveWell can help your family, we'd be happy to
+            have a conversation.
+        </p>
+
+        <a
+            href="./contact.html"
+            class="button">
+
+            Speak With Your Concierge
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<p>
-© 2026 LiveWell Home Concierge. All Rights Reserved.
-</p>
+    <div class="container">
+
+        <div class="footer-logo">
+
+            <img
+                src="./logo.png"
+                alt="LiveWell Home Concierge">
+
+        </div>
+
+        <p>
+            Helping you stay in the home you love.
+        </p>
+
+        <p style="margin-top:12px;">
+            © 2026 LiveWell Home Concierge. All rights reserved.
+        </p>
+
+    </div>
 
 </footer>
 
 
 
+<!-- =========================
+     MOBILE MENU
+========================= -->
+
+<script>
+
+function toggleMenu() {
+
+    const nav = document.getElementById("mainNav");
+
+    nav.classList.toggle("active");
+
+}
+
+document.querySelectorAll("#mainNav a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        document.getElementById("mainNav").classList.remove("active");
+
+    });
+
+});
+
+</script>
+
+
 </body>
 
 </html>
+```
