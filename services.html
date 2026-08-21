@@ -18,6 +18,8 @@ content="LiveWell Home Concierge helps older homeowners and their families with 
 ========================= */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -26,7 +28,6 @@ html {
 }
 
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #303b34;
     background: #f8f6f0;
@@ -81,7 +82,7 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 27px;
+    gap: 25px;
 }
 
 nav a {
@@ -105,6 +106,19 @@ nav a:hover {
 
 .nav-button:hover {
     background: #3f604b;
+}
+
+/* PHONE NUMBER */
+
+.phone-link {
+    color: #52745d !important;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.phone-link:hover {
+    color: #3f604b !important;
 }
 
 
@@ -150,7 +164,7 @@ nav a:hover {
     margin-bottom: 18px;
 }
 
-h1 {
+.hero h1 {
     font-family: Georgia, "Times New Roman", serif;
     color: #304a38;
     font-size: clamp(42px, 5vw, 66px);
@@ -250,11 +264,6 @@ h1 {
     color: #69746c;
     font-size: 14px;
     margin: 0 0 17px;
-}
-
-.service-card p strong {
-    color: #405b47;
-    font-size: 15px;
 }
 
 .service-card ul {
@@ -462,10 +471,10 @@ footer p {
    RESPONSIVE
 ========================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
 
     nav {
-        gap: 17px;
+        gap: 16px;
     }
 
     nav a {
@@ -517,10 +526,16 @@ footer p {
     nav a {
         padding: 13px 0;
         border-bottom: 1px solid #eef0eb;
+        font-size: 14px;
     }
 
     nav a:last-child {
         border-bottom: none;
+    }
+
+    .phone-link {
+        color: #52745d !important;
+        font-weight: 700;
     }
 
     .nav-button {
@@ -559,7 +574,7 @@ footer p {
         max-height: 55px;
     }
 
-    h1 {
+    .hero h1 {
         font-size: 40px;
     }
 
@@ -640,7 +655,7 @@ footer p {
 
             <a href="./resources.html">
                 Resources
-                   </a>
+            </a>
 
             <a href="./partners.html">
                 Partners
@@ -649,6 +664,17 @@ footer p {
             <a href="./contact.html">
                 Contact
             </a>
+
+            <!-- PHONE NUMBER -->
+
+            <a
+                href="tel:+12895807777"
+                class="phone-link">
+
+                (289) 580-7777
+
+            </a>
+
 
             <a
                 href="./contact.html"
@@ -1102,6 +1128,20 @@ footer p {
 
         <p>
             Helping you stay in the home you love.
+        </p>
+
+        <!-- PHONE NUMBER -->
+
+        <p style="margin-top:12px;">
+
+            <a
+                href="tel:+12895807777"
+                style="color:#ffffff; font-size:15px; font-weight:700;">
+
+                (289) 580-7777
+
+            </a>
+
         </p>
 
         <p style="margin-top:12px;">
