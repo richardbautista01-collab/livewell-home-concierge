@@ -110,6 +110,20 @@ nav a:hover {
 
 
 /* =========================
+   PHONE HEADER
+========================= */
+
+.header-phone {
+    color: #52745d !important;
+    font-weight: 700 !important;
+}
+
+.header-phone:hover {
+    color: #3f604b !important;
+}
+
+
+/* =========================
    MOBILE MENU
 ========================= */
 
@@ -323,6 +337,50 @@ nav a:hover {
 
 
 /* =========================
+   PHONE CONTACT
+========================= */
+
+.phone-contact {
+    display: block;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(82,116,93,.12);
+    transition: all .2s ease;
+}
+
+.phone-contact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(44, 63, 49, .08);
+}
+
+.phone-label {
+    display: block;
+    color: #52745d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.phone-number {
+    display: block;
+    color: #304a38;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.phone-note {
+    display: block;
+    color: #69746c;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+
+/* =========================
    ASSESSMENT
 ========================= */
 
@@ -345,7 +403,17 @@ nav a:hover {
     color: #dce6de;
     font-size: 17px;
     max-width: 750px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
+}
+
+.assessment-phone {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 5px;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    padding-bottom: 3px;
 }
 
 
@@ -374,6 +442,19 @@ footer p {
     width: 190px;
     max-height: 65px;
     object-fit: contain;
+}
+
+.footer-phone {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.footer-phone:hover {
+    color: #dce6de;
 }
 
 
@@ -444,6 +525,10 @@ footer p {
         margin-top: 8px;
     }
 
+    .header-phone {
+        text-align: center;
+    }
+
     .hero {
         padding: 65px 0 60px;
     }
@@ -484,6 +569,10 @@ footer p {
 
     .info-box h2 {
         font-size: 30px;
+    }
+
+    .phone-number {
+        font-size: 24px;
     }
 
 }
@@ -700,6 +789,27 @@ footer p {
                 </p>
 
 
+                <!-- PHONE -->
+
+                <a
+                    href="tel:+12895807777"
+                    class="phone-contact">
+
+                    <span class="phone-label">
+                        CALL LIVEWELL
+                    </span>
+
+                    <span class="phone-number">
+                        (289) 580-7777
+                    </span>
+
+                    <span class="phone-note">
+                        Tap to call from your mobile device
+                    </span>
+
+                </a>
+
+
                 <div class="info-item">
 
                     <div class="info-icon">
@@ -779,6 +889,14 @@ footer p {
             and your peace of mind.
         </p>
 
+        <a
+            href="tel:+12895807777"
+            class="assessment-phone">
+
+            (289) 580-7777
+
+        </a>
+
     </div>
 
 </section>
@@ -804,6 +922,14 @@ footer p {
         <p>
             Helping you stay in the home you love.
         </p>
+
+        <a
+            href="tel:+12895807777"
+            class="footer-phone">
+
+            (289) 580-7777
+
+        </a>
 
         <p style="margin-top:12px;">
             © 2026 LiveWell Home Concierge. All rights reserved.
@@ -845,4 +971,3 @@ document.querySelectorAll("#mainNav a").forEach(function(link) {
 </body>
 
 </html>
-```
