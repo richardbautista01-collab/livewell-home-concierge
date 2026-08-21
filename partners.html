@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -9,7 +10,7 @@
 <title>Partners | LiveWell Home Concierge</title>
 
 <meta name="description"
-content="Partner with LiveWell Home Concierge. We work alongside PSWs, healthcare professionals, and senior-focused organizations to support families aging at home.">
+content="Partner with LiveWell Home Concierge. We work alongside healthcare professionals, PSWs, home-care providers, senior organizations and community partners to help older adults remain safely and comfortably at home.">
 
 <style>
 
@@ -140,7 +141,7 @@ nav a:hover {
 }
 
 .hero-content {
-    max-width: 850px;
+    max-width: 900px;
 }
 
 .tagline {
@@ -160,11 +161,31 @@ nav a:hover {
     margin: 0 0 25px;
 }
 
+.hero h1 span {
+    color: #52745d;
+}
+
 .hero p {
     font-size: 19px;
     color: #68736b;
-    max-width: 790px;
-    margin: 0;
+    max-width: 820px;
+    margin: 0 0 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background: #52745d;
+    color: #ffffff;
+    padding: 15px 27px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all .2s ease;
+}
+
+.hero-button:hover {
+    background: #3f604b;
+    transform: translateY(-2px);
 }
 
 
@@ -187,8 +208,8 @@ nav a:hover {
     border-radius: 25px;
     padding: 50px;
     text-align: center;
-    max-width: 950px;
-    margin: 0 auto 55px;
+    max-width: 1000px;
+    margin: 0 auto 65px;
 }
 
 .highlight h2 {
@@ -203,17 +224,21 @@ nav a:hover {
 .highlight p {
     color: #607066;
     font-size: 16px;
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
 
 /* =========================
-   SECTION HEADING
+   VALUE SECTION
 ========================= */
 
+.value-section {
+    margin-bottom: 75px;
+}
+
 .section-heading {
-    max-width: 780px;
+    max-width: 820px;
     margin: 0 auto 50px;
     text-align: center;
 }
@@ -230,8 +255,48 @@ nav a:hover {
 .section-heading p {
     color: #6c766f;
     font-size: 17px;
-    max-width: 780px;
+    max-width: 800px;
     margin: 0 auto;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value-card {
+    background: #f8f6f0;
+    border-radius: 22px;
+    padding: 35px 30px;
+    text-align: center;
+}
+
+.value-number {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #52745d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+}
+
+.value-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    color: #69746c;
+    font-size: 14px;
 }
 
 
@@ -321,16 +386,89 @@ nav a:hover {
 
 
 /* =========================
-   TRUST SECTION
+   RETENTION / SAFETY SECTION
 ========================= */
 
-.trust-section {
+.retention-section {
     background: #f8f6f0;
     padding: 85px 0;
 }
 
-.trust-box {
+.retention-box {
     background: #ffffff;
+    border-radius: 28px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+    align-items: center;
+    box-shadow: 0 12px 40px rgba(44, 63, 49, .06);
+}
+
+.retention-label {
+    color: #52745d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 14px;
+}
+
+.retention-box h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.retention-box p {
+    color: #68736b;
+    font-size: 15px;
+    margin: 0 0 18px;
+}
+
+.retention-box p:last-child {
+    margin-bottom: 0;
+}
+
+.retention-side {
+    background: #edf3ed;
+    border-radius: 24px;
+    padding: 38px;
+}
+
+.retention-side h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 29px;
+    line-height: 1.25;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.retention-side p {
+    color: #617067;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.retention-side strong {
+    color: #304a38;
+}
+
+
+/* =========================
+   TRUST SECTION
+========================= */
+
+.trust-section {
+    background: #ffffff;
+    padding: 85px 0;
+}
+
+.trust-box {
+    background: #f8f6f0;
     border: 1px solid #e3e6df;
     border-radius: 28px;
     padding: 55px;
@@ -338,7 +476,6 @@ nav a:hover {
     grid-template-columns: 1fr 1fr;
     gap: 55px;
     align-items: center;
-    box-shadow: 0 12px 40px rgba(44, 63, 49, .06);
 }
 
 .trust-label {
@@ -483,6 +620,16 @@ footer p {
         max-width: 750px;
     }
 
+    .value-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .retention-box {
+        grid-template-columns: 1fr;
+    }
+
     .trust-box {
         grid-template-columns: 1fr;
     }
@@ -544,7 +691,16 @@ footer p {
 
     .highlight {
         padding: 35px 28px;
-        margin-bottom: 40px;
+        margin-bottom: 45px;
+    }
+
+    .retention-section {
+        padding: 65px 0;
+    }
+
+    .retention-box {
+        padding: 35px 28px;
+        gap: 35px;
     }
 
     .trust-section {
@@ -586,6 +742,10 @@ footer p {
         font-size: 30px;
     }
 
+    .retention-box h2 {
+        font-size: 32px;
+    }
+
     .trust-box h2 {
         font-size: 32px;
     }
@@ -596,9 +756,7 @@ footer p {
 
 </head>
 
-
 <body>
-
 
 <!-- =========================
      HEADER
@@ -606,76 +764,76 @@ footer p {
 
 <header>
 
-    <div class="container navbar">
+```
+<div class="container navbar">
 
-        <a href="./index.html" class="logo">
+    <a href="./index.html" class="logo">
 
-            <img
-                src="./logo.png"
-                alt="LiveWell Home Concierge">
+        <img
+            src="./logo.png"
+            alt="LiveWell Home Concierge">
+
+    </a>
+
+
+    <button
+        class="menu-toggle"
+        onclick="toggleMenu()"
+        aria-label="Open navigation">
+
+        ☰
+
+    </button>
+
+
+    <nav id="mainNav">
+
+        <a href="./index.html">
+            Home
+        </a>
+
+        <a href="./about.html">
+            About
+        </a>
+
+        <a href="./services.html">
+            Services
+        </a>
+
+        <a href="./families.html">
+            For Families
+        </a>
+
+        <a href="./memberships.html">
+            Memberships
+        </a>
+
+        <a href="./resources.html">
+            Resources
+        </a>
+
+        <a href="./partners.html">
+            Partners
+        </a>
+
+        <a href="./contact.html">
+            Contact
+        </a>
+
+        <a
+            href="./contact.html"
+            class="nav-button">
+
+            Speak With Your Concierge
 
         </a>
 
+    </nav>
 
-        <button
-            class="menu-toggle"
-            onclick="toggleMenu()"
-            aria-label="Open navigation">
-
-            ☰
-
-        </button>
-
-
-        <nav id="mainNav">
-
-            <a href="./index.html">
-                Home
-            </a>
-
-            <a href="./about.html">
-                About
-            </a>
-
-            <a href="./services.html">
-                Services
-            </a>
-
-            <a href="./families.html">
-                For Families
-            </a>
-
-            <a href="./memberships.html">
-                Memberships
-            </a>
-
-            <a href="./resources.html">
-                Resources
-            </a>
-
-            <a href="./partners.html">
-                Partners
-            </a>
-
-            <a href="./contact.html">
-                Contact
-            </a>
-
-            <a
-                href="./contact.html"
-                class="nav-button">
-
-                Speak With Your Concierge
-
-            </a>
-
-        </nav>
-
-    </div>
+</div>
+```
 
 </header>
-
-
 
 <!-- =========================
      HERO
@@ -683,31 +841,42 @@ footer p {
 
 <section class="hero">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <div class="tagline">
-                LIVEWELL COMMUNITY PARTNERS
-            </div>
-
-            <h1>
-                Partner With LiveWell.
-            </h1>
-
-            <p>
-                You support the person. We support the home.
-                Together, we can help seniors live safely and independently
-                in the homes they know and love.
-            </p>
-
+        <div class="tagline">
+            LIVEWELL COMMUNITY PARTNERS
         </div>
+
+        <h1>
+            You Support the Person.
+            <span>We Support the Home.</span>
+        </h1>
+
+        <p>
+            Partner with LiveWell to help older adults remain safely,
+            comfortably and confidently at home. We work alongside
+            healthcare professionals, care providers, senior organizations
+            and other trusted community partners to support the practical
+            needs that come with aging at home.
+        </p>
+
+        <a
+            href="./contact.html"
+            class="hero-button">
+
+            Become a Partner
+
+        </a>
 
     </div>
 
+</div>
+```
+
 </section>
-
-
 
 <!-- =========================
      PARTNERS
@@ -715,201 +884,376 @@ footer p {
 
 <section class="partners-section">
 
-    <div class="container">
+```
+<div class="container">
 
 
-        <!-- HIGHLIGHT -->
+    <!-- HIGHLIGHT -->
 
-        <div class="highlight">
+    <div class="highlight">
 
-            <h2>
-                We Don't Replace Your Role.
-                We Support It.
-            </h2>
+        <h2>
+            We Don't Replace Your Role.
+            We Extend the Support Around Your Client.
+        </h2>
 
-            <p>
-                LiveWell respects the important work performed by PSWs,
-                healthcare professionals, and senior-focused organizations.
-                Our services are designed to complement your support by
-                helping families with the home-related challenges that often
-                fall outside your role.
-            </p>
+        <p>
+            LiveWell provides practical home and household support that
+            complements the work of healthcare professionals, PSWs,
+            home-care providers, therapists, community organizations and
+            other professionals serving older adults.
+        </p>
 
-        </div>
-
+    </div>
 
 
-        <!-- INTRO -->
+
+    <!-- VALUE -->
+
+    <div class="value-section">
 
         <div class="section-heading">
 
             <h2>
-                Building a Stronger Support Network
+                A Safer Home Can Help Your Clients Stay Home Longer.
             </h2>
 
             <p>
-                Families often need support beyond personal care. By working
-                together, we can help address both the needs of the person
-                and the needs of the home.
+                When an older adult can remain safely and comfortably in
+                their home, everyone supporting them benefits. LiveWell
+                helps address the everyday home responsibilities that can
+                become barriers to aging in place.
             </p>
 
         </div>
 
 
+        <div class="value-grid">
 
-        <div class="partner-grid">
+            <div class="value-card">
 
-
-            <!-- WHY PARTNER -->
-
-            <div class="partner-card">
-
-                <div class="partner-icon">
-                    🤝
+                <div class="value-number">
+                    1
                 </div>
 
-                <h2>
-                    Why We Partner With PSWs
-                </h2>
+                <h3>
+                    Support Independence
+                </h3>
 
                 <p>
-                    Families often need more than personal support. They may
-                    need help managing the home, coordinating repairs,
-                    organizing household needs, or keeping family members
-                    informed.
-                </p>
-
-                <p>
-                    LiveWell provides a trusted home concierge solution while
-                    allowing PSWs to continue focusing on the important support
-                    they provide.
+                    Help clients maintain a well-kept, functional home
+                    that supports their ability to continue living
+                    independently.
                 </p>
 
             </div>
 
 
+            <div class="value-card">
 
-            <!-- HOW WE SUPPORT -->
-
-            <div class="partner-card">
-
-                <div class="partner-icon">
-                    🏡
+                <div class="value-number">
+                    2
                 </div>
 
-                <h2>
-                    How We Support Families Together
-                </h2>
-
-                <ul>
-
-                    <li>
-                        Home check-ins and household support
-                    </li>
-
-                    <li>
-                        Maintenance coordination
-                    </li>
-
-                    <li>
-                        Contractor scheduling and follow-up
-                    </li>
-
-                    <li>
-                        Home organization assistance
-                    </li>
-
-                    <li>
-                        Seasonal home preparation
-                    </li>
-
-                    <li>
-                        Communication and updates for families
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-
-            <!-- WHO WE PARTNER WITH -->
-
-            <div class="partner-card">
-
-                <div class="partner-icon">
-                    ❤️
-                </div>
-
-                <h2>
-                    Who We Partner With
-                </h2>
-
-                <ul>
-
-                    <li>
-                        Personal Support Workers (PSWs)
-                    </li>
-
-                    <li>
-                        Registered Practical Nurses (RPNs)
-                    </li>
-
-                    <li>
-                        Registered Nurses (RNs)
-                    </li>
-
-                    <li>
-                        Senior-focused professionals
-                    </li>
-
-                    <li>
-                        Community organizations
-                    </li>
-
-                    <li>
-                        Retirement and aging-at-home networks
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-
-            <!-- PARTNERSHIP APPROACH -->
-
-            <div class="partner-card">
-
-                <div class="partner-icon">
-                    🌿
-                </div>
-
-                <h2>
-                    A Partnership Built On Trust
-                </h2>
+                <h3>
+                    Reduce Family Stress
+                </h3>
 
                 <p>
-                    We understand that trust is earned. PSWs develop
-                    meaningful relationships with the seniors and families
-                    they support, and we respect the role you play.
-                </p>
-
-                <p>
-                    Our goal is simple: create a stronger support network
-                    around seniors by working together.
+                    Families often become responsible for every repair,
+                    appointment and household issue. LiveWell helps take
+                    those responsibilities off their plate.
                 </p>
 
             </div>
 
+
+            <div class="value-card">
+
+                <div class="value-number">
+                    3
+                </div>
+
+                <h3>
+                    Extend the Relationship
+                </h3>
+
+                <p>
+                    The longer a client is able to safely remain at home,
+                    the longer they may continue benefiting from the
+                    professional and community services already supporting
+                    them.
+                </p>
+
+            </div>
 
         </div>
 
     </div>
 
+
+
+    <!-- INTRO -->
+
+    <div class="section-heading">
+
+        <h2>
+            Building a Stronger Aging-at-Home Network
+        </h2>
+
+        <p>
+            Aging at home works best when the different people supporting
+            an older adult can work together. LiveWell focuses on the home
+            so your organization can remain focused on your area of
+            expertise.
+        </p>
+
+    </div>
+
+
+
+    <div class="partner-grid">
+
+
+        <!-- WHY PARTNER -->
+
+        <div class="partner-card">
+
+            <div class="partner-icon">
+                🤝
+            </div>
+
+            <h2>
+                Why Partner With LiveWell?
+            </h2>
+
+            <p>
+                Your clients may have excellent healthcare, personal care
+                or community support — but still struggle with the
+                practical responsibilities of maintaining their home.
+            </p>
+
+            <p>
+                LiveWell gives your organization another trusted resource
+                to recommend when home maintenance, repairs, household
+                coordination or family support becomes a concern.
+            </p>
+
+        </div>
+
+
+
+        <!-- HOW WE SUPPORT -->
+
+        <div class="partner-card">
+
+            <div class="partner-icon">
+                🏡
+            </div>
+
+            <h2>
+                How We Support Your Clients
+            </h2>
+
+            <ul>
+
+                <li>
+                    Home maintenance coordination
+                </li>
+
+                <li>
+                    Small repairs and handyman services
+                </li>
+
+                <li>
+                    Contractor scheduling and follow-up
+                </li>
+
+                <li>
+                    Seasonal home preparation
+                </li>
+
+                <li>
+                    Home check-ins and oversight
+                </li>
+
+                <li>
+                    Household organization and coordination
+                </li>
+
+                <li>
+                    Family communication and updates
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- WHO WE PARTNER WITH -->
+
+        <div class="partner-card">
+
+            <div class="partner-icon">
+                ❤️
+            </div>
+
+            <h2>
+                Who We Partner With
+            </h2>
+
+            <ul>
+
+                <li>
+                    Personal Support Workers (PSWs)
+                </li>
+
+                <li>
+                    Registered Practical Nurses (RPNs)
+                </li>
+
+                <li>
+                    Registered Nurses (RNs)
+                </li>
+
+                <li>
+                    Home-care agencies
+                </li>
+
+                <li>
+                    Occupational & physical therapists
+                </li>
+
+                <li>
+                    Social workers and care coordinators
+                </li>
+
+                <li>
+                    Senior-focused organizations
+                </li>
+
+                <li>
+                    Retirement and aging-at-home networks
+                </li>
+
+                <li>
+                    Community organizations and businesses
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- PARTNERSHIP APPROACH -->
+
+        <div class="partner-card">
+
+            <div class="partner-icon">
+                🌿
+            </div>
+
+            <h2>
+                A Partnership Built Around the Client
+            </h2>
+
+            <p>
+                We understand that professionals earn trust by building
+                meaningful relationships with the people they serve.
+            </p>
+
+            <p>
+                Our role is not to replace your services. It is to provide
+                another layer of practical support around your client,
+                helping make the home environment easier to manage.
+            </p>
+
+            <p>
+                <strong>
+                    One client. One home. A stronger support network.
+                </strong>
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+```
+
 </section>
 
+<!-- =========================
+     RETENTION / SAFETY
+========================= -->
 
+<section class="retention-section">
+
+```
+<div class="container">
+
+    <div class="retention-box">
+
+        <div>
+
+            <div class="retention-label">
+                THE VALUE OF AGING AT HOME
+            </div>
+
+            <h2>
+                Helping Clients Stay Home Can Mean More Than Just Comfort.
+            </h2>
+
+            <p>
+                For many older adults, remaining in their own home is an
+                important part of maintaining independence, routine and
+                quality of life.
+            </p>
+
+            <p>
+                But staying home successfully requires more than healthcare
+                or personal support. The home itself needs to be
+                maintained, monitored and cared for.
+            </p>
+
+            <p>
+                That's the gap LiveWell helps fill.
+            </p>
+
+        </div>
+
+
+        <div class="retention-side">
+
+            <h3>
+                The longer your client can safely remain at home,
+                the longer your organization can continue supporting them
+                in the environment they know.
+            </h3>
+
+            <p>
+                LiveWell helps address practical household needs before
+                they become bigger problems — creating another layer of
+                support around the client.
+            </p>
+
+            <p>
+                <strong>
+                    We help make aging at home more sustainable.
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
 
 <!-- =========================
      TRUST SECTION
@@ -917,64 +1261,66 @@ footer p {
 
 <section class="trust-section">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="trust-box">
+    <div class="trust-box">
 
-            <div>
+        <div>
 
-                <div class="trust-label">
-                    WORKING TOGETHER
-                </div>
-
-                <h2>
-                    Better Support Starts With Collaboration.
-                </h2>
-
-                <p>
-                    Aging at home often involves a network of people helping
-                    in different ways. A PSW may support personal care.
-                    Healthcare professionals may support health needs.
-                    Families provide love and oversight.
-                </p>
-
-                <p>
-                    LiveWell focuses on the home — helping coordinate the
-                    maintenance, household tasks, and practical details that
-                    can otherwise become another responsibility for families
-                    and care providers.
-                </p>
-
+            <div class="trust-label">
+                WORKING TOGETHER
             </div>
 
+            <h2>
+                Better Outcomes Start With Collaboration.
+            </h2>
 
-            <div class="trust-side">
+            <p>
+                Aging at home often involves a network of people helping
+                in different ways. A PSW may provide personal support.
+                A nurse may monitor health needs. A therapist may help
+                maintain mobility and independence. Families provide love
+                and oversight.
+            </p>
 
-                <h3>
-                    You Support the Person.
-                    We Support the Home.
-                </h3>
+            <p>
+                LiveWell focuses on the home — coordinating the
+                maintenance, repairs, household tasks and practical details
+                that can otherwise become another responsibility for
+                families and care providers.
+            </p>
 
-                <p>
-                    Together, we can help families create a more complete
-                    aging-at-home support system.
-                </p>
+        </div>
 
-                <p>
-                    <strong>
-                        Our role is to complement your work — not replace it.
-                    </strong>
-                </p>
 
-            </div>
+        <div class="trust-side">
+
+            <h3>
+                You Bring Your Expertise.
+                We Bring Home Support.
+            </h3>
+
+            <p>
+                Together, we can create a more complete support system
+                around the older adults and families you serve.
+            </p>
+
+            <p>
+                <strong>
+                    Our goal is simple: help people remain safely and
+                    comfortably at home for as long as possible.
+                </strong>
+            </p>
 
         </div>
 
     </div>
 
+</div>
+```
+
 </section>
-
-
 
 <!-- =========================
      CTA
@@ -982,31 +1328,31 @@ footer p {
 
 <section class="cta">
 
-    <div class="container">
+```
+<div class="container">
 
-        <h2>
-            Become a LiveWell Community Partner.
-        </h2>
+    <h2>
+        Let's Support More Families Together.
+    </h2>
 
-        <p>
-            Let's work together to provide families with a complete
-            aging-at-home support solution. We'd love to learn more about
-            the work you do and explore how we can support one another.
-        </p>
+    <p>
+        If your organization works with older adults, caregivers or
+        families aging at home, we'd love to learn more about what you do
+        and explore how LiveWell can complement your services.
+    </p>
 
-        <a
-            href="./contact.html"
-            class="button">
+    <a
+        href="./contact.html"
+        class="button">
 
-            Start a Conversation
+        Become a LiveWell Partner
 
-        </a>
+    </a>
 
-    </div>
+</div>
+```
 
 </section>
-
-
 
 <!-- =========================
      FOOTER
@@ -1014,29 +1360,29 @@ footer p {
 
 <footer>
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="footer-logo">
+    <div class="footer-logo">
 
-            <img
-                src="./logo.png"
-                alt="LiveWell Home Concierge">
-
-        </div>
-
-        <p>
-            Helping you stay in the home you love.
-        </p>
-
-        <p style="margin-top:12px;">
-            © 2026 LiveWell Home Concierge. All rights reserved.
-        </p>
+        <img
+            src="./logo.png"
+            alt="LiveWell Home Concierge">
 
     </div>
 
+    <p>
+        Helping you stay in the home you love.
+    </p>
+
+    <p style="margin-top:12px;">
+        © 2026 LiveWell Home Concierge. All rights reserved.
+    </p>
+
+</div>
+```
+
 </footer>
-
-
 
 <!-- =========================
      MOBILE MENU SCRIPT
@@ -1063,7 +1409,6 @@ document.querySelectorAll("#mainNav a").forEach(function(link) {
 });
 
 </script>
-
 
 </body>
 
