@@ -9,7 +9,7 @@
 <title>Memberships | LiveWell Home Concierge</title>
 
 <meta name="description"
-content="LiveWell Home Concierge memberships provide trusted home maintenance coordination, family communication, handyman assistance, project management and ongoing support for homeowners and their families.">
+content="LiveWell Home Concierge memberships provide trusted home maintenance coordination, family communication, handyman assistance, project management and ongoing support for homeowners and their families across York Region and the Greater Toronto Area.">
 
 <style>
 
@@ -61,7 +61,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 35px;
+    gap: 30px;
 }
 
 .logo {
@@ -81,7 +81,7 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 27px;
+    gap: 22px;
 }
 
 nav a {
@@ -105,6 +105,20 @@ nav a:hover {
 
 .nav-button:hover {
     background: #3f604b;
+}
+
+
+/* PHONE */
+
+.phone-link {
+    color: #52745d !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    white-space: nowrap;
+}
+
+.phone-link:hover {
+    color: #3f604b !important;
 }
 
 
@@ -139,7 +153,7 @@ nav a:hover {
 }
 
 .hero-content {
-    max-width: 820px;
+    max-width: 850px;
 }
 
 .tagline {
@@ -164,6 +178,14 @@ h1 {
     color: #68736b;
     max-width: 790px;
     margin: 0;
+}
+
+.hero-service-area {
+    margin-top: 25px;
+    color: #52745d;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .3px;
 }
 
 
@@ -558,6 +580,59 @@ h1 {
 
 
 /* =========================
+   SERVICE AREA
+========================= */
+
+.service-area {
+    background: #f8f6f0;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.service-area-label {
+    color: #52745d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 12px;
+}
+
+.service-area h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 15px;
+}
+
+.service-area p {
+    color: #68736b;
+    font-size: 16px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.locations {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.location {
+    background: #ffffff;
+    border: 1px solid #e1e5df;
+    color: #52745d;
+    padding: 9px 17px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================
    TERMS
 ========================= */
 
@@ -631,6 +706,10 @@ h1 {
     transform: translateY(-2px);
 }
 
+.phone-button {
+    margin-left: 10px;
+}
+
 
 /* =========================
    FOOTER
@@ -639,7 +718,7 @@ h1 {
 footer {
     background: #2f4937;
     color: #d8e0d9;
-    padding: 35px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
@@ -659,15 +738,27 @@ footer p {
     object-fit: contain;
 }
 
+.footer-phone {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer-phone:hover {
+    color: #dce6de;
+}
+
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
 
     nav {
-        gap: 17px;
+        gap: 15px;
     }
 
     nav a {
@@ -735,6 +826,7 @@ footer p {
     nav a {
         padding: 13px 0;
         border-bottom: 1px solid #eef0eb;
+        font-size: 14px;
     }
 
     nav a:last-child {
@@ -744,6 +836,11 @@ footer p {
     .nav-button {
         text-align: center;
         margin-top: 8px;
+    }
+
+    .phone-link {
+        text-align: center;
+        margin-bottom: 5px;
     }
 
     .hero {
@@ -780,6 +877,11 @@ footer p {
         padding: 28px;
     }
 
+    .phone-button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
 }
 
 
@@ -814,6 +916,29 @@ footer p {
 
     .project-box h2 {
         font-size: 32px;
+    }
+
+    .service-area {
+        padding: 55px 20px;
+    }
+
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
     }
 
 }
@@ -877,7 +1002,7 @@ footer p {
 
             <a href="./resources.html">
                 Resources
-               </a>
+            </a>
 
             <a href="./partners.html">
                 Partners
@@ -885,6 +1010,14 @@ footer p {
 
             <a href="./contact.html">
                 Contact
+            </a>
+
+            <a
+                href="tel:+12895807777"
+                class="phone-link">
+
+                (289) 580-7777
+
             </a>
 
             <a
@@ -929,6 +1062,10 @@ footer p {
                 tailored to your needs. When something bigger comes up,
                 LiveWell can help manage that too.
             </p>
+
+            <div class="hero-service-area">
+                Proudly serving York Region &amp; the Greater Toronto Area
+            </div>
 
         </div>
 
@@ -1613,6 +1750,74 @@ footer p {
 
 
 <!-- =========================
+     SERVICE AREA
+========================= -->
+
+<section class="service-area">
+
+    <div class="container">
+
+        <div class="service-area-label">
+            PROUDLY SERVING
+        </div>
+
+        <h2>
+            York Region &amp; the Greater Toronto Area
+        </h2>
+
+        <p>
+            LiveWell Home Concierge provides local home support and
+            coordination for older homeowners and their families across
+            York Region and surrounding GTA communities.
+        </p>
+
+        <div class="locations">
+
+            <span class="location">
+                Newmarket
+            </span>
+
+            <span class="location">
+                Aurora
+            </span>
+
+            <span class="location">
+                Richmond Hill
+            </span>
+
+            <span class="location">
+                Vaughan
+            </span>
+
+            <span class="location">
+                Markham
+            </span>
+
+            <span class="location">
+                King
+            </span>
+
+            <span class="location">
+                East Gwillimbury
+            </span>
+
+            <span class="location">
+                Bradford
+            </span>
+
+            <span class="location">
+                Whitchurch-Stouffville
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
      TERMS
 ========================= -->
 
@@ -1678,6 +1883,14 @@ footer p {
 
         </a>
 
+        <a
+            href="tel:+12895807777"
+            class="button phone-button">
+
+            Call (289) 580-7777
+
+        </a>
+
     </div>
 
 </section>
@@ -1703,6 +1916,18 @@ footer p {
         <p>
             Helping you stay in the home you love.
         </p>
+
+        <p style="margin-top:10px;">
+            Serving York Region &amp; the Greater Toronto Area
+        </p>
+
+        <a
+            href="tel:+12895807777"
+            class="footer-phone">
+
+            (289) 580-7777
+
+        </a>
 
         <p style="margin-top:12px;">
             © 2026 LiveWell Home Concierge. All rights reserved.
