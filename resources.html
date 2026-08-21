@@ -110,6 +110,20 @@ nav a:hover {
 
 
 /* =========================
+   PHONE LINK
+========================= */
+
+.phone-link {
+    color: #52745d !important;
+    font-weight: 700 !important;
+}
+
+.phone-link:hover {
+    color: #3f604b !important;
+}
+
+
+/* =========================
    MOBILE MENU
 ========================= */
 
@@ -393,13 +407,82 @@ nav a:hover {
 
 
 /* =========================
+   PHONE CTA
+========================= */
+
+.phone-cta {
+    margin-top: 20px;
+}
+
+.phone-cta-label {
+    display: block;
+    color: #dce6de;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.phone-cta a {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.phone-cta a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   SERVICE AREA
+========================= */
+
+.service-area {
+    background: #edf3ed;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.service-area h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #304a38;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.service-area p {
+    color: #647168;
+    font-size: 15px;
+    margin: 0 auto 8px;
+    max-width: 800px;
+}
+
+.service-area strong {
+    color: #405b47;
+}
+
+.service-area-phone {
+    display: inline-block;
+    margin-top: 18px;
+    color: #52745d;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.service-area-phone:hover {
+    color: #3f604b;
+    text-decoration: underline;
+}
+
+
+/* =========================
    FOOTER
 ========================= */
 
 footer {
     background: #2f4937;
     color: #d8e0d9;
-    padding: 35px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
@@ -417,6 +500,20 @@ footer p {
     width: 190px;
     max-height: 65px;
     object-fit: contain;
+}
+
+.footer-phone {
+    margin-top: 15px;
+}
+
+.footer-phone a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer-phone a:hover {
+    text-decoration: underline;
 }
 
 
@@ -527,6 +624,14 @@ footer p {
     .resource-card h3,
     .resource-content-card h2 {
         font-size: 27px;
+    }
+
+    .service-area h2 {
+        font-size: 28px;
+    }
+
+    .phone-cta a {
+        font-size: 20px;
     }
 
 }
@@ -1007,6 +1112,50 @@ footer p {
 
 
 <!-- =========================
+     SERVICE AREA
+========================= -->
+
+<section class="service-area">
+
+    <div class="container">
+
+        <h2>
+            Serving Families Across York Region &amp; the GTA
+        </h2>
+
+        <p>
+            LiveWell Home Concierge provides local home support and
+            coordination for families in:
+        </p>
+
+        <p>
+            <strong>
+                Newmarket &nbsp;•&nbsp;
+                Aurora &nbsp;•&nbsp;
+                Richmond Hill &nbsp;•&nbsp;
+                Vaughan &nbsp;•&nbsp;
+                Markham &nbsp;•&nbsp;
+                Stouffville &nbsp;•&nbsp;
+                King City &nbsp;•&nbsp;
+                East Gwillimbury
+            </strong>
+        </p>
+
+        <a
+            href="tel:+12895807777"
+            class="service-area-phone">
+
+            📞 (289) 580-7777
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
      CTA
 ========================= -->
 
@@ -1033,6 +1182,19 @@ footer p {
 
         </a>
 
+
+        <div class="phone-cta">
+
+            <span class="phone-cta-label">
+                Prefer to speak with us?
+            </span>
+
+            <a href="tel:+12895807777">
+                (289) 580-7777
+            </a>
+
+        </div>
+
     </div>
 
 </section>
@@ -1058,6 +1220,14 @@ footer p {
         <p>
             Helping you stay in the home you love.
         </p>
+
+        <div class="footer-phone">
+
+            <a href="tel:+12895807777">
+                📞 (289) 580-7777
+            </a>
+
+        </div>
 
         <p style="margin-top:12px;">
             © 2026 LiveWell Home Concierge. All rights reserved.
@@ -1099,4 +1269,3 @@ document.querySelectorAll("#mainNav a").forEach(function(link) {
 </body>
 
 </html>
-```
