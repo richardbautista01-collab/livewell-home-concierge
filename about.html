@@ -81,7 +81,7 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 27px;
+    gap: 25px;
 }
 
 nav a {
@@ -127,43 +127,104 @@ nav a:hover {
 ========================= */
 
 .hero {
-    background:
-        linear-gradient(
-            90deg,
-            rgba(248,246,240,.98) 0%,
-            rgba(248,246,240,.94) 55%,
-            rgba(248,246,240,.78) 100%
-        );
+    position: relative;
+    overflow: hidden;
+    padding: 105px 0 100px;
 
-    padding: 90px 0 80px;
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(82,116,93,.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f8f6f0 0%,
+            #f4f3ed 55%,
+            #edf3ed 100%
+        );
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(82,116,93,.05);
+    right: -180px;
+    bottom: -220px;
 }
 
 .hero-content {
-    max-width: 850px;
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
 }
 
 .tagline {
     color: #52745d;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 3px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
     font-family: Georgia, "Times New Roman", serif;
     color: #304a38;
-    font-size: clamp(42px, 5vw, 62px);
-    line-height: 1.08;
+    font-size: clamp(45px, 6vw, 72px);
+    line-height: 1.05;
     font-weight: 500;
-    margin: 0 0 25px;
+    margin: 0 0 27px;
+    max-width: 900px;
 }
 
 .hero p {
     font-size: 19px;
     color: #68736b;
-    max-width: 790px;
+    max-width: 760px;
     margin: 0;
+}
+
+
+/* =========================
+   INTRO STATEMENT
+========================= */
+
+.intro {
+    background: #3f604b;
+    color: white;
+    padding: 70px 0;
+}
+
+.intro-inner {
+    max-width: 930px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-label {
+    color: #c9d9cd;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.intro p {
+    color: #dce6de;
+    font-size: 17px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 
@@ -172,7 +233,7 @@ nav a:hover {
 ========================= */
 
 .section {
-    padding: 85px 0;
+    padding: 90px 0;
 }
 
 .section.white {
@@ -181,14 +242,14 @@ nav a:hover {
 
 .section-heading {
     max-width: 800px;
-    margin: 0 auto 50px;
+    margin: 0 auto 55px;
     text-align: center;
 }
 
 .section-heading h2 {
     font-family: Georgia, "Times New Roman", serif;
     color: #304a38;
-    font-size: clamp(32px, 4vw, 45px);
+    font-size: clamp(34px, 4vw, 46px);
     line-height: 1.2;
     font-weight: 500;
     margin: 0 0 18px;
@@ -203,17 +264,19 @@ nav a:hover {
 
 
 /* =========================
-   STORY SECTION
+   OUR STORY
 ========================= */
 
-.story-box {
-    background: #ffffff;
-    border: 1px solid #e5e6df;
-    border-radius: 28px;
-    padding: 55px;
-    max-width: 950px;
-    margin: 0 auto;
-    box-shadow: 0 12px 40px rgba(44, 63, 49, .06);
+.story-layout {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.story-intro {
+    position: sticky;
+    top: 120px;
 }
 
 .story-label {
@@ -221,26 +284,52 @@ nav a:hover {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2.5px;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 }
 
-.story-box h2 {
+.story-intro h2 {
     font-family: Georgia, "Times New Roman", serif;
     color: #304a38;
-    font-size: clamp(34px, 4vw, 45px);
-    line-height: 1.2;
+    font-size: clamp(35px, 4vw, 50px);
+    line-height: 1.15;
     font-weight: 500;
-    margin: 0 0 22px;
+    margin: 0 0 20px;
 }
 
-.story-box p {
-    color: #68736b;
+.story-intro p {
+    color: #69746c;
+    font-size: 15px;
+}
+
+.story-copy {
+    border-left: 1px solid #dfe5df;
+    padding-left: 50px;
+}
+
+.story-copy p {
+    color: #5f6b63;
     font-size: 16px;
-    margin: 0 0 18px;
+    margin: 0 0 24px;
 }
 
-.story-box p:last-child {
-    margin-bottom: 0;
+.story-copy p:first-child {
+    font-size: 20px;
+    color: #405548;
+    line-height: 1.65;
+}
+
+.story-highlight {
+    margin-top: 35px;
+    padding: 28px 30px;
+    background: #edf3ed;
+    border-radius: 20px;
+    border-left: 4px solid #52745d;
+}
+
+.story-highlight p {
+    margin: 0;
+    color: #405548;
+    font-size: 17px;
 }
 
 
@@ -254,11 +343,11 @@ nav a:hover {
 
 .team-box {
     background: #edf3ed;
-    border-radius: 28px;
-    padding: 55px;
+    border-radius: 30px;
+    padding: 65px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 55px;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 65px;
     align-items: center;
 }
 
@@ -267,37 +356,47 @@ nav a:hover {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2.5px;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 }
 
 .team-box h2 {
     font-family: Georgia, "Times New Roman", serif;
     color: #304a38;
-    font-size: clamp(32px, 4vw, 44px);
-    line-height: 1.2;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.15;
     font-weight: 500;
-    margin: 0 0 20px;
+    margin: 0 0 23px;
 }
 
 .team-box p {
-    color: #637067;
+    color: #5f6c63;
     font-size: 15px;
-    margin: 0 0 17px;
+    margin: 0 0 18px;
 }
 
 .team-side {
     background: #ffffff;
-    border: 1px solid #e2e7e2;
-    border-radius: 22px;
-    padding: 35px;
+    border-radius: 24px;
+    padding: 38px;
+    border: 1px solid #e1e7e1;
+    box-shadow: 0 15px 40px rgba(44,63,49,.06);
+}
+
+.team-side-top {
+    color: #52745d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
 }
 
 .team-side h3 {
     font-family: Georgia, "Times New Roman", serif;
     color: #304a38;
-    font-size: 27px;
+    font-size: 29px;
     font-weight: 500;
-    margin: 0 0 18px;
+    line-height: 1.2;
+    margin: 0 0 20px;
 }
 
 .team-side ul {
@@ -308,7 +407,7 @@ nav a:hover {
 
 .team-side li {
     position: relative;
-    padding: 11px 0 11px 27px;
+    padding: 12px 0 12px 27px;
     border-bottom: 1px solid #eef0eb;
     color: #5f6b63;
     font-size: 14px;
@@ -322,13 +421,13 @@ nav a:hover {
     content: "✓";
     position: absolute;
     left: 0;
-    top: 11px;
+    top: 12px;
     color: #52745d;
     font-weight: 700;
 }
 
 .team-note {
-    margin-top: 22px;
+    margin-top: 23px !important;
     padding-top: 18px;
     border-top: 1px solid #dce4dd;
     color: #748078 !important;
@@ -350,14 +449,14 @@ nav a:hover {
     background: #ffffff;
     border: 1px solid #e5e6df;
     border-radius: 22px;
-    padding: 32px 28px;
-    box-shadow: 0 10px 35px rgba(44, 63, 49, .06);
+    padding: 34px 30px;
+    box-shadow: 0 10px 35px rgba(44,63,49,.05);
     transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 18px 45px rgba(44, 63, 49, .10);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(44,63,49,.10);
 }
 
 .service-icon {
@@ -371,7 +470,7 @@ nav a:hover {
     justify-content: center;
 
     font-size: 27px;
-    margin-bottom: 21px;
+    margin-bottom: 22px;
 }
 
 .service-card h3 {
@@ -407,28 +506,46 @@ nav a:hover {
 .value-card {
     background: #ffffff;
     border: 1px solid #e5e6df;
-    border-radius: 22px;
-    padding: 35px 30px;
-    text-align: center;
+    border-radius: 24px;
+    padding: 40px 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #edf3ed;
+    right: -55px;
+    top: -55px;
 }
 
 .value-number {
+    position: relative;
+    z-index: 2;
     color: #52745d;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
 }
 
 .value-card h3 {
+    position: relative;
+    z-index: 2;
     font-family: Georgia, "Times New Roman", serif;
     color: #304a38;
-    font-size: 25px;
+    font-size: 27px;
     font-weight: 500;
     margin: 0 0 13px;
 }
 
 .value-card p {
+    position: relative;
+    z-index: 2;
     color: #69746c;
     font-size: 14px;
     margin: 0;
@@ -444,11 +561,16 @@ nav a:hover {
 }
 
 .commitment-box {
-    max-width: 950px;
+    max-width: 980px;
     margin: 0 auto;
-    background: #edf3ed;
-    border-radius: 28px;
-    padding: 60px;
+    background:
+        linear-gradient(
+            135deg,
+            #edf3ed,
+            #f5f7f2
+        );
+    border-radius: 30px;
+    padding: 70px 60px;
     text-align: center;
 }
 
@@ -463,17 +585,17 @@ nav a:hover {
 .commitment-box h2 {
     font-family: Georgia, "Times New Roman", serif;
     color: #304a38;
-    font-size: clamp(34px, 4vw, 46px);
-    line-height: 1.2;
+    font-size: clamp(36px, 4vw, 50px);
+    line-height: 1.15;
     font-weight: 500;
-    margin: 0 0 20px;
+    margin: 0 0 22px;
 }
 
 .commitment-box p {
     color: #637067;
     font-size: 16px;
     max-width: 780px;
-    margin: 0 auto 17px;
+    margin: 0 auto 18px;
 }
 
 .commitment-box p:last-child {
@@ -482,34 +604,93 @@ nav a:hover {
 
 
 /* =========================
-   IMPORTANT DISTINCTION
+   WHAT WE ARE
 ========================= */
 
-.disclaimer-box {
-    max-width: 900px;
-    margin: 0 auto;
+.distinction {
+    background: #f8f6f0;
+}
+
+.distinction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.distinction-card {
+    border-radius: 25px;
+    padding: 40px;
+}
+
+.distinction-card.is {
+    background: #edf3ed;
+}
+
+.distinction-card.isnt {
     background: #ffffff;
     border: 1px solid #e4e6df;
-    border-radius: 22px;
-    padding: 45px 50px;
 }
 
-.disclaimer-box h2 {
+.distinction-label {
+    color: #52745d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 14px;
+}
+
+.distinction-card h2 {
     font-family: Georgia, "Times New Roman", serif;
     color: #304a38;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 500;
-    margin: 0 0 22px;
+    margin: 0 0 20px;
 }
 
-.disclaimer-box p {
-    color: #69746c;
+.distinction-card p {
+    color: #657169;
     font-size: 14px;
-    margin: 0 0 17px;
+    margin: 0 0 16px;
 }
 
-.disclaimer-box p:last-child {
+.distinction-card p:last-child {
     margin-bottom: 0;
+}
+
+
+/* =========================
+   SERVICE AREA
+========================= */
+
+.area {
+    background: #3f604b;
+    color: white;
+    padding: 75px 20px;
+    text-align: center;
+}
+
+.area-label {
+    color: #c9d9cd;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.area h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 18px;
+}
+
+.area p {
+    color: #dce6de;
+    font-size: 16px;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
 }
 
 
@@ -518,31 +699,31 @@ nav a:hover {
 ========================= */
 
 .cta {
-    background: #3f604b;
-    color: white;
+    background: #ffffff;
+    color: #304a38;
     text-align: center;
-    padding: 80px 20px;
+    padding: 90px 20px;
 }
 
 .cta h2 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(34px, 4vw, 48px);
+    font-size: clamp(36px, 4vw, 50px);
     font-weight: 500;
     line-height: 1.2;
-    margin: 0 0 15px;
+    margin: 0 0 17px;
 }
 
 .cta p {
-    color: #dce6de;
+    color: #68736b;
     font-size: 17px;
     margin: 0 auto 30px;
-    max-width: 750px;
+    max-width: 720px;
 }
 
 .button {
     display: inline-block;
-    background: #ffffff;
-    color: #3f604b;
+    background: #52745d;
+    color: #ffffff;
     padding: 15px 27px;
     border-radius: 30px;
     font-size: 14px;
@@ -551,7 +732,7 @@ nav a:hover {
 }
 
 .button:hover {
-    background: #edf3ed;
+    background: #3f604b;
     transform: translateY(-2px);
 }
 
@@ -563,7 +744,7 @@ nav a:hover {
 footer {
     background: #2f4937;
     color: #d8e0d9;
-    padding: 35px 0;
+    padding: 38px 0;
     text-align: center;
 }
 
@@ -591,20 +772,36 @@ footer p {
 @media (max-width: 1050px) {
 
     nav {
-        gap: 17px;
+        gap: 16px;
     }
 
     nav a {
         font-size: 13px;
     }
 
-    .services-grid,
-    .values-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .story-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-intro {
+        position: static;
+    }
+
+    .story-copy {
+        border-left: none;
+        border-top: 1px solid #dfe5df;
+        padding-left: 0;
+        padding-top: 35px;
     }
 
     .team-box {
         grid-template-columns: 1fr;
+    }
+
+    .services-grid,
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -622,24 +819,16 @@ footer p {
 
     nav {
         display: none;
-
         position: absolute;
-
         top: 76px;
         left: 0;
         right: 0;
-
         background: #ffffff;
-
         border-top: 1px solid #e7e5dc;
-
         box-shadow: 0 12px 25px rgba(0,0,0,.08);
-
         padding: 18px 5%;
-
         flex-direction: column;
         align-items: stretch;
-
         gap: 0;
     }
 
@@ -650,6 +839,7 @@ footer p {
     nav a {
         padding: 13px 0;
         border-bottom: 1px solid #eef0eb;
+        font-size: 14px;
     }
 
     nav a:last-child {
@@ -662,7 +852,7 @@ footer p {
     }
 
     .hero {
-        padding: 65px 0 60px;
+        padding: 70px 0 65px;
     }
 
     .hero h1 {
@@ -677,10 +867,17 @@ footer p {
         padding: 65px 0;
     }
 
-    .story-box,
-    .team-box,
-    .commitment-box {
+    .intro {
+        padding: 60px 0;
+    }
+
+    .story-copy {
+        padding-top: 28px;
+    }
+
+    .team-box {
         padding: 35px 28px;
+        gap: 35px;
     }
 
     .services-grid,
@@ -688,8 +885,20 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .disclaimer-box {
-        padding: 35px 28px;
+    .commitment-box {
+        padding: 45px 28px;
+    }
+
+    .distinction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .distinction-card {
+        padding: 32px 28px;
+    }
+
+    .area {
+        padding: 60px 20px;
     }
 
     .cta {
@@ -706,6 +915,10 @@ footer p {
         max-height: 55px;
     }
 
+    .hero {
+        padding: 60px 0;
+    }
+
     .hero h1 {
         font-size: 39px;
     }
@@ -714,16 +927,24 @@ footer p {
         font-size: 17px;
     }
 
-    .service-card {
-        padding: 30px 24px;
-    }
-
-    .commitment-box h2 {
+    .intro h2 {
         font-size: 32px;
     }
 
-    .disclaimer-box h2 {
-        font-size: 30px;
+    .story-intro h2 {
+        font-size: 36px;
+    }
+
+    .team-box h2 {
+        font-size: 34px;
+    }
+
+    .commitment-box h2 {
+        font-size: 34px;
+    }
+
+    .distinction-card h2 {
+        font-size: 29px;
     }
 
 }
@@ -833,9 +1054,41 @@ footer p {
             </h1>
 
             <p>
-                LiveWell Home Concierge helps older adults remain comfortable
-                and independent in the homes they know while giving their
-                families a trusted local presence they can rely on.
+                We help older adults remain comfortable in the homes they know
+                and love — while giving their families a trusted local presence
+                they can rely on.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="intro-inner">
+
+            <div class="intro-label">
+                WHY LIVEWELL EXISTS
+            </div>
+
+            <h2>
+                Home Should Feel Like Home.
+            </h2>
+
+            <p>
+                As life changes, maintaining a home can become more difficult.
+                LiveWell exists to make the practical side of staying at home
+                easier — for older adults and for the families who care about them.
             </p>
 
         </div>
@@ -854,45 +1107,72 @@ footer p {
 
     <div class="container">
 
-        <div class="story-box">
+        <div class="story-layout">
 
-            <div class="story-label">
-                OUR STORY
+            <div class="story-intro">
+
+                <div class="story-label">
+                    OUR STORY
+                </div>
+
+                <h2>
+                    A Different Kind of Home Support.
+                </h2>
+
+                <p>
+                    Built around a simple idea: families shouldn't have to
+                    manage every detail alone.
+                </p>
+
             </div>
 
-            <h2>
-                A Different Kind of Home Support.
-            </h2>
 
-            <p>
-                LiveWell Home Concierge was founded with one simple mission:
-                to help older adults remain comfortable, confident, and
-                independent in the homes they love while providing families
-                with greater peace of mind.
-            </p>
+            <div class="story-copy">
 
-            <p>
-                We understand that managing a home can become more challenging
-                over time. Everyday responsibilities, home maintenance,
-                appointments, organization, and coordinating support can create
-                stress for both older adults and their families.
-            </p>
+                <p>
+                    LiveWell Home Concierge was founded with one simple mission:
+                    to help older adults remain comfortable, confident, and
+                    independent in the homes they love while providing families
+                    with greater peace of mind.
+                </p>
 
-            <p>
-                And for families who live across town, across the GTA, or simply
-                have busy lives of their own, being there for every little thing
-                isn't always possible.
-            </p>
+                <p>
+                    We understand that managing a home can become more
+                    challenging over time. Everyday responsibilities, repairs,
+                    maintenance, appointments, contractors, organization, and
+                    unexpected issues can create stress for both older adults
+                    and their families.
+                </p>
 
-            <p>
-                That's where LiveWell comes in.
-            </p>
+                <p>
+                    For families who live across town, across the GTA, or simply
+                    have busy lives of their own, being there for every little
+                    thing isn't always possible.
+                </p>
 
-            <p>
-                We provide trusted home concierge services designed to simplify
-                the practical details, help families stay connected, and make
-                staying at home easier to manage.
-            </p>
+                <p>
+                    That's where LiveWell comes in.
+                </p>
+
+                <p>
+                    We provide a trusted local presence that helps coordinate
+                    the practical details of the home, keeps families informed,
+                    and makes staying at home easier to manage.
+                </p>
+
+
+                <div class="story-highlight">
+
+                    <p>
+                        <strong>
+                            We don't replace the family.
+                            We make being there easier.
+                        </strong>
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -954,6 +1234,10 @@ footer p {
 
             <div class="team-side">
 
+                <div class="team-side-top">
+                    BUILT AROUND YOUR FAMILY
+                </div>
+
                 <h3>
                     What That Means for Your Family
                 </h3>
@@ -977,7 +1261,7 @@ footer p {
                     </li>
 
                     <li>
-                        A commitment to helping older adults remain independent
+                        A commitment to supporting independence
                     </li>
 
                 </ul>
@@ -986,7 +1270,7 @@ footer p {
                     LiveWell Home Concierge does not provide medical care,
                     nursing, personal support, or other healthcare services.
                     Our healthcare-related experience informs how we understand
-                    the needs of families, but LiveWell's role is focused on
+                    the needs of families, while our role remains focused on
                     non-medical home concierge and coordination support.
                 </p>
 
@@ -1015,7 +1299,7 @@ footer p {
             </h2>
 
             <p>
-                We help with the practical details that can become difficult
+                We take care of the practical details that can become difficult
                 to manage alone — especially when family members aren't always
                 able to be there.
             </p>
@@ -1045,7 +1329,6 @@ footer p {
             </div>
 
 
-
             <div class="service-card">
 
                 <div class="service-icon">
@@ -1065,7 +1348,6 @@ footer p {
             </div>
 
 
-
             <div class="service-card">
 
                 <div class="service-icon">
@@ -1077,12 +1359,11 @@ footer p {
                 </h3>
 
                 <p>
-                    From arranging household services to coordinating access,
-                    we help manage the practical details around appointments.
+                    We help manage the practical details around household
+                    appointments, service visits, access, and scheduling.
                 </p>
 
             </div>
-
 
 
             <div class="service-card">
@@ -1103,7 +1384,6 @@ footer p {
             </div>
 
 
-
             <div class="service-card">
 
                 <div class="service-icon">
@@ -1122,7 +1402,6 @@ footer p {
             </div>
 
 
-
             <div class="service-card">
 
                 <div class="service-icon">
@@ -1134,7 +1413,7 @@ footer p {
                 </h3>
 
                 <p>
-                    For larger household needs, LiveWell can coordinate multiple
+                    For larger household needs, LiveWell can coordinate
                     providers, appointments, estimates, access, and follow-ups.
                 </p>
 
@@ -1160,12 +1439,11 @@ footer p {
         <div class="section-heading">
 
             <h2>
-                How We Think About Care
+                What We Believe
             </h2>
 
             <p>
-                LiveWell isn't about taking over your family's role.
-                It's about making that role easier.
+                LiveWell is built around three simple principles.
             </p>
 
         </div>
@@ -1185,13 +1463,11 @@ footer p {
                 </h3>
 
                 <p>
-                    We believe older adults should have the opportunity to
-                    remain in the homes they know and love for as long as
-                    possible.
+                    Older adults should have the opportunity to remain in the
+                    homes they know and love for as long as possible.
                 </p>
 
             </div>
-
 
 
             <div class="value-card">
@@ -1205,12 +1481,11 @@ footer p {
                 </h3>
 
                 <p>
-                    When something needs attention, families should know
-                    someone local is there to help coordinate it.
+                    When something needs attention, families should know there
+                    is someone local who can help coordinate it.
                 </p>
 
             </div>
-
 
 
             <div class="value-card">
@@ -1282,43 +1557,110 @@ footer p {
 
 
 <!-- =========================
-     IMPORTANT DISTINCTION
+     WHAT LIVEWELL IS / ISN'T
 ========================= -->
 
-<section class="section">
+<section class="section distinction">
 
     <div class="container">
 
-        <div class="disclaimer-box">
+        <div class="section-heading">
 
             <h2>
-                What LiveWell Is — And Isn't
+                Clear About Our Role.
             </h2>
 
             <p>
-                LiveWell Home Concierge provides non-medical home concierge,
-                household coordination, maintenance coordination, and practical
-                support services.
-            </p>
-
-            <p>
-                We do not provide medical care, nursing, personal support,
-                emergency response, professional home inspections, engineering
-                services, or other regulated professional services.
-            </p>
-
-            <p>
-                When a situation requires specialized or licensed expertise,
-                LiveWell can help coordinate the appropriate third-party
-                professional.
-            </p>
-
-            <p>
-                Our role is simple: help with the practical details, keep
-                things organized, and help families stay connected.
+                Families should always know exactly what LiveWell does and
+                where our role begins and ends.
             </p>
 
         </div>
+
+
+        <div class="distinction-grid">
+
+
+            <div class="distinction-card is">
+
+                <div class="distinction-label">
+                    LIVEWELL IS
+                </div>
+
+                <h2>
+                    Your Local Home Concierge.
+                </h2>
+
+                <p>
+                    LiveWell provides non-medical home concierge, household
+                    coordination, maintenance coordination, and practical
+                    support services.
+                </p>
+
+                <p>
+                    When something needs to get done around the home, we help
+                    coordinate the people, appointments, access, follow-ups,
+                    and communication required to keep things moving.
+                </p>
+
+            </div>
+
+
+            <div class="distinction-card isnt">
+
+                <div class="distinction-label">
+                    LIVEWELL IS NOT
+                </div>
+
+                <h2>
+                    A Healthcare Provider.
+                </h2>
+
+                <p>
+                    We do not provide medical care, nursing, personal support,
+                    emergency response, professional home inspections,
+                    engineering services, or other regulated professional
+                    services.
+                </p>
+
+                <p>
+                    When a situation requires specialized or licensed expertise,
+                    LiveWell can help coordinate the appropriate third-party
+                    professional.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICE AREA
+========================= -->
+
+<section class="area">
+
+    <div class="container">
+
+        <div class="area-label">
+            PROUDLY LOCAL
+        </div>
+
+        <h2>
+            Supporting Families Close to Home.
+        </h2>
+
+        <p>
+            Serving families across Newmarket • Aurora • Markham • Richmond Hill
+            • Vaughan • North York • Toronto • Scarborough and surrounding
+            communities.
+        </p>
 
     </div>
 
@@ -1418,4 +1760,3 @@ document.querySelectorAll("#mainNav a").forEach(function(link) {
 </body>
 
 </html>
-```
